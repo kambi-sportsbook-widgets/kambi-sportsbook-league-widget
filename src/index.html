@@ -9,18 +9,6 @@
    <meta name="MobileOptimized" content="320">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
-   <!--<link rel="apple-touch-icon-precomposed" sizes="180x180" href="images/touch/Icon-60@3x.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/touch/Icon-76@2x.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/Icon-72@2x.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/touch/Icon-60@2x.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/Icon@2x.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/touch/Icon-76.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/Icon-72.png">-->
-   <!--<link rel="apple-touch-icon-precomposed" href="images/touch/Icon.png">-->
-   <!--<link rel="shortcut icon" href="images/touch/apple-touch-icon.png">-->
-   <!--<link rel="icon" sizes="192x192" href="images/touch/Icon-192.png">-->
-   <!--<link rel="icon" sizes="128x128" href="images/touch/Icon-128.png">-->
-
    <meta name="fragment" content="!"/>
 
    <meta name="mobile-web-app-capable" content="yes">
@@ -28,8 +16,8 @@
    <meta name="apple-mobile-web-app-status-bar-style" content="black">
    <meta name="apple-mobile-web-app-title" content="">
 
-   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
+
    <!-- build:css -->
    <!-- This section will be replaced in the gulp build process -->
    <link rel="stylesheet" type="text/css" href="css/app.css"/>
@@ -40,13 +28,10 @@
    <!-- build:js -->
    <!-- This section will be replaced in the gulp build process -->
    <script src="js/app.js"></script>
-   <!--<script src="js/filters/startFrom.js"></script>-->
    <script src="js/controllers/appController.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/controllers/widgetCoreController.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/filters/startFrom.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/services/kambiWidgetService.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/services/kambiAPIService.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/directives/kambiPaginationDirective.js"></script>
    <!-- endbuild -->
 </head>
 <body class="kw-body">
@@ -55,6 +40,20 @@
    <header class="kw-header l-pl-15">League widget</header>
 
    <!--Main-->
+   <main class="l-flexbox l-vertical l-flexed l-pack-start">
+
+      <!--Table header-->
+      <div class="kw-table-header l-flexbox l-horizontal">
+         <div data-item-attr="{{headerKey}}" class="l-flex-1 text-truncate" ng-repeat="(headerKey, headerValue) in columnLabels">{{headerValue}}</div>
+      </div>
+
+      <!--Table body-->
+      <div class="kw-table-item l-flexbox l-horizontal anim-fade-in"
+           ng-repeat="leagueTableRow in leagueTableRows">
+         <div data-item-attr="{{bodyKey}}" class="l-flex-1 text-truncate" ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
+      </div>
+
+   </main>
 
 </div>
 </body>
