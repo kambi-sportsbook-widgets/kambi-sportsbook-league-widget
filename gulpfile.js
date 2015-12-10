@@ -1,5 +1,5 @@
 (function () {
-   var gulp, awspublish, rename, concat, uglify, notify, jshint, stripDebug, del, sourcemaps, minifycss, htmlReplace, gulpDoxx, sass, buildTemp, replace,
+   var gulp, awspublish, rename, concat, uglify, notify, jshint, stripDebug, del, sourcemaps, minifycss, htmlReplace, sass, buildTemp, replace,
       install, npmLibs;
 
    gulp = require('gulp');
@@ -29,8 +29,6 @@
    htmlReplace = require('gulp-html-replace');
 
    del = require('del');
-
-   gulpDoxx = require('gulp-doxx');
 
    replace = require('gulp-replace');
 
@@ -118,20 +116,6 @@
       return gulp.src(npmLibs)
          .pipe(concat('libs.js'))
          .pipe(gulp.dest('./' + buildTemp + '/js'));
-   });
-
-   gulp.task('docs', function () {
-      del.sync('./docs');
-      return gulp.src('./src/js/**/*.js', { base: './src/js/' })
-         .pipe(gulpDoxx({
-            title: 'Kambi Sportsbook Live Now widget',
-            urlPrefix: '/livenow/docs'
-         }))
-         .pipe(rename(function ( path ) {
-            path.dirname = path.dirname.replace('src/js/', '/');
-         }))
-         .pipe(replace('/src/js/', '/'))
-         .pipe(gulp.dest('./docs'));
    });
 
    gulp.task('clean-build-dir', function () {

@@ -1,3 +1,31 @@
 .kw-table-item {
    height: 45px;
 }
+
+.kw-table-header {
+   background-color: white;
+   border-bottom: 1px solid $color-4-1-card-border;
+   color: $color-4-2-card-supportive-text;
+
+   [data-item-attr="position"],
+   [data-item-attr="participantName"] {
+      visibility: hidden;
+   }
+}
+
+.kw-table-item {
+   border-bottom: 1px solid $color-4-1-card-border;
+
+   &:hover {
+      background-color: $color-4-1-card-background-hover;
+   }
+}
+
+.kw-table-header,
+.kw-table-item {
+   [data-item-attr="participantName"] {
+      @include flex(7);
+   }
+
+
+}

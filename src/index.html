@@ -29,28 +29,33 @@
    <!-- This section will be replaced in the gulp build process -->
    <script src="js/app.js"></script>
    <script src="js/controllers/appController.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/controllers/widgetCoreController.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/services/kambiWidgetService.js"></script>
-   <script src="../node_modules/kambi-sportsbook-widget-libraries/src/js/services/kambiAPIService.js"></script>
+   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/controllers/widgetCoreController.js"></script>
+   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiWidgetService.js"></script>
+   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiAPIService.js"></script>
    <!-- endbuild -->
 </head>
 <body class="kw-body">
 <div class="kw-card l-flexbox l-vertical l-expander" ng-controller="appController">
    <!--Header-->
-   <header class="kw-header l-pl-15">League widget</header>
+   <!--<header class="kw-header l-pl-15">League widget</header>-->
 
    <!--Main-->
    <main class="l-flexbox l-vertical l-flexed l-pack-start">
 
       <!--Table header-->
-      <div class="kw-table-header l-flexbox l-horizontal">
-         <div data-item-attr="{{headerKey}}" class="l-flex-1 text-truncate" ng-repeat="(headerKey, headerValue) in columnLabels">{{headerValue}}</div>
+      <div class="kw-table-header l-flexbox l-horizontal l-pl-15 l-pr-15 l-pt-10 l-pb-10 l-mb-10">
+         <div data-item-attr="{{headerKey}}"
+              title="{{bodyKey}}"
+              class="l-flex-1 text-truncate"
+              ng-repeat="(headerKey, headerValue) in columnLabels">{{headerValue}}</div>
       </div>
 
       <!--Table body-->
-      <div class="kw-table-item l-flexbox l-horizontal anim-fade-in"
+      <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-15 l-pr-15 l-pt-5 l-pb-5"
            ng-repeat="leagueTableRow in leagueTableRows">
-         <div data-item-attr="{{bodyKey}}" class="l-flex-1 text-truncate" ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
+         <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
+              class="l-flex-1 text-truncate"
+              ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
       </div>
 
    </main>

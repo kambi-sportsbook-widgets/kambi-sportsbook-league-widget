@@ -24,14 +24,14 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^1.0.2",
     "gulp-uglify": "^1.4.2",
-    "kambi-sportsbook-widget-libraries": "git+ssh://github.com/kambi-sportsbook-widgets/widget-library.git"
+    "kambi-sportsbook-widget-library": "git+ssh://github.com/kambi-sportsbook-widgets/widget-library.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:kambi-sportsbook-widgets/league-widget.git"
+    "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-widget.git"
   },
   "author": "Andrei Teodorescu <andrei@globalmouth.com",
   "license": "ISC",
