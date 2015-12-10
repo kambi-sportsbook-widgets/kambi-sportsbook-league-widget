@@ -24,7 +24,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^1.0.2",
     "gulp-uglify": "^1.4.2",
-    "kambi-sportsbook-widget-libraries": "git+ssh://bitbucket.org/globalmouth/kambi-sportsbook-widget-libraries.git#docs"
+    "kambi-sportsbook-widget-libraries": "git+ssh://github.com/kambi-sportsbook-widgets/widget-library.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,7 +33,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com:kambi-sportsbook-widgets/league-widget.git"
   },
-  "author": "Michael Blom <michael@globalmouth.com",
+  "author": "Andrei Teodorescu <andrei@globalmouth.com",
   "license": "ISC",
   "homepage": "https://github.com/kambi-sportsbook-widgets/league-widget#readme"
 }

@@ -8,7 +8,7 @@
       angular.extend(appController, $controller('widgetCoreController', {
          '$scope': $scope
       }));
-      
+
       $scope.leagueTableRows = [];
 
       $scope.columnLabels = {};
