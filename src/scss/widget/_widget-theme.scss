@@ -1,3 +1,8 @@
+.kw-body {
+   background-color: transparent;
+   padding: 16px;
+}
+
 .kw-table-item {
    height: 45px;
 }
@@ -6,6 +11,8 @@
    background-color: white;
    border-bottom: 1px solid $color-4-1-card-border;
    color: $color-4-2-card-supportive-text;
+   font-size: 14px;
+   min-height: 44px;
 
    [data-item-attr="position"],
    [data-item-attr="participantName"] {
@@ -26,6 +33,5 @@
    [data-item-attr="participantName"] {
       @include flex(7);
    }
-
 
 }

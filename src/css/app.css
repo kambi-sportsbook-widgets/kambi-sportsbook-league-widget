@@ -739,6 +739,11 @@ Copyright (c) 2015 Daniel Eden
   -webkit-transition-duration: 0s;
 }
 
+.kw-body {
+  background-color: transparent;
+  padding: 16px;
+}
+
 .kw-table-item {
   height: 45px;
 }
@@ -747,6 +752,8 @@ Copyright (c) 2015 Daniel Eden
   background-color: white;
   border-bottom: 1px solid #EAEAEA;
   color: #999;
+  font-size: 14px;
+  min-height: 44px;
 }
 .kw-table-header [data-item-attr="position"],
 .kw-table-header [data-item-attr="participantName"] {
