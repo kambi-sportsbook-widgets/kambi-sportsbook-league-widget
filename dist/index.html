@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="leagueWidget">
+<head>
+   <title>League widget</title>
+   <meta charset="UTF-8">
+   <meta name="apple-mobile-web-app-title" content="Kambi">
+   <meta name="description" content="League Widget">
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+   <meta name="fragment" content="!"/>
+
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta name="apple-mobile-web-app-title" content="">
+
+   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"/>
+
+   <link rel="stylesheet" href="css/app.min.css">
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+   <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.7/kambi-widget-api.js"></script>
+   <script src="js/app.min.js"></script>
+</head>
+<body class="kw-body">
+<div class="kw-card l-flexbox l-vertical l-expander" ng-controller="appController">
+   <!--Header-->
+   <!--<header class="kw-header l-pl-15">League widget</header>-->
+
+   <!--Main-->
+   <main class="l-flexbox l-vertical l-flexed l-pack-start">
+
+      <!--Table header-->
+      <div class="kw-table-header l-flexbox l-horizontal l-pl-15 l-pr-15 l-pt-10 l-pb-10 l-mb-10">
+         <div data-item-attr="{{headerKey}}"
+              title="{{bodyKey}}"
+              class="l-flex-1 text-truncate"
+              ng-repeat="(headerKey, headerValue) in columnLabels">{{headerValue}}</div>
+      </div>
+
+      <!--Table body-->
+      <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-15 l-pr-15 l-pt-5 l-pb-5"
+           ng-repeat="leagueTableRow in leagueTableRows">
+         <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
+              class="l-flex-1 text-truncate"
+              ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
+      </div>
+
+   </main>
+
+</div>
+</body>
+</html>

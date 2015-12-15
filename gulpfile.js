@@ -55,7 +55,7 @@
 
       return gulp.src(['./dist/**/*'])
          .pipe(rename(function ( path ) {
-            path.dirname = '/livenow/' + path.dirname;
+            path.dirname = '/league/' + path.dirname;
          }))
          .pipe(publisher.publish(headers, {
             //force: true

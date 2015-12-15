@@ -18,6 +18,7 @@
    [data-item-attr="participantName"] {
       visibility: hidden;
    }
+
 }
 
 .kw-table-item {
@@ -34,4 +35,18 @@
       @include flex(7);
    }
 
+}
+
+[data-item-attr="wins"],
+[data-item-attr="draws"],
+[data-item-attr="losses"],
+[data-item-attr="gamesPlayed"] {
+   @extend .hidden-xs;
+}
+
+[data-item-attr="wins"],
+[data-item-attr="draws"],
+[data-item-attr="losses"],
+[data-item-attr="gamesPlayed"] {
+   @extend .hidden-sm;
 }
