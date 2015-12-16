@@ -650,33 +650,32 @@ a {
   color: #999;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
   .hidden-xs, [data-item-attr="wins"],
   [data-item-attr="draws"],
   [data-item-attr="losses"],
-  [data-item-attr="gamesPlayed"] {
+  [data-item-attr="goalsFor"],
+  [data-item-attr="goalsAgainst"] {
     display: none !important;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .hidden-sm, [data-item-attr="wins"],
-  [data-item-attr="draws"],
-  [data-item-attr="losses"],
-  [data-item-attr="gamesPlayed"] {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hidden-sm, [data-item-attr="goalsFor"],
+  [data-item-attr="goalsAgainst"] {
     display: none !important;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .hidden-md {
     display: none !important;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .hidden-lg {
     display: none !important;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
   .hidden-xlg {
     display: none !important;
   }
@@ -753,9 +752,10 @@ Copyright (c) 2015 Daniel Eden
   background-color: transparent;
   padding: 16px;
 }
-
-.kw-table-item {
-  height: 45px;
+@media screen and (max-width: 320px) {
+  .kw-body {
+    padding: 0 3px;
+  }
 }
 
 .kw-table-header {
@@ -771,6 +771,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .kw-table-item {
+  height: 45px;
   border-bottom: 1px solid #EAEAEA;
 }
 .kw-table-item:hover {

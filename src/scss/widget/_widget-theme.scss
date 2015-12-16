@@ -7,10 +7,6 @@
    }
 }
 
-.kw-table-item {
-   height: 45px;
-}
-
 .kw-table-header {
    background-color: white;
    border-bottom: 1px solid darken($color-4-1-card-border, 11%);
@@ -26,6 +22,7 @@
 }
 
 .kw-table-item {
+   height: 45px;
    border-bottom: 1px solid $color-4-1-card-border;
 
    &:hover {
@@ -41,16 +38,15 @@
 
 }
 
-[data-item-attr="wins"],
-[data-item-attr="draws"],
-[data-item-attr="losses"],
-[data-item-attr="gamesPlayed"] {
-   @extend .hidden-xs;
+[data-item-attr="goalsFor"],
+[data-item-attr="goalsAgainst"] {
+   @extend .hidden-sm;
 }
 
 [data-item-attr="wins"],
 [data-item-attr="draws"],
 [data-item-attr="losses"],
-[data-item-attr="gamesPlayed"] {
-   @extend .hidden-sm;
+[data-item-attr="goalsFor"],
+[data-item-attr="goalsAgainst"] {
+   @extend .hidden-xs;
 }

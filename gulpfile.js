@@ -37,7 +37,7 @@
    buildTemp = '.buildTemp';
 
    npmLibs = [
-      './node_modules/kambi-sportsbook-widget-libraries/dist/js/app.min.js'
+      './node_modules/kambi-sportsbook-widget-library/dist/js/app.min.js'
    ];
 
    gulp.task('default', ['build', 'clean-build'], function () {
@@ -56,26 +56,6 @@
       return gulp.src(['./dist/**/*'])
          .pipe(rename(function ( path ) {
             path.dirname = '/league/' + path.dirname;
-         }))
-         .pipe(publisher.publish(headers, {
-            //force: true
-         }))
-         .pipe(publisher.cache())
-         .pipe(awspublish.reporter());
-   });
-
-   gulp.task('publish-docs', function () {
-      var publisher = awspublish.create({
-         params: {
-            Bucket: 'kambi-widgets'
-         }
-      });
-
-      var headers = {};
-
-      return gulp.src(['docs/**/*'])
-         .pipe(rename(function ( path ) {
-            path.dirname = '/livenow/docs/' + path.dirname;
          }))
          .pipe(publisher.publish(headers, {
             //force: true

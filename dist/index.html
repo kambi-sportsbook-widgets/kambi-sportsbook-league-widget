@@ -44,7 +44,8 @@
       <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-15 l-pr-15 l-pt-5 l-pb-5"
            ng-repeat="leagueTableRow in leagueTableRows">
          <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
-              class="l-flex-1 text-truncate"
+              class="l-flex-1"
+              ng-class="{'text-truncate': bodyValue.length > 20}"
               ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
       </div>
 
