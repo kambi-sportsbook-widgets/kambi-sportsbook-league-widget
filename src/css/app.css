@@ -753,6 +753,11 @@ Copyright (c) 2015 Daniel Eden
   background-color: transparent;
   padding: 16px;
 }
+@media screen and (max-width: 320px) {
+  .kw-body {
+    padding: 0 3px;
+  }
+}
 
 .kw-table-item {
   height: 45px;
@@ -786,7 +791,5 @@ Copyright (c) 2015 Daniel Eden
   -ms-flex: 7;
   flex: 7;
 }
-
-
 
 /*# sourceMappingURL=app.css.map */

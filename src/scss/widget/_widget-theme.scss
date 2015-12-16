@@ -1,6 +1,10 @@
 .kw-body {
    background-color: transparent;
    padding: 16px;
+
+   @media screen and (max-width: $screen-xs) {
+      padding: 0 3px;
+   }
 }
 
 .kw-table-item {
