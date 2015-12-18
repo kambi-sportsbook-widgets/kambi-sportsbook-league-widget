@@ -505,6 +505,7 @@ strong.stronger {
   line-height: 36px;
   overflow: hidden;
   position: relative;
+  min-height: 37px;
 }
 
 .kw-footer {
@@ -651,7 +652,7 @@ a {
 }
 
 @media screen and (max-width: 319px) {
-  .hidden-xs, [data-item-attr="wins"],
+  .hidden-xss, [data-item-attr="wins"],
   [data-item-attr="draws"],
   [data-item-attr="losses"],
   [data-item-attr="goalsFor"],
@@ -659,7 +660,18 @@ a {
     display: none !important;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .hidden-xs, [data-item-attr="goalsFor"],
+  [data-item-attr="goalsAgainst"] {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 567px) {
+  .hidden-ss {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 568px) and (max-width: 767px) {
   .hidden-sm, [data-item-attr="goalsFor"],
   [data-item-attr="goalsAgainst"] {
     display: none !important;
@@ -752,7 +764,7 @@ Copyright (c) 2015 Daniel Eden
   background-color: transparent;
   padding: 16px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .kw-body {
     padding: 0 3px;
   }
@@ -765,9 +777,22 @@ Copyright (c) 2015 Daniel Eden
   font-size: 14px;
   min-height: 44px;
 }
-.kw-table-header [data-item-attr="position"],
+.kw-table-header [data-item-attr="position"] {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+  -moz-box-flex: 7;
+  -moz-flex: 7;
+  -ms-flex: 7;
+  flex: 7;
+}
 .kw-table-header [data-item-attr="participantName"] {
   visibility: hidden;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-box-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .kw-table-item {
@@ -778,7 +803,6 @@ Copyright (c) 2015 Daniel Eden
   background-color: #f0f0f0;
 }
 
-.kw-table-header [data-item-attr="participantName"],
 .kw-table-item [data-item-attr="participantName"] {
   -webkit-box-flex: 7;
   -webkit-flex: 7;

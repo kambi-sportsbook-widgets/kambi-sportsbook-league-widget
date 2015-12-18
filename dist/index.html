@@ -27,7 +27,7 @@
 <body class="kw-body">
 <div class="kw-card l-flexbox l-vertical l-expander" ng-controller="appController">
    <!--Header-->
-   <!--<header class="kw-header l-pl-15">League widget</header>-->
+   <!--<header class="kw-header l-pl-15">League table</header>-->
 
    <!--Main-->
    <main class="l-flexbox l-vertical l-flexed l-pack-start">
@@ -37,7 +37,7 @@
          <div data-item-attr="{{headerKey}}"
               title="{{bodyKey}}"
               class="l-flex-1 text-truncate"
-              ng-repeat="(headerKey, headerValue) in columnLabels">{{headerValue}}</div>
+              ng-repeat="(headerKey, headerValue) in columnLabels">{{$index === 0 ? 'League table' : headerValue}}</div>
       </div>
 
       <!--Table body-->

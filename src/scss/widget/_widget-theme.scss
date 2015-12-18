@@ -14,28 +14,30 @@
    font-size: 14px;
    min-height: 44px;
 
-   [data-item-attr="position"],
+   [data-item-attr="position"] {
+      @include flex(7);
+   }
+
    [data-item-attr="participantName"] {
       visibility: hidden;
+      @include flex(1);
    }
 
 }
 
 .kw-table-item {
-   height: 45px;
    border-bottom: 1px solid $color-4-1-card-border;
+   height: 45px;
 
    &:hover {
       background-color: $color-4-1-card-background-hover;
    }
 }
 
-.kw-table-header,
 .kw-table-item {
    [data-item-attr="participantName"] {
       @include flex(7);
    }
-
 }
 
 [data-item-attr="goalsFor"],
@@ -43,10 +45,15 @@
    @extend .hidden-sm;
 }
 
+[data-item-attr="goalsFor"],
+[data-item-attr="goalsAgainst"] {
+   @extend .hidden-xs;
+}
+
 [data-item-attr="wins"],
 [data-item-attr="draws"],
 [data-item-attr="losses"],
 [data-item-attr="goalsFor"],
 [data-item-attr="goalsAgainst"] {
-   @extend .hidden-xs;
+   @extend .hidden-xss;
 }
