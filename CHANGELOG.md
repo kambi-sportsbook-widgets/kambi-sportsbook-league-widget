@@ -1,3 +1,9 @@
+2016-01-08
+==========
+
+  * Updated package.json changelog path
+  * Added changelog
+
 2015-12-18
 ==========
 
