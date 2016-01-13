@@ -11,7 +11,7 @@ __`client-widgets.js`__
 ...
 {
     "order": 1,
-    "widgetId": "Live right now widget",
+    "widgetId": "League widget",
     "args": {
     }
 },
