@@ -1,3 +1,21 @@
+2016-01-28
+==========
+
+  * KSBWI-109 Update margins, added translation support
+
+2016-01-22
+==========
+
+  * Added new core service
+  * Added screenshot
+
+2016-01-13
+==========
+
+  * KSBWI-66 Fix breakdown point
+  * Update README.md
+  * Update CHANGELOG
+
 2016-01-08
 ==========
 
