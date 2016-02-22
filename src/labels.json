@@ -1,0 +1,13 @@
+{
+   "columnLabels": {
+      "position": "Pos",
+      "participantName": "Club",
+      "gamesPlayed": "P",
+      "wins": "W",
+      "draws": "D",
+      "losses": "L",
+      "goalsFor": "Gf",
+      "goalsAgainst": "Ga",
+      "points": "Pts"
+   }
+}

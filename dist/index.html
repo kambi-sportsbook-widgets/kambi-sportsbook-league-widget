@@ -36,7 +36,8 @@
          <div data-item-attr="{{headerKey}}"
               title="{{bodyKey}}"
               class="l-flex-1 text-truncate"
-              ng-repeat="(headerKey, headerValue) in columnLabels">{{($index === 0 ? 'League table' : headerValue) | translate}}</div>
+              ng-repeat="(headerKey, headerValue) in columnLabels">{{($index === 0 ? 'League table' : headerValue) | translate}}
+         </div>
       </div>
 
       <!--Table body-->
@@ -45,11 +46,12 @@
          <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
               class="l-flex-1"
               ng-class="{'text-truncate': bodyValue.length > 20}"
-              ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
+              ng-repeat="(bodyKey, bodyValue) in leagueTableRow"
+              ng-if="bodyKey!='participantId'">{{bodyValue}}
+         </div>
       </div>
 
    </main>
-
 </div>
 </body>
 </html>

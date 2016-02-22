@@ -33,6 +33,7 @@
    <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiWidgetService.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiAPIService.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/coreUtilsService.js"></script>
+   <script src="../node_modules/kambi-sportsbook-widget-library/src/js/services/kambiStatisticsService.js"></script>
    <script src="../node_modules/kambi-sportsbook-widget-core-translate/dist/translate.js"></script>
    <!-- endbuild -->
    <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.7/kambi-widget-api.js"></script>
@@ -48,7 +49,8 @@
          <div data-item-attr="{{headerKey}}"
               title="{{bodyKey}}"
               class="l-flex-1 text-truncate"
-              ng-repeat="(headerKey, headerValue) in columnLabels">{{($index === 0 ? 'League table' : headerValue) | translate}}</div>
+              ng-repeat="(headerKey, headerValue) in columnLabels">{{($index === 0 ? 'League table' : headerValue) | translate}}
+         </div>
       </div>
 
       <!--Table body-->
@@ -57,11 +59,12 @@
          <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
               class="l-flex-1"
               ng-class="{'text-truncate': bodyValue.length > 20}"
-              ng-repeat="(bodyKey, bodyValue) in leagueTableRow">{{bodyValue}}</div>
+              ng-repeat="(bodyKey, bodyValue) in leagueTableRow"
+              ng-if="bodyKey!='participantId'">{{bodyValue}}
+         </div>
       </div>
 
    </main>
-
 </div>
 </body>
 </html>
