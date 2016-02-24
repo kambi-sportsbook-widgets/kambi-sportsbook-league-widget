@@ -20,7 +20,7 @@
 
       'use strict';
 
-      function appController( $scope, $http, $q, $widgetService, $apiService, $controller, $statisticsApi ) {
+      function appController( $scope, $widgetService, $apiService, $controller, $statisticsApi ) {
 
          // Extend the core controller that takes care of basic setup and common functions
          angular.extend(appController, $controller('widgetCoreController', {
@@ -44,23 +44,27 @@
           * Get column labels from local file
           */
          $scope.getColumnLabels = function () {
-            $http({
-               method: 'GET',
-               url: 'labels.json'
-            }).then(function successCallback( objResponse ) {
-               if ( objResponse.data && objResponse.data.columnLabels ) {
-                  $scope.columnLabels = objResponse.data.columnLabels
-               }
-            });
-         }
+            $scope.columnLabels = {
+               'position': 'Pos',
+               'participantName': 'Club',
+               'gamesPlayed': 'P',
+               'wins': 'W',
+               'draws': 'D',
+               'losses': 'L',
+               'goalsFor': 'Gf',
+               'goalsAgainst': 'Ga',
+               'points': 'Pts'
+            };
+         };
 
          /**
           * Get league items
           */
-         $scope.getLeagueItems = function ( type, filter ) {
+         $scope.getLeagueItems = function ( type ) {
 
             $scope.getColumnLabels();
-            $statisticsApi.getStatistics(type, filter)
+
+            $statisticsApi.getStatistics(type, $scope.filter)
                .then(function successCallback( objResponse ) {
                   if ( objResponse.data && objResponse.data.statistics ) {
                      var i = 0, arrLength = objResponse.data.statistics.length;
@@ -86,13 +90,13 @@
          $scope.init().then(function () {
             // Fetch League statistics
             $scope.filter = $scope.pageInfo.pageParam;
-            $scope.getLeagueItems('leaguetable', $scope.filter);
+            $scope.getLeagueItems('leaguetable');
          });
 
       }
 
       (function ( $app ) {
-         return $app.controller('appController', ['$scope', '$http', '$q', 'kambiWidgetService', 'kambiAPIService', '$controller', 'kambiStatisticsService',
+         return $app.controller('appController', ['$scope', 'kambiWidgetService', 'kambiAPIService', '$controller', 'kambiStatisticsService',
             appController]);
       })(angular.module('leagueWidget'));
 
