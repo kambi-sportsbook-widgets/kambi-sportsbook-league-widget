@@ -825,7 +825,6 @@ Copyright (c) 2015 Daniel Eden
 
 .kw-body {
   background-color: transparent;
-  padding-top: 12px;
 }
 @media screen and (max-width: 480px) {
   .kw-body {
@@ -865,7 +864,6 @@ Copyright (c) 2015 Daniel Eden
 .kw-table-item:hover {
   background-color: #f0f0f0;
 }
-
 .kw-table-item [data-item-attr="participantName"] {
   -webkit-box-flex: 7;
   -webkit-flex: 7;
@@ -873,6 +871,10 @@ Copyright (c) 2015 Daniel Eden
   -moz-flex: 7;
   -ms-flex: 7;
   flex: 7;
+}
+
+.kw-table-date {
+  background-color: white;
 }
 
 

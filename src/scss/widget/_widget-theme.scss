@@ -1,6 +1,5 @@
 .kw-body {
    background-color: transparent;
-   padding-top: 12px;
 
    @media screen and (max-width: $screen-xs) {
       padding: 0 3px;
@@ -22,7 +21,6 @@
       visibility: hidden;
       @include flex(1);
    }
-
 }
 
 .kw-table-item {
@@ -32,12 +30,14 @@
    &:hover {
       background-color: $color-4-1-card-background-hover;
    }
-}
 
-.kw-table-item {
    [data-item-attr="participantName"] {
       @include flex(7);
    }
+}
+
+.kw-table-date {
+   background-color: white;
 }
 
 [data-item-attr="goalsFor"],

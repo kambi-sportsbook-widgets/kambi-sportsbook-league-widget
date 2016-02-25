@@ -1,6 +1,6 @@
-# league-widget - (not ready for production)
+# league-widget
 
-Displays the league teams with statistics, with data from a json feed
+Displays the league teams with statistics, with data from statistics api
 
 ## Configuration example:
 
@@ -13,6 +13,8 @@ __`client-widgets.js`__
     "order": 1,
     "widgetId": "League widget",
     "args": {
+        "updatedTime": '08:00 GMT',
+        "style": "padding-top: 12px;"
     }
 },
 ...

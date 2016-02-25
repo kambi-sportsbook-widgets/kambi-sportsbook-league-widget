@@ -38,8 +38,8 @@
    <!-- endbuild -->
    <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.7/kambi-widget-api.js"></script>
 </head>
-<body class="kw-body">
-<div class="kw-card l-flexbox l-vertical l-expander" ng-controller="appController">
+<body class="kw-body" style="{{defaultArgs.style}}"  ng-controller="appController">
+<div class="kw-card l-flexbox l-vertical l-expander">
 
    <!--Main-->
    <main class="l-flexbox l-vertical l-flexed l-pack-start">
@@ -47,9 +47,10 @@
       <!--Table header-->
       <div class="kw-table-header l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12">
          <div data-item-attr="{{headerKey}}"
-              title="{{bodyKey}}"
+              title="{{headerKey}}"
               class="l-flex-1 text-truncate"
-              ng-repeat="(headerKey, headerValue) in columnLabels">{{($index === 0 ? 'League table' : headerValue) | translate}}
+              ng-repeat="(headerKey, headerValue) in columnLabels">
+            {{($index === 0 ? 'League table' : headerValue) | translate}}
          </div>
       </div>
 
@@ -63,6 +64,8 @@
               ng-if="bodyKey!='participantId'">{{bodyValue}}
          </div>
       </div>
+
+      <div ng-if="args.updatedTime" class="kw-table-date l-pl-16 l-pr-16 l-pt-6 l-pb-6">{{'Last updated' | translate}}: {{args.updatedTime}}</div>
 
    </main>
 </div>

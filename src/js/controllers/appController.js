@@ -19,6 +19,11 @@
 
          $scope.rowHeight = 45;
 
+         $scope.defaultArgs = {
+            updatedTime: '08:00 GMT',
+            style: 'padding-top: 12px;'
+         };
+
          //Get page info
          $widgetService.requestPageInfo();
 
