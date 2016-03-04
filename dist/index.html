@@ -34,7 +34,7 @@
       <!--Table header-->
       <div class="kw-table-header l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12">
          <div data-item-attr="{{headerKey}}"
-              title="{{headerKey}}"
+              title="{{headerKey | translate}}"
               class="l-flex-1 text-truncate"
               ng-repeat="(headerKey, headerValue) in columnLabels">
             {{($index === 0 ? 'League table' : headerValue) | translate}}
@@ -44,7 +44,7 @@
       <!--Table body-->
       <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-16 l-pr-16 l-pt-6 l-pb-6"
            ng-repeat="leagueTableRow in leagueTableRows">
-         <div data-item-attr="{{bodyKey}}" title="{{bodyKey}}"
+         <div data-item-attr="{{bodyKey}}" title="{{bodyKey | translate}}"
               class="l-flex-1"
               ng-class="{'text-truncate': bodyValue.length > 20}"
               ng-repeat="(bodyKey, bodyValue) in leagueTableRow"

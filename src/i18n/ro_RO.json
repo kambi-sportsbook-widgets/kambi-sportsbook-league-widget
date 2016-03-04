@@ -1,3 +1,12 @@
 {
-   "League table": "Tabel liga"
+   "League table": "Tabel liga",
+   "position": "Position",
+   "participantName": "Participant name",
+   "gamesPlayed": "Games Played",
+   "wins": "Wins",
+   "draws": "Draws",
+   "losses": "Losses",
+   "goalsFor": "Goals for",
+   "goalsAgainst": "Goals against",
+   "points": "Points"
 }
