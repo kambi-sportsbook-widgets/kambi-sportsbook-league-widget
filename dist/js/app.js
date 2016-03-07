@@ -39,7 +39,8 @@
 
          $scope.defaultArgs = {
             updatedTime: '08:00 GMT',
-            style: 'padding-top: 12px;'
+            style: 'padding-top: 12px;',
+            headerDefaultTitle: 'Premier League 2015/16'
          };
 
          //Get page info

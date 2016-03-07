@@ -50,7 +50,7 @@
               title="{{headerKey | translate}}"
               class="l-flex-1 text-truncate"
               ng-repeat="(headerKey, headerValue) in columnLabels">
-            {{($index === 0 ? 'League table' : headerValue) | translate}}
+            {{($index === 0 ? args.headerDefaultTitle : headerValue) | translate}}
          </div>
       </div>
 
