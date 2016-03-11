@@ -32,18 +32,39 @@
        * Get column labels from local file
        */
       $scope.getColumnLabels = function () {
-            $scope.columnLabels = {
-               'position': 'Pos',
-               'participantName': 'Club',
-               'gamesPlayed': 'P',
-               'wins': 'W',
-               'draws': 'D',
-               'losses': 'L',
-               'goalsFor': 'Gf',
-               'goalsAgainst': 'Ga',
-               'points': 'Pts',
-               'goalsDifference': '+/-'
-            };
+            $scope.columnLabels = [
+               {
+                  key: 'position',
+                  value: 'Pos'
+               },{
+                  key: 'participantName',
+                  value: 'Club'
+               },{
+                  key: 'gamesPlayed',
+                  value: 'P'
+               },{
+                  key: 'wins',
+                  value: 'W'
+               },{
+                  key: 'draws',
+                  value: 'D'
+               },{
+                  key: 'losses',
+                  value: 'L'
+               },{
+                  key: 'goalsFor',
+                  value: 'Gf'
+               },{
+                  key: 'goalsAgainst',
+                  value: 'Ga'
+               },{
+                  key: 'goalsDifference',
+                  value: '+/-'
+               },{
+                  key: 'points',
+                  value: 'Pts'
+               }
+            ];
          };
 
       /**
@@ -53,7 +74,7 @@
 
          $scope.getColumnLabels();
          // For testing:
-         // $scope.filter = 'football/england/premier_league/';
+          $scope.filter = 'football/england/premier_league/';
          $statisticsApi.getStatistics(type, $scope.filter)
                .then(function successCallback (objResponse) {
                   if (objResponse.data && objResponse.data.statistics) {

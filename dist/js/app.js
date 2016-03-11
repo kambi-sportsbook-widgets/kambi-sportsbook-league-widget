@@ -57,8 +57,8 @@
                'losses': 'L',
                'goalsFor': 'Gf',
                'goalsAgainst': 'Ga',
-               'points': 'Pts',
-               'goalsDifference': '+/-'
+               'goalsDifference': '+/-',
+               'points': 'Pts'
             };
          };
 

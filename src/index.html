@@ -47,7 +47,10 @@
    <script src="../node_modules/kambi-sportsbook-widget-core-translate/dist/translate.js"></script>
    <!-- endbuild -->
 
-   <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.7/kambi-widget-api.js"></script>
+   <!-- build:kambi-widget-api -->
+   <!-- This section will be replaced in the gulp build process -->
+   <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.8/kambi-widget-api.js"></script>
+   <!-- endbuild -->
 </head>
 <body class="kw-body" style="{{defaultArgs.style}}"  ng-controller="appController">
 <div class="kw-card l-flexbox l-vertical l-expander">
@@ -57,22 +60,22 @@
 
       <!--Table header-->
       <div class="kw-table-header l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12">
-         <div data-item-attr="{{headerKey}}"
-              title="{{headerKey | translate}}"
+         <div data-item-attr="{{column.key}}"
+              title="{{column.key | translate}}"
               class="l-flex-1 text-truncate"
-              ng-repeat="(headerKey, headerValue) in columnLabels">
-            {{($index === 0 ? 'League table' : headerValue) | translate}}
+              ng-repeat="column in columnLabels">
+            {{($index === 0 ? 'League table' : column.value) | translate}}
          </div>
       </div>
 
       <!--Table body-->
       <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-16 l-pr-16 l-pt-6 l-pb-6"
            ng-repeat="leagueTableRow in leagueTableRows">
-         <div data-item-attr="{{bodyKey}}" title="{{bodyKey | translate}}"
+         <div data-item-attr="{{column.key}}" title="{{column.key | translate}}"
               class="l-flex-1"
               ng-class="{'text-truncate': bodyValue.length > 20}"
-              ng-repeat="(bodyKey, bodyValue) in leagueTableRow"
-              ng-if="bodyKey!='participantId'">{{bodyValue}}
+              ng-repeat="column in columnLabels"
+              ng-if="column.key!='participantId'">{{leagueTableRow[column.key]}}
          </div>
       </div>
 

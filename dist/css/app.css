@@ -877,17 +877,6 @@ Copyright (c) 2015 Daniel Eden
   background-color: white;
 }
 
-[data-item-attr="gamesPlayed"],
-[data-item-attr="points"],
-[data-item-attr="wins"],
-[data-item-attr="draws"],
-[data-item-attr="losses"],
-[data-item-attr="goalsFor"],
-[data-item-attr="goalsAgainst"],
-[data-item-attr="goalsDifference"] {
-  text-align: center;
-}
-
 
 
 /*# sourceMappingURL=app.css.map */
