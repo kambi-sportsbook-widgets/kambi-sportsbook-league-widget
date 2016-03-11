@@ -74,30 +74,30 @@
 
          $scope.getColumnLabels();
          // For testing:
-          $scope.filter = 'football/england/premier_league/';
+         // $scope.filter = 'football/england/premier_league/';
          $statisticsApi.getStatistics(type, $scope.filter)
-               .then(function successCallback (objResponse) {
-                  if (objResponse.data && objResponse.data.statistics) {
-                     var i = 0, arrLength = objResponse.data.statistics.length;
-                     for (; i < arrLength; ++i) {
-                        var statistics = objResponse.data.statistics[i];
+            .then(function successCallback (objResponse) {
+               if (objResponse.data && objResponse.data.statistics) {
+                  var i = 0, arrLength = objResponse.data.statistics.length;
+                  for (; i < arrLength; ++i) {
+                     var statistics = objResponse.data.statistics[i];
 
-                        if (statistics && statistics.leagueTable) {
-                           $scope.leagueTableRows = statistics.leagueTable.leagueTableRows;
-                           for (var j = 0; j < $scope.leagueTableRows.length; ++j) {
-                              var row = $scope.leagueTableRows[j];
-                              row.goalsDifference = row.goalsFor - row.goalsAgainst;
-                           }
-                           $scope.calculatedHeight = $scope.leagueTableRows.length * $scope.rowHeight;
+                     if (statistics && statistics.leagueTable) {
+                        $scope.leagueTableRows = statistics.leagueTable.leagueTableRows;
+                        for (var j = 0; j < $scope.leagueTableRows.length; ++j) {
+                           var row = $scope.leagueTableRows[j];
+                           row.goalsDifference = row.goalsFor - row.goalsAgainst;
                         }
+                        $scope.calculatedHeight = $scope.leagueTableRows.length * $scope.rowHeight;
                      }
-
-                     $scope.setWidgetHeight($scope.calculatedHeight);
                   }
 
-               }, function errorCallback (response) {
-                  console.log(response);
-               });
+                  $scope.setWidgetHeight($scope.calculatedHeight);
+               }
+
+            }, function errorCallback (response) {
+               console.log(response);
+            });
       };
 
       // Call the init method in the coreWidgetController so that we setup everything using our overridden values
