@@ -55,7 +55,7 @@
    <!-- endbuild -->
 </head>
 <body class="kw-body" style="{{defaultArgs.style}}"  ng-controller="appController">
-<div class="KambiWidget-card-background-color KambiWidget-card-text-color  l-flexbox l-vertical l-expander">
+<div class="kw-card KambiWidget-card-background-color KambiWidget-card-text-color  l-flexbox l-vertical l-expander">
 
    <!--Main-->
    <main class="l-flexbox l-vertical l-flexed l-pack-start">
@@ -66,7 +66,7 @@
               title="{{column.key | translate}}"
               class="l-flex-1 text-truncate"
               ng-repeat="column in columnLabels">
-            {{($index === 0 ? 'League table' : column.value) | translate}}
+            {{($index === 0 ? args.headerDefaultTitle : column.value) | translate}}
          </div>
       </div>
 
