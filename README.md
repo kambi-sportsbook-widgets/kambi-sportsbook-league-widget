@@ -13,15 +13,21 @@ __`client-widgets.js`__
     "order": 1,
     "widgetId": "League widget",
     "args": {
-        "updatedTime": '08:00 GMT',
-        "style": "padding-top: 12px;"
+        "offering": "offering"
+        "updatedTime": "08:00 GMT",
+        "style": "padding-top: 12px;",
+        "headerDefaultTitle": "Premier League 2015/16"
     }
 },
 ...
 
 ```
 
-### The widget accepts the following parameter/s:
+### The widget accepts the following arguments/s:
+1. `offering` - string - __REQUIRED__ - The offering provided by Kambi
+2. `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
+3. `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
+4. `headerDefaultTitle` - string - defaults to 'League table' - The default title of the widget
 
 # Other tools
 
