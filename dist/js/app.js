@@ -37,12 +37,9 @@
 
       $scope.defaultArgs = {
             updatedTime: '08:00 GMT',
-            style: 'padding-top: 12px;',
-            headerDefaultTitle: 'Premier League 2015/16'
+            style: '',
+            headerDefaultTitle: 'League table'
          };
-
-      // Get page info
-      $widgetService.requestPageInfo();
 
       /**
        * Get column labels from local file
