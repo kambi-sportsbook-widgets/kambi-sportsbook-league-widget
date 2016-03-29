@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="leagueWidget">
+<html>
 <head>
    <title>League widget</title>
    <meta charset="UTF-8">
@@ -25,45 +25,47 @@
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-sanitize.min.js"></script>
 
-   <script src="js/app.min.js"></script>
-
    <script src="//kambi-cdn.globalmouth.com/lib/dist/js/app.min.js"></script>
-
-   <script src="//kambi-cdn.globalmouth.com/translate/dist/translate.min.js"></script>
 
    <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.8/kambi-widget-api.js"></script>
 </head>
 
-<body class="kw-body" style="{{defaultArgs.style}}"  ng-controller="appController">
-<div class="kw-card KambiWidget-card-background-color KambiWidget-card-text-color  l-flexbox l-vertical l-expander">
+<body class="kw-body" style="{{defaultArgs.style}}">
+<div id="main" class="kw-card KambiWidget-card-background-color KambiWidget-card-text-color l-flexbox l-vertical l-expander">
 
    <!--Main-->
    <main class="l-flexbox l-vertical l-flexed l-pack-start">
 
       <!--Table header-->
       <div class="kw-table-header KambiWidget-header l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12">
-         <div data-item-attr="{{column.key}}"
-              title="{{column.key | translate}}"
-              class="l-flex-1 text-truncate"
-              ng-repeat="column in columnLabels">
-            {{($index === 0 ? args.headerDefaultTitle : column.value) | translate}}
+         <div rv-data-item-attr="column.key"
+               rv-column-header-title="column"
+               class="l-flex-1 text-truncate"
+               rv-each-column="columnLabels">
+               <span rv-if="index | > 1">
+                  {column.value | translate}
+               </span>
+               <span rv-if="index | === 0">
+                  {args.headerDefaultTitle}
+               </span>
          </div>
       </div>
 
       <!--Table body-->
       <div class="kw-table-item l-flexbox l-horizontal l-align-center anim-fade-in l-pl-16 l-pr-16 l-pt-6 l-pb-6"
-           ng-repeat="leagueTableRow in leagueTableRows">
-         <div data-item-attr="{{column.key}}" title="{{column.key | translate}}"
-              class="l-flex-1"
-              ng-class="{'text-truncate': bodyValue.length > 20}"
-              ng-repeat="column in columnLabels"
-              ng-if="column.key!='participantId'">{{leagueTableRow[column.key]}}
+           rv-each-row="leagueTableRows">
+         <div rv-data-item-attr="column.key" rv-title="column.key | translate"
+              class="l-flex-1 text-truncate"
+              rv-each-column="columnLabels"
+              ng-if="column.key != 'participantId'">
+              {row | tableCell column}
          </div>
       </div>
-
-      <div ng-if="args.updatedTime" class="kw-table-date l-pl-16 l-pr-16 l-pt-6 l-pb-6">{{'Last updated' | translate}}: {{args.updatedTime}}</div>
-
+      <div ng-if="args.updatedTime" class="kw-table-date l-pl-16 l-pr-16 l-pt-6 l-pb-6">{'Last updated' | translate}: {args.updatedTime}</div>
    </main>
 </div>
+
+<script src="js/app.min.js"></script>
+
 </body>
 </html>

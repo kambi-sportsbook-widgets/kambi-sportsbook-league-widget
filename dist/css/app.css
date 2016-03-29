@@ -42,11 +42,6 @@
 .kw-body {
   background-color: transparent;
 }
-@media screen and (max-width: 480px) {
-  .kw-body {
-    padding: 0 3px;
-  }
-}
 
 .kw-table-header {
   font-size: 14px;
