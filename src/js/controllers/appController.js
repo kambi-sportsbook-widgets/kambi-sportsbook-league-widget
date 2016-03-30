@@ -80,7 +80,8 @@
                         var row = $scope.leagueTableRows[j];
                         row.goalsDifference = row.goalsFor - row.goalsAgainst;
                      }
-                     $scope.calculatedHeight = $scope.leagueTableRows.length * $scope.rowHeight;
+                     // Calculate the height based on the rows plus the header and footer divs
+                     $scope.calculatedHeight = $scope.leagueTableRows.length * $scope.rowHeight + 96;
                      $scope.setWidgetHeight($scope.calculatedHeight);
                   }
                }, function errorCallback ( response ) {
