@@ -5,8 +5,8 @@
       constructor: function ( name ) {
          this.scope = {
             args: {
-               updatedTime: '08:00 GMT',
-               headerDefaultTitle: 'Premier League 2015/2016'
+               updatedTime: '',
+               headerDefaultTitle: ''
             },
             leagueTableRows: []
          };
@@ -41,7 +41,7 @@
 
                      // Calculate the height based on the rows plus the header and footer divs
                      var rowHeight = 45;
-                     var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 96;
+                     var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 84;
 
                      CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
                   }.bind(this));

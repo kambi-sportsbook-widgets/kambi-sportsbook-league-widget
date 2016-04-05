@@ -5,8 +5,8 @@
       constructor: function ( name ) {
          this.scope = {
             args: {
-               updatedTime: '08:00 GMT',
-               headerDefaultTitle: 'Premier League 2015/2016'
+               updatedTime: '',
+               headerDefaultTitle: ''
             },
             leagueTableRows: []
          };

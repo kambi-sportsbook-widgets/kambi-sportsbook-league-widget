@@ -5,8 +5,9 @@
 @import 'compass/css3';
 
 //Included variables, mixins and layout
-@import '../../node_modules/widget-core-library/src/scss/app-base.scss';
-@import '../../node_modules/widget-core-library/src/scss/plugins/responsive';
+@import 'app-base';
+//Include own custom plugins
+@import 'plugins/responsive';
 
 //Included widget related styles
 @import 'widget/variables';
