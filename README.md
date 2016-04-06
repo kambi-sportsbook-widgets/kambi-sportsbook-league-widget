@@ -29,6 +29,19 @@ __`client-widgets.js`__
 3. `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
 4. `headerDefaultTitle` - string - defaults to 'League table' - The default title of the widget
 
+
+### To add specific locale strings to be compiled add the following to the buildparameters.json.
+Each array object must contain key/value pairs, where key is the Label of the string used in template, and the value
+represents the object pointing to Kambi locale.js
+
+```json
+"localeStrings": [
+      {
+         "Draw": "mostpopular.outcomeLabel.draw"
+      }
+   ]
+```
+
 # Other tools
 
 For setting up sass maps, follow this tutorial https://www.hackmonkey.com/2014/sep/configuring-css-source-maps-compass

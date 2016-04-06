@@ -2,7 +2,7 @@
    'use strict';
 
    var LeagueTable = Stapes.subclass({
-      constructor: function ( name ) {
+      constructor: function () {
          this.scope = {
             args: {
                updatedTime: '',
@@ -20,7 +20,7 @@
 
                CoreLibrary.widgetModule.enableWidgetTransition(true);
 
-               if (CoreLibrary.config.offering == null) {
+               if ( CoreLibrary.config.offering == null ) {
                   CoreLibrary.config.offering = 'ub';
                }
 
@@ -31,13 +31,14 @@
 
                CoreLibrary.statisticsModule
                   .getStatistics('leaguetable', CoreLibrary.pageInfo.pageParam)
-                  .then(function (data) {
-                     var rows = [];
-                     data.leagueTableRows.forEach(function (row) {
+                  .then(function ( data ) {
+                     var rows = [], date = new Date(data.updated);
+                     data.leagueTableRows.forEach(function ( row ) {
                         row.goalsDifference = row.goalsFor - row.goalsAgainst;
                         rows.push(row);
                      }.bind(this));
                      this.scope.leagueTableRows = rows;
+                     this.scope.args.updatedTime = date;
 
                      // Calculate the height based on the rows plus the header and footer divs
                      var rowHeight = 45;
@@ -54,13 +55,13 @@
          this.view = rivets.bind(document.getElementById('main'), this.scope);
 
          this.view.binders['column-header-title'] = function ( el, column ) {
-            if (column.value !== 'Pos' && column.value !== 'participantName') {
+            if ( column.value !== 'Pos' && column.value !== 'participantName' ) {
                el.setAttribute('title', CoreLibrary.translationModule.i18nStrings[column.key]);
             }
          };
 
-         this.view.formatters.tableCell = function (tableRow, column) {
-            if (tableRow != null) {
+         this.view.formatters.tableCell = function ( tableRow, column ) {
+            if ( tableRow != null ) {
                return tableRow[column.key];
             }
          }.bind(this);
