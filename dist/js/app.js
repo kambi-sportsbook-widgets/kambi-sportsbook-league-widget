@@ -20,32 +20,33 @@
 
                CoreLibrary.widgetModule.enableWidgetTransition(true);
 
-               if ( CoreLibrary.config.offering == null ) {
-                  CoreLibrary.config.offering = 'ub';
-               }
-
                CoreLibrary.widgetModule.setWidgetHeight(450);
 
                // for testing:
-               // CoreLibrary.pageInfo.pageParam = 'football/england/premier_league/';
+               // CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
 
-               CoreLibrary.statisticsModule
-                  .getStatistics('leaguetable', CoreLibrary.pageInfo.pageParam)
-                  .then(function ( data ) {
-                     var rows = [], date = new Date(data.updated);
-                     data.leagueTableRows.forEach(function ( row ) {
-                        row.goalsDifference = row.goalsFor - row.goalsAgainst;
-                        rows.push(row);
+               if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
+                  CoreLibrary.statisticsModule
+                     .getStatistics('leaguetable', CoreLibrary.pageInfo.leaguePaths[0])
+                     .then(function ( data ) {
+                        var rows = [], date = new Date(data.updated);
+                        data.leagueTableRows.forEach(function ( row ) {
+                           row.goalsDifference = row.goalsFor - row.goalsAgainst;
+                           rows.push(row);
+                        }.bind(this));
+                        this.scope.leagueTableRows = rows;
+                        this.scope.args.updatedTime = date;
+
+                        // Calculate the height based on the rows plus the header and footer divs
+                        var rowHeight = 45;
+                        var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 84;
+
+                        CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
                      }.bind(this));
-                     this.scope.leagueTableRows = rows;
-                     this.scope.args.updatedTime = date;
+               } else {
+                  CoreLibrary.widgetModule.removeWidget();
+               }
 
-                     // Calculate the height based on the rows plus the header and footer divs
-                     var rowHeight = 45;
-                     var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 84;
-
-                     CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
-                  }.bind(this));
             }.bind(this))
             .catch(function ( error ) {
                void 0;
