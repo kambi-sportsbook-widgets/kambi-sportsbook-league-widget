@@ -1,5 +1,5 @@
 {
-   "name": "league-widget",
+   "name": "league-table-widget",
    "version": "2.0.1",
    "description": "",
    "main": "dist/index.html",
@@ -8,7 +8,7 @@
    },
    "repository": {
       "type": "git",
-      "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-widget.git"
+      "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
    },
    "dependencies": {},
    "devDependencies": {
@@ -19,10 +19,10 @@
       "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v1.0.0"
    },
    "scripts": {
-      "changelog": "changelog kambi-sportsbook-widgets/league-widget all -m > CHANGELOG.md",
+      "changelog": "changelog kambi-sportsbook-widgets/league-table-widget all -m > CHANGELOG.md",
       "test": "echo \"Error: no test specified\" && exit 1"
    },
    "author": "Andrei Teodorescu <andrei@globalmouth.com",
    "license": "ISC",
-   "homepage": "https://github.com/kambi-sportsbook-widgets/league-widget#readme"
+   "homepage": "https://github.com/kambi-sportsbook-widgets/league-table-widget#readme"
 }

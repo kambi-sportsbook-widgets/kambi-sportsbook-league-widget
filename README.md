@@ -1,4 +1,4 @@
-# league-widget
+# league-table-widget
 
 Displays the league teams with statistics, with data from statistics api
 
