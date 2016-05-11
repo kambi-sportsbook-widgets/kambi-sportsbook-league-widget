@@ -57,7 +57,6 @@
             CoreLibrary.widgetModule.removeWidget();
          }
 
-
       },
 
       getColumnLabels () {
