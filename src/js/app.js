@@ -14,6 +14,18 @@
       init () {
          this.scope.leagueTableRows = [];
 
+         this.view.binders['column-header-title'] = function ( el, column ) {
+            if ( column.value !== 'Pos' && column.value !== 'participantName' ) {
+               el.setAttribute('title', CoreLibrary.translationModule.i18nStrings[column.key]);
+            }
+         };
+
+         this.view.formatters.tableCell = function ( tableRow, column ) {
+            if ( tableRow != null ) {
+               return tableRow[column.key];
+            }
+         };
+
          this.getColumnLabels();
 
          CoreLibrary.widgetModule.enableWidgetTransition(true);
@@ -45,17 +57,7 @@
             CoreLibrary.widgetModule.removeWidget();
          }
 
-         this.view.binders['column-header-title'] = function ( el, column ) {
-            if ( column.value !== 'Pos' && column.value !== 'participantName' ) {
-               el.setAttribute('title', CoreLibrary.translationModule.i18nStrings[column.key]);
-            }
-         };
 
-         this.view.formatters.tableCell = function ( tableRow, column ) {
-            if ( tableRow != null ) {
-               return tableRow[column.key];
-            }
-         };
       },
 
       getColumnLabels () {
