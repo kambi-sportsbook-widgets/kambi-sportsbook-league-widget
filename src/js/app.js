@@ -37,7 +37,7 @@
 
                   // Calculate the height based on the rows plus the header and footer divs
                   var rowHeight = 45;
-                  var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 84;
+                  var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 59 + 45;
 
                   CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
                });
