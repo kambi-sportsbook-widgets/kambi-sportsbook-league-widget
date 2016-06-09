@@ -1,13 +1,14 @@
 {
    "League table": "League Table",
-   "position": "Position",
-   "participantName": "Participant name",
-   "gamesPlayed": "Games Played",
-   "wins": "Wins",
-   "draws": "Draws",
-   "losses": "Losses",
-   "goalsFor": "Goals for",
-   "goalsAgainst": "Goals against",
-   "goalsDifference": "Difference",
-   "points": "Points"
+   "position": "Sijoitus",
+   "participantName": "Joukkueen nimi",
+   "gamesPlayed": "Pelatut pelit",
+   "wins": "Voitot",
+   "draws": "Tasapelit",
+   "losses": "Häviöt",
+   "goalsFor": "Joukkueen tekemät maalit",
+   "goalsAgainst": "Joukkueen päästämät maalit",
+   "goalsDifference": "Maaliero",
+   "points": "Pisteet",
+   "Last updated": "Päivitetty viimeksi"
 }

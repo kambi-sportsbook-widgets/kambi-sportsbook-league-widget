@@ -1,13 +1,14 @@
 {
    "League table": "League Table",
-   "position": "Position",
-   "participantName": "Participant name",
-   "gamesPlayed": "Games Played",
-   "wins": "Wins",
-   "draws": "Draws",
-   "losses": "Losses",
-   "goalsFor": "Goals for",
-   "goalsAgainst": "Goals against",
-   "goalsDifference": "Difference",
-   "points": "Points"
+   "position": "Helyezés",
+   "participantName": "Csapat neve",
+   "gamesPlayed": "Lejátszott mérkőzések",
+   "wins": "Győzelem",
+   "draws": "Döntetlen",
+   "losses": "Vereség",
+   "goalsFor": "Lőtt gólok száma",
+   "goalsAgainst": "Kapott gólok száma",
+   "goalsDifference": "Gólkülönbség",
+   "points": "Pontszám",
+   "Last updated": "Legutóbbi frissítés"
 }

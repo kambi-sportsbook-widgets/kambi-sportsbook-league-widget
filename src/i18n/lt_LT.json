@@ -1,13 +1,14 @@
 {
    "League table": "League Table",
-   "position": "Position",
-   "participantName": "Participant name",
-   "gamesPlayed": "Games Played",
-   "wins": "Wins",
-   "draws": "Draws",
-   "losses": "Losses",
-   "goalsFor": "Goals for",
-   "goalsAgainst": "Goals against",
-   "goalsDifference": "Difference",
-   "points": "Points"
+   "position": "Pozicija",
+   "participantName": "Dalyvio pavadinimas",
+   "gamesPlayed": "Sužaista rungtynių",
+   "wins": "Pergalės",
+   "draws": "Lygiosios",
+   "losses": "Pralaimėjimai",
+   "goalsFor": "Pelnyti įvarčiai",
+   "goalsAgainst": "Praleisti įvarčiai",
+   "goalsDifference": "Skirtumas",
+   "points": "Taškai",
+   "Last updated": "Paskutinis atnaujinimas"
 }

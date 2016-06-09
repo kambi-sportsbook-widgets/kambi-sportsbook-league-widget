@@ -1,13 +1,14 @@
 {
    "League table": "League Table",
-   "position": "Position",
-   "participantName": "Participant name",
-   "gamesPlayed": "Games Played",
-   "wins": "Wins",
-   "draws": "Draws",
-   "losses": "Losses",
-   "goalsFor": "Goals for",
-   "goalsAgainst": "Goals against",
-   "goalsDifference": "Difference",
-   "points": "Points"
+   "position": "Положение",
+   "participantName": "Название участника",
+   "gamesPlayed": "Сыгранные игры",
+   "wins": "Выигрыши",
+   "draws": "Ничьи",
+   "losses": "Поражения",
+   "goalsFor": "Забитые голы",
+   "goalsAgainst": "Пропущенные голы",
+   "goalsDifference": "Разница",
+   "points": "Очки",
+   "Last updated": "Последнее обновление"
 }
