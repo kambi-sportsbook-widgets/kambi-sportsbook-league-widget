@@ -33,7 +33,7 @@
          CoreLibrary.widgetModule.setWidgetHeight(450);
 
          // for testing:
-         CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
+         // CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
 
          if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
             CoreLibrary.statisticsModule
