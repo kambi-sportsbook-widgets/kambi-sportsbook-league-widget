@@ -4,7 +4,7 @@
    var LeagueTable = CoreLibrary.Component.subclass({
       defaultArgs: {
          updatedTime: '',
-         headerDefaultTitle: ''
+         title: null
       },
 
       constructor () {
@@ -33,12 +33,23 @@
          CoreLibrary.widgetModule.setWidgetHeight(450);
 
          // for testing:
-         // CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
+         CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
 
          if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
             CoreLibrary.statisticsModule
                .getStatistics('leaguetable', CoreLibrary.pageInfo.leaguePaths[0])
                .then(( data ) => {
+                  if (this.scope.args.title == null) {
+                     // getting the title from the offering api
+                     CoreLibrary.offeringModule.getGroup(data.eventGroupId)
+                        .then((groupData) => {
+                           this.scope.title = groupData.group.name;
+                           // rerenders the header
+                           this.getColumnLabels();
+                        });
+                  } else {
+                     this.scope.title = this.scope.args.title;
+                  }
                   var rows = [], date = new Date(data.updated);
                   data.leagueTableRows.forEach(( row ) => {
                      row.goalsDifference = row.goalsFor - row.goalsAgainst;
@@ -60,6 +71,8 @@
       },
 
       getColumnLabels () {
+         // forces rerender when this function is invoked
+         this.scope.columnLabels = null;
          this.scope.columnLabels = [
             {
                key: 'position',
