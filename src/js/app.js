@@ -4,7 +4,8 @@
    var LeagueTable = CoreLibrary.Component.subclass({
       defaultArgs: {
          updatedTime: '',
-         title: null
+         title: null,
+         filter: null // if null will use oreLibrary.pageInfo.leaguePaths
       },
 
       constructor () {
@@ -32,42 +33,55 @@
 
          CoreLibrary.widgetModule.setWidgetHeight(450);
 
+         let filter;
+
          // for testing:
-         // CoreLibrary.pageInfo.leaguePaths = ['football/england/premier_league/'];
-
-         if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
-            CoreLibrary.statisticsModule
-               .getStatistics('leaguetable', CoreLibrary.pageInfo.leaguePaths[0])
-               .then(( data ) => {
-                  if (this.scope.args.title == null) {
-                     // getting the title from the offering api
-                     CoreLibrary.offeringModule.getGroup(data.eventGroupId)
-                        .then((groupData) => {
-                           this.scope.title = groupData.group.name;
-                           // rerenders the header
-                           this.getColumnLabels();
-                        });
-                  } else {
-                     this.scope.title = this.scope.args.title;
-                  }
-                  var rows = [], date = new Date(data.updated);
-                  data.leagueTableRows.forEach(( row ) => {
-                     row.goalsDifference = row.goalsFor - row.goalsAgainst;
-                     rows.push(row);
-                  });
-                  this.scope.leagueTableRows = rows;
-                  this.scope.args.updatedTime = date;
-
-                  // Calculate the height based on the rows plus the header and footer divs
-                  var rowHeight = 45;
-                  var calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 59 + 45;
-
-                  CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
-               });
+         // filter = 'football/england/premier_league/';
+         if (this.scope.args.filter != null) {
+            filter = this.scope.args.filter;
+         } else if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
+            filter = CoreLibrary.pageInfo.leaguePaths[0];
          } else {
             CoreLibrary.widgetModule.removeWidget();
          }
 
+         if (this.scope.args.title == null) {
+            // getting the title from the offering api
+            CoreLibrary.offeringModule.getEventsByFilter(filter)
+               .then((response) => {
+                  if (Array.isArray(response.events) &&
+                        response.events.length > 0 &&
+                        Array.isArray(response.events[0].event.path)) {
+                     let path = response.events[0].event.path;
+                     if (path.length >= 3) {
+                        this.scope.title = path[2].name;
+                     } else if (path.length >= 1) {
+                        this.scope.title = path[0].name;
+                     }
+                     // rerenders the header
+                     this.getColumnLabels();
+                  }
+               });
+         } else {
+            this.scope.title = this.scope.args.title;
+         }
+         CoreLibrary.statisticsModule
+            .getStatistics('leaguetable', filter)
+            .then(( data ) => {
+               const rows = [], date = new Date(data.updated);
+               data.leagueTableRows.forEach(( row ) => {
+                  row.goalsDifference = row.goalsFor - row.goalsAgainst;
+                  rows.push(row);
+               });
+               this.scope.leagueTableRows = rows;
+               this.scope.args.updatedTime = date;
+
+               // Calculate the height based on the rows plus the header and footer divs
+               const rowHeight = 45;
+               const calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 59 + 45;
+
+               CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
+            });
       },
 
       getColumnLabels () {
