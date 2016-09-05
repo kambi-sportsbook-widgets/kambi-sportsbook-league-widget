@@ -15,8 +15,8 @@
       "changelog": "latest",
       "gulp": "^3.9.0",
       "require-dir": "^0.3.0",
-      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#v2.9.0",
-      "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v1.4.3"
+      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#v2.11.2",
+      "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v1.4.5"
    },
    "scripts": {
       "changelog": "changelog kambi-sportsbook-widgets/league-table-widget all -m > CHANGELOG.md",

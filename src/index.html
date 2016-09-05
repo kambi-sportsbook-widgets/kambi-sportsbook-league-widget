@@ -33,7 +33,7 @@
    <!-- endbuild -->
 </head>
 
-<body class="kw-body KambiWidget-font" style="{{defaultArgs.style}}" rv-cloak>
+<body class="kw-body KambiWidget-font" style="{{defaultArgs.style}}" rv-cloak="loaded">
 <div id="main" class="kw-card KambiWidget-card-background-color KambiWidget-card-text-color l-flexbox l-vertical l-expander">
 
    <!--Table header-->
@@ -56,7 +56,6 @@
 
       <!--Table body-->
       <div class="kw-table-item KambiWidget-card-border-color KambiWidget-card-background-color--hoverable l-flexbox l-horizontal l-align-center  l-pl-16 l-pr-16 l-pt-6 l-pb-6"
-           rv-anim-stagger="index"
            rv-each-row="leagueTableRows">
          <div rv-data-item-attr="column.key" rv-title="column.key | translate"
               class="l-flex-1 text-truncate"

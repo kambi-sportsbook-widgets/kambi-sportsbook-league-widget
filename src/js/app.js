@@ -5,7 +5,7 @@
       defaultArgs: {
          updatedTime: '',
          title: null,
-         filter: null // if null will use oreLibrary.pageInfo.leaguePaths
+         filter: null // if null will use CoreLibrary.pageInfo.leaguePaths
       },
 
       constructor () {
@@ -32,11 +32,10 @@
          CoreLibrary.widgetModule.enableWidgetTransition(true);
 
          CoreLibrary.widgetModule.setWidgetHeight(450);
-
          let filter;
 
          // for testing:
-         // filter = 'football/england/premier_league/';
+         // this.scope.args.filter = 'football/england/premier_league/';
          if (this.scope.args.filter != null) {
             filter = this.scope.args.filter;
          } else if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
@@ -45,9 +44,10 @@
             CoreLibrary.widgetModule.removeWidget();
          }
 
+         let promises = [];
          if (this.scope.args.title == null) {
             // getting the title from the offering api
-            CoreLibrary.offeringModule.getEventsByFilter(filter)
+            promises.push(CoreLibrary.offeringModule.getEventsByFilter(filter)
                .then((response) => {
                   if (Array.isArray(response.events) &&
                         response.events.length > 0 &&
@@ -61,12 +61,12 @@
                      // rerenders the header
                      this.getColumnLabels();
                   }
-               });
+               }));
          } else {
             this.scope.title = this.scope.args.title;
          }
-         CoreLibrary.statisticsModule
-            .getStatistics('leaguetable', filter)
+         promises.push(CoreLibrary.statisticsModule
+            .getLeagueTableStatistics(filter)
             .then(( data ) => {
                const rows = [], date = new Date(data.updated);
                data.leagueTableRows.forEach(( row ) => {
@@ -81,7 +81,12 @@
                const calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 59 + 45;
 
                CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
-            });
+            }));
+
+         this.scope.loaded = false;
+         Promise.all(promises).then(() => {
+            this.scope.loaded = true;
+         });
       },
 
       getColumnLabels () {
