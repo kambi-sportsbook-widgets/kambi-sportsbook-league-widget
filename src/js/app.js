@@ -2,22 +2,10 @@
    'use strict';
 
    /**
-    * Participant row height
-    * @type {number}
-    */
-   const ROW_HEIGHT = 45;
-
-   /**
     * Widget header height
     * @type {number}
     */
    const HEADER_HEIGHT = 59;
-
-   /**
-    * Widget footer height
-    * @type {number}
-    */
-   const FOOTER_HEIGHT = 45;
 
    /**
     * Widget default height
@@ -164,6 +152,18 @@
 
          this.scope.columnLabels = COLUMN_LABELS;
 
+         this.scope.toggle = () => {
+            if (!!this.hidden) {
+               CoreLibrary.widgetModule.adaptWidgetHeight();
+               document.getElementById('main').classList.remove('hidden');
+            } else {
+               CoreLibrary.widgetModule.setWidgetHeight(HEADER_HEIGHT);
+               document.getElementById('main').classList.add('hidden');
+            }
+
+            this.hidden = !this.hidden;
+         };
+
          const filter = this.getFilter();
 
          if (filter === null) {
@@ -191,8 +191,7 @@
             this.scope.columnLabels = COLUMN_LABELS;
 
             // recalculate and update widget height
-            const calculatedHeight = this.scope.participants.length * ROW_HEIGHT + HEADER_HEIGHT + FOOTER_HEIGHT;
-            CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
+            CoreLibrary.widgetModule.adaptWidgetHeight();
 
             this.scope.loaded = true;
          });

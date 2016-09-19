@@ -27,9 +27,10 @@ __`client-widgets.js`__
 ### The widget accepts the following arguments/s:
 1. `filter` - string - __REQUIRED__ - The league filter
 2. `criterionId` - number - __REQUIRED__ - Criterion identifier for bet offers to be matched against
-3. `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
-4. `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
-5. `headerDefaultTitle` - string - defaults to 'League table' - The default title of the widget
+3. -- not implemented yet -- `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
+4. -- not implemented yet -- `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
+5. `title` - string - Forces title of the widget
+6. `widgetTrackingName` - string - defaults to 'gm-league-table-widget' - tracking name for analytics purposes
 
 
 ### To add specific locale strings to be compiled add the following to the buildparameters.json.

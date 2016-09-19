@@ -69,3 +69,11 @@ header {
 [data-item-attr="betOffer"] {
    text-align: center;
 }
+
+.hidden header [data-item-attr] {
+   display: none;
+}
+
+.hidden header [data-item-attr="position"] {
+   display: block;
+}
