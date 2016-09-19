@@ -13,7 +13,8 @@ __`client-widgets.js`__
     "order": 1,
     "widgetId": "League widget",
     "args": {
-        "offering": "offering"
+        "filter": "/football/england/premier_league/",
+        "criterionId": 1001221607,
         "updatedTime": "08:00 GMT",
         "style": "padding-top: 12px;",
         "headerDefaultTitle": "Premier League 2015/16"
@@ -24,10 +25,11 @@ __`client-widgets.js`__
 ```
 
 ### The widget accepts the following arguments/s:
-1. `offering` - string - __REQUIRED__ - The offering provided by Kambi
-2. `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
-3. `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
-4. `headerDefaultTitle` - string - defaults to 'League table' - The default title of the widget
+1. `filter` - string - __REQUIRED__ - The league filter
+2. `criterionId` - number - __REQUIRED__ - Criterion identifier for bet offers to be matched against
+3. `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
+4. `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
+5. `headerDefaultTitle` - string - defaults to 'League table' - The default title of the widget
 
 
 ### To add specific locale strings to be compiled add the following to the buildparameters.json.

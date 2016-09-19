@@ -49,6 +49,12 @@
                   {title}
                </span>
       </div>
+      <div rv-each-betoffer="betOffers"
+           class="l-flex-2 l-ml-6"
+           rv-title="betoffer.betOfferType.name"
+           data-item-attr="betOffer">
+           {betoffer.betOfferType.name}
+      </div>
    </header>
 
    <!--Main-->
@@ -56,15 +62,21 @@
 
       <!--Table body-->
       <div class="kw-table-item KambiWidget-card-border-color KambiWidget-card-background-color--hoverable l-flexbox l-horizontal l-align-center  l-pl-16 l-pr-16 l-pt-6 l-pb-6"
-           rv-each-row="leagueTableRows">
+           rv-each-row="participants">
          <div rv-data-item-attr="column.key" rv-title="column.key | translate"
               class="l-flex-1 text-truncate"
               rv-each-column="columnLabels"
               ng-if="column.key != 'participantId'">
               {row | tableCell column}
          </div>
+         <outcome-component-no-label rv-each-outcome="row.outcomes"
+                                     outcome-attr="outcome"
+                                     event-attr="event"
+                                     data-item-attr="betOffer"
+                                     class="l-flexbox l-flex-2 l-ml-6">
+         </outcome-component-no-label>
       </div>
-      <div ng-show="args.updatedTime" class="kw-table-item l-flexbox l-align-center l-pl-16 l-pr-16 l-pt-6 l-pb-6">{'Last updated' | translate}: {args.updatedTime}</div>
+      <div ng-show="updated" class="kw-table-item l-flexbox l-align-center l-pl-16 l-pr-16 l-pt-6 l-pb-6">{'Last updated' | translate}: {updated}</div>
    </main>
 </div>
 
@@ -75,8 +87,10 @@
 <script src="/node_modules/widget-core-library/src/transpiled/js/Module/offeringModule.js"></script>
 <script src="/node_modules/widget-core-library/src/transpiled/js/Module/statisticsModule.js"></script>
 <script src="/node_modules/widget-core-library/src/transpiled/js/Module/translationModule.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Module/utilModule.js"></script>
 <script src="/node_modules/widget-core-library/src/transpiled/js/Component/Component.js"></script>
 <script src="/node_modules/widget-core-library/src/transpiled/js/Component/PaginationComponent/PaginationComponent.js"></script>
+<script src="/node_modules/widget-core-library/src/transpiled/js/Component/OutcomeComponent/OutcomeComponent.js"></script>
 <script src="transpiled/js/app.js"></script>
 <!-- endbuild -->
 

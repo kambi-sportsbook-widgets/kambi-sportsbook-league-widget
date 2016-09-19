@@ -1,19 +1,154 @@
 (function () {
    'use strict';
 
-   var LeagueTable = CoreLibrary.Component.subclass({
+   /**
+    * Participant row height
+    * @type {number}
+    */
+   const ROW_HEIGHT = 45;
+
+   /**
+    * Widget header height
+    * @type {number}
+    */
+   const HEADER_HEIGHT = 59;
+
+   /**
+    * Widget footer height
+    * @type {number}
+    */
+   const FOOTER_HEIGHT = 45;
+
+   /**
+    * Widget default height
+    * @type {number}
+    */
+   const DEFAULT_HEIGHT = 450;
+
+   /**
+    * Column labels map
+    * @type {Object[]}
+    */
+   const COLUMN_LABELS = [
+      {key: 'position', value: 'Pos'},
+      {key: 'participantName', value: 'Club'},
+      {key: 'gamesPlayed', value: 'P'},
+      {key: 'wins', value: 'W'},
+      {key: 'draws', value: 'D'},
+      {key: 'losses', value: 'L'},
+      {key: 'goalsFor', value: 'Gf'},
+      {key: 'goalsAgainst', value: 'Ga'},
+      {key: 'goalsDifference', value: '+/-'},
+      {key: 'points', value: 'Pts'}
+   ];
+
+   const LeagueTable = CoreLibrary.Component.subclass({
       defaultArgs: {
+         filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
+         criterionId: null,
          updatedTime: '',
          title: null,
-         filter: null // if null will use CoreLibrary.pageInfo.leaguePaths
+         widgetTrackingName: 'gm-league-table-widget'
       },
 
       constructor () {
          CoreLibrary.Component.apply(this, arguments);
       },
 
+      /**
+       * Returns events filter.
+       * @returns {string}
+       */
+      getFilter () {
+         if (this.scope.args.filter != null) {
+            return this.scope.args.filter;
+         }
+
+         if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
+            return CoreLibrary.pageInfo.leaguePaths[0];
+         }
+
+         return null;
+      },
+
+      /**
+       * Returns proper widget title.
+       * @param {object} event Fetched event object
+       * @returns {string}
+       */
+      getTitle (event) {
+         if (this.scope.args.title) {
+            return this.scope.args.title;
+         }
+
+         const path = event.event.path;
+
+         if (path.length >= 3) {
+            return path[2].name;
+         } else if (path.length >= 1) {
+            return path[0].name;
+         }
+      },
+
+      /**
+       * Fetches competition event for given filter and criterion identifier.
+       * @param {String} filter
+       * @returns {Promise.<Object>}
+       */
+      getCompetitionEvent (filter) {
+         const criterionId = parseInt(this.scope.args.criterionId);
+
+         if (Number.isNaN(criterionId)) {
+            throw new Error('criterionId not specified');
+         }
+
+         // modify filter to match only competitions
+         const competitionsFilter = (() => {
+            const parts = filter.split('/').filter(termKey => !!termKey);
+
+            for (let i = 0; i < 4 - parts.length; i++) {
+               parts.push('all');
+            }
+
+            parts.push('competitions');
+
+            return parts.join('/');
+         })();
+
+         // fetch competitions for previously prepared filter
+         return CoreLibrary.offeringModule.getEventsByFilter(competitionsFilter)
+            .then(response => {
+               if (!response || !Array.isArray(response.events)) {
+                  throw new Error('Invalid response from Kambi API');
+               }
+
+               // search for event which has a betOffer with given criterion identifier
+               return response.events.find((ev) => {
+                  return ev.event.type === 'ET_COMPETITION' &&
+                     ev.betOffers.find((bo) => bo.criterion.id === criterionId);
+               });
+            })
+            .then(event => {
+               if (event === null) {
+                  throw new Error(`Competition not found for filter ${filter} and criterionId ${criterionId}`);
+               }
+
+               // following request will respond with all betOffers
+               return CoreLibrary.offeringModule.getEvent(event.event.id);
+            })
+            .then(event => {
+               if (event === null) {
+                  throw new Error('Event not found');
+               }
+
+               return event;
+            });
+      },
+
       init () {
-         this.scope.leagueTableRows = [];
+         CoreLibrary.setWidgetTrackingName(this.scope.args.widgetTrackingName);
+         CoreLibrary.widgetModule.enableWidgetTransition(true);
+         CoreLibrary.widgetModule.setWidgetHeight(DEFAULT_HEIGHT);
 
          this.view.binders['column-header-title'] = function ( el, column ) {
             if ( column.value !== 'Pos' && column.value !== 'participantName' ) {
@@ -27,108 +162,44 @@
             }
          };
 
-         this.getColumnLabels();
+         this.scope.columnLabels = COLUMN_LABELS;
 
-         CoreLibrary.widgetModule.enableWidgetTransition(true);
+         const filter = this.getFilter();
 
-         CoreLibrary.widgetModule.setWidgetHeight(450);
-         let filter;
-
-         // for testing:
-         // this.scope.args.filter = 'football/england/premier_league/';
-         if (this.scope.args.filter != null) {
-            filter = this.scope.args.filter;
-         } else if ( CoreLibrary.pageInfo.leaguePaths != null && CoreLibrary.pageInfo.leaguePaths.length === 1 ) {
-            filter = CoreLibrary.pageInfo.leaguePaths[0];
-         } else {
+         if (filter === null) {
             CoreLibrary.widgetModule.removeWidget();
          }
 
-         let promises = [];
-         if (this.scope.args.title == null) {
-            // getting the title from the offering api
-            promises.push(CoreLibrary.offeringModule.getEventsByFilter(filter)
-               .then((response) => {
-                  if (Array.isArray(response.events) &&
-                        response.events.length > 0 &&
-                        Array.isArray(response.events[0].event.path)) {
-                     let path = response.events[0].event.path;
-                     if (path.length >= 3) {
-                        this.scope.title = path[2].name;
-                     } else if (path.length >= 1) {
-                        this.scope.title = path[0].name;
-                     }
-                     // rerenders the header
-                     this.getColumnLabels();
-                  }
-               }));
-         } else {
-            this.scope.title = this.scope.args.title;
-         }
-         promises.push(CoreLibrary.statisticsModule
-            .getLeagueTableStatistics(filter)
-            .then(( data ) => {
-               const rows = [], date = new Date(data.updated);
-               data.leagueTableRows.forEach(( row ) => {
-                  row.goalsDifference = row.goalsFor - row.goalsAgainst;
-                  rows.push(row);
-               });
-               this.scope.leagueTableRows = rows;
-               this.scope.args.updatedTime = date;
+         Promise.all([
+            this.getCompetitionEvent(filter),
+            CoreLibrary.statisticsModule.getLeagueTableStatistics(filter)
+         ]).then(([event, statistics]) => {
+            const betOffers = event.betOffers.filter(bo => bo.criterion.id === this.scope.args.criterionId);
 
-               // Calculate the height based on the rows plus the header and footer divs
-               const rowHeight = 45;
-               const calculatedHeight = this.scope.leagueTableRows.length * rowHeight + 59 + 45;
+            this.scope.title = this.getTitle(event);
+            this.scope.updated = new Date(statistics.updated);
+            this.scope.event = event;
+            this.scope.betOffers = betOffers;
+            this.scope.participants = statistics.leagueTableRows.map(row => {
+               row.goalsDifference = row.goalsFor - row.goalsAgainst;
+               row.outcomes = betOffers.map(bo => bo.outcomes.find(oc => oc.participantId === row.participantId));
+               return row;
+            });
 
-               CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
-            }));
+            // re-render column titles
+            this.scope.columnLabels = [];
+            this.scope.columnLabels = COLUMN_LABELS;
 
-         this.scope.loaded = false;
-         Promise.all(promises).then(() => {
+            // recalculate and update widget height
+            const calculatedHeight = this.scope.participants.length * ROW_HEIGHT + HEADER_HEIGHT + FOOTER_HEIGHT;
+            CoreLibrary.widgetModule.setWidgetHeight(calculatedHeight);
+
             this.scope.loaded = true;
          });
-      },
-
-      getColumnLabels () {
-         // forces rerender when this function is invoked
-         this.scope.columnLabels = null;
-         this.scope.columnLabels = [
-            {
-               key: 'position',
-               value: 'Pos'
-            }, {
-               key: 'participantName',
-               value: 'Club'
-            }, {
-               key: 'gamesPlayed',
-               value: 'P'
-            }, {
-               key: 'wins',
-               value: 'W'
-            }, {
-               key: 'draws',
-               value: 'D'
-            }, {
-               key: 'losses',
-               value: 'L'
-            }, {
-               key: 'goalsFor',
-               value: 'Gf'
-            }, {
-               key: 'goalsAgainst',
-               value: 'Ga'
-            }, {
-               key: 'goalsDifference',
-               value: '+/-'
-            }, {
-               key: 'points',
-               value: 'Pts'
-            }
-         ];
       }
    });
 
-   var leagueTable = new LeagueTable({
+   const leagueTable = new LeagueTable({
       rootElement: 'html'
    });
 
