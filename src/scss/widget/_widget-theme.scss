@@ -19,6 +19,12 @@ header {
       visibility: hidden;
       @include flex(1);
    }
+
+   @include device((xss, xs, ss)) {
+      [data-item-attr="position"] {
+         @include flex(4);
+      }
+   }
 }
 
 .kw-table-item {
@@ -34,6 +40,18 @@ header {
    [data-item-attr="participantName"] {
       @include flex(7);
    }
+
+   @include device((xss, xs, ss)) {
+      [data-item-attr="participantName"] {
+         @include flex(4);
+      }
+   }
+}
+
+@include device((xss, xs, ss)) {
+   [data-item-attr="betOffer"] {
+      @include flex(1.5);
+   }
 }
 
 .kw-table-date {
@@ -42,12 +60,12 @@ header {
 
 [data-item-attr="goalsFor"],
 [data-item-attr="goalsAgainst"] {
-   @extend .hidden-ss;
+   @extend .hidden-sm;
 }
 
 [data-item-attr="goalsFor"],
 [data-item-attr="goalsAgainst"] {
-   @extend .hidden-xs;
+   @extend .hidden-ss;
 }
 
 [data-item-attr="wins"],
@@ -55,6 +73,7 @@ header {
 [data-item-attr="losses"],
 [data-item-attr="goalsFor"],
 [data-item-attr="goalsAgainst"] {
+   @extend .hidden-xs;
    @extend .hidden-xss;
 }
 
