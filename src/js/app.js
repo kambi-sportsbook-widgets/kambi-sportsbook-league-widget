@@ -86,10 +86,6 @@
       getCompetitionEvent (filter) {
          const criterionId = parseInt(this.scope.args.criterionId);
 
-         if (Number.isNaN(criterionId)) {
-            throw new Error('criterionId not specified');
-         }
-
          // modify filter to match only competitions
          const competitionsFilter = (() => {
             const parts = filter.split('/').filter(termKey => !!termKey);
@@ -110,7 +106,12 @@
                   throw new Error('Invalid response from Kambi API');
                }
 
-               // search for event which has a betOffer with given criterion identifier
+               // if criterion identifier is not set just find first event which is a competition
+               if (Number.isNaN(criterionId)) {
+                  return response.events.find((ev) => ev.event.type === 'ET_COMPETITION');
+               }
+
+               // search for event which is a competition and has a betOffer with given criterion identifier
                return response.events.find((ev) => {
                   return ev.event.type === 'ET_COMPETITION' &&
                      ev.betOffers.find((bo) => bo.criterion.id === criterionId);
@@ -118,7 +119,7 @@
             })
             .then(event => {
                if (event === null) {
-                  throw new Error(`Competition not found for filter ${filter} and criterionId ${criterionId}`);
+                  throw new Error(`Competition not found for filter=${filter} and criterionId=${criterionId}`);
                }
 
                // following request will respond with all betOffers
@@ -174,7 +175,11 @@
             this.getCompetitionEvent(filter),
             CoreLibrary.statisticsModule.getLeagueTableStatistics(filter)
          ]).then(([event, statistics]) => {
-            const betOffers = event.betOffers.filter(bo => bo.criterion.id === this.scope.args.criterionId);
+            const criterionId = parseInt(this.scope.args.criterionId);
+
+            // don't look for bet offers if criterion identifier is not set
+            const betOffers = Number.isNaN(criterionId) ? []
+               : event.betOffers.filter(bo => bo.criterion.id === this.scope.args.criterionId);
 
             this.scope.title = this.getTitle(event);
             this.scope.updated = new Date(statistics.updated);

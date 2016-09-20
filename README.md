@@ -26,7 +26,7 @@ __`client-widgets.js`__
 
 ### The widget accepts the following arguments/s:
 1. `filter` - string - __REQUIRED__ - The league filter
-2. `criterionId` - number - __REQUIRED__ - Criterion identifier for bet offers to be matched against
+2. `criterionId` - number - Criterion identifier for bet offers to be matched against
 3. -- not implemented yet -- `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
 4. -- not implemented yet -- `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
 5. `title` - string - Forces title of the widget
