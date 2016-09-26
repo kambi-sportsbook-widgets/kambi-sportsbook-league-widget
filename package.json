@@ -10,15 +10,17 @@
       "type": "git",
       "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
    },
-   "dependencies": {},
+   "dependencies": {
+      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#KSBWI-710"
+   },
    "devDependencies": {
       "changelog": "latest",
-      "gulp": "^3.9.0",
       "require-dir": "^0.3.0",
-      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#v2.13.0",
-      "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v1.4.5"
+      "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#KSBWI-710"
    },
    "scripts": {
+      "build:test": "webpack --config ./node_modules/widget-build-tools/default.js",
+      "build:dev": "webpack-dev-server --hot --inline --config ./node_modules/widget-build-tools/default.js",
       "changelog": "changelog kambi-sportsbook-widgets/league-table-widget all -m > CHANGELOG.md",
       "test": "echo \"Error: no test specified\" && exit 1"
    },

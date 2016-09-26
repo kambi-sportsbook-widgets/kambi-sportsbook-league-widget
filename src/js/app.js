@@ -1,4 +1,8 @@
-(function () {
+import CoreLibrary from 'widget-core-library';
+
+CoreLibrary.development = true;
+
+export default (function () {
    'use strict';
 
    /**
@@ -18,16 +22,16 @@
     * @type {Object[]}
     */
    const COLUMN_LABELS = [
-      {key: 'position', value: 'Pos'},
-      {key: 'participantName', value: 'Club'},
-      {key: 'gamesPlayed', value: 'P'},
-      {key: 'wins', value: 'W'},
-      {key: 'draws', value: 'D'},
-      {key: 'losses', value: 'L'},
-      {key: 'goalsFor', value: 'Gf'},
-      {key: 'goalsAgainst', value: 'Ga'},
-      {key: 'goalsDifference', value: '+/-'},
-      {key: 'points', value: 'Pts'}
+      { key: 'position', value: 'Pos' },
+      { key: 'participantName', value: 'Club' },
+      { key: 'gamesPlayed', value: 'P' },
+      { key: 'wins', value: 'W' },
+      { key: 'draws', value: 'D' },
+      { key: 'losses', value: 'L' },
+      { key: 'goalsFor', value: 'Gf' },
+      { key: 'goalsAgainst', value: 'Ga' },
+      { key: 'goalsDifference', value: '+/-' },
+      { key: 'points', value: 'Pts' }
    ];
 
    const LeagueTable = CoreLibrary.Component.subclass({
@@ -84,7 +88,7 @@
        * @returns {Promise.<Object>}
        */
       getCompetitionEvent (filter) {
-         const criterionId = parseInt(this.scope.args.criterionId);
+         const criterionId = parseInt(this.scope.args.criterionId, 10);
 
          // modify filter to match only competitions
          const competitionsFilter = (() => {
@@ -101,23 +105,23 @@
 
          // fetch competitions for previously prepared filter
          return CoreLibrary.offeringModule.getEventsByFilter(competitionsFilter)
-            .then(response => {
+            .then((response) => {
                if (!response || !Array.isArray(response.events)) {
                   throw new Error('Invalid response from Kambi API');
                }
 
                // if criterion identifier is not set just find first event which is a competition
                if (Number.isNaN(criterionId)) {
-                  return response.events.find((ev) => ev.event.type === 'ET_COMPETITION');
+                  return response.events.find(ev => ev.event.type === 'ET_COMPETITION');
                }
 
                // search for event which is a competition and has a betOffer with given criterion identifier
                return response.events.find((ev) => {
                   return ev.event.type === 'ET_COMPETITION' &&
-                     ev.betOffers.find((bo) => bo.criterion.id === criterionId);
+                     ev.betOffers.find(bo => bo.criterion.id === criterionId);
                });
             })
-            .then(event => {
+            .then((event) => {
                if (event === null) {
                   throw new Error(`Competition not found for filter=${filter} and criterionId=${criterionId}`);
                }
@@ -125,7 +129,7 @@
                // following request will respond with all betOffers
                return CoreLibrary.offeringModule.getEvent(event.event.id);
             })
-            .then(event => {
+            .then((event) => {
                if (event === null) {
                   throw new Error('Event not found');
                }
@@ -154,7 +158,7 @@
          this.scope.columnLabels = COLUMN_LABELS;
 
          this.scope.toggle = () => {
-            if (!!this.hidden) {
+            if (this.hidden) {
                CoreLibrary.widgetModule.adaptWidgetHeight();
                document.getElementById('main').classList.remove('hidden');
             } else {
@@ -175,7 +179,7 @@
             this.getCompetitionEvent(filter),
             CoreLibrary.statisticsModule.getLeagueTableStatistics(filter)
          ]).then(([event, statistics]) => {
-            const criterionId = parseInt(this.scope.args.criterionId);
+            const criterionId = parseInt(this.scope.args.criterionId, 10);
 
             // don't look for bet offers if criterion identifier is not set
             const betOffers = Number.isNaN(criterionId) ? []
@@ -185,7 +189,7 @@
             this.scope.updated = new Date(statistics.updated);
             this.scope.event = event;
             this.scope.betOffers = betOffers;
-            this.scope.participants = statistics.leagueTableRows.map(row => {
+            this.scope.participants = statistics.leagueTableRows.map((row) => {
                row.goalsDifference = row.goalsFor - row.goalsAgainst;
                row.outcomes = betOffers.map(bo => bo.outcomes.find(oc => oc.participantId === row.participantId));
                return row;
@@ -207,4 +211,4 @@
       rootElement: 'html'
    });
 
-})();
+});
