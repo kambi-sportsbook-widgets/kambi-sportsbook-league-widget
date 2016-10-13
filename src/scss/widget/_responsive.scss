@@ -1,0 +1,61 @@
+//Responsive helpers
+
+// Function to return min and max values for media queries
+@function get-screen-size ($val) {
+   @each $value, $label in $screens {
+      @if $val == $label {
+         @if index($screens, ($value, $label)) == 1 {
+            @return (0, $value);
+         } @else {
+            $prev: nth($screens, index($screens, ($value, $label)) - 1);
+            @return (nth($prev, 1), $value);
+         }
+      }
+   }
+}
+
+// Iterates and prints media queries for each screen size
+@each $value, $label in $screens {
+
+   @if index($screens, ($value, $label)) == 1 {
+      @media screen and (max-width: $value - 1) {
+         .hidden-#{$label} {
+            display: none !important;
+         }
+      }
+   } @else {
+      $prev: nth($screens, index($screens, ($value, $label)) - 1);
+      @media screen and (min-width: nth($prev, 1)) and (max-width: $value - 1) {
+         .hidden-#{$label} {
+            display: none !important;
+         }
+      }
+   }
+
+}
+
+// Uses labels from $screens variable.
+// Screen sizes labels must be enclosed in parentheses
+// Example: @include device( (xs, xss, lg, ..) ) { ... }
+// Second mixin parameter will return a min/max media query for each screen size if passed
+@mixin device($screen-size-label, $type:'') {
+   @each $size in $screen-size-label {
+      $size: get-screen-size($size);
+      $min: nth($size, 1);
+      $max: nth($size, 2);
+
+      @if $type == 'min' {
+         @media (min-width: #{$max + 1}) {
+            @content;
+         }
+      } @else if $type == 'max' {
+         @media (max-width: #{$max}) {
+            @content;
+         }
+      } @else {
+         @media (min-width: #{$min}) and (max-width: #{$max}) {
+            @content;
+         }
+      }
+   }
+}

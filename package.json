@@ -11,18 +11,22 @@
       "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
    },
    "dependencies": {
-      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#KSBWI-710"
+      "react": "^15.3.2",
+      "react-dom": "^15.3.2",
+      "widget-components": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-components.git#master",
+      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#KSBWI-742"
    },
    "devDependencies": {
-      "changelog": "latest",
-      "require-dir": "^0.3.0",
       "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#KSBWI-710"
    },
    "scripts": {
-      "build:test": "webpack --config ./node_modules/widget-build-tools/default.js",
-      "build:dev": "webpack-dev-server --hot --inline --config ./node_modules/widget-build-tools/default.js",
-      "changelog": "changelog kambi-sportsbook-widgets/league-table-widget all -m > CHANGELOG.md",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "clean": "kambi-widgets-cli clean",
+      "prestart": "npm run clean",
+      "start": "kambi-widgets-cli start",
+      "prebuild": "npm run clean",
+      "build": "kambi-widgets-cli build",
+      "preversion": "kambi-widgets-cli preversion",
+      "postversion": "kambi-widgets-cli postversion"
    },
    "author": "Andrei Teodorescu <andrei@globalmouth.com",
    "license": "ISC",

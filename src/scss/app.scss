@@ -1,11 +1,10 @@
 //Main scss file
 
 //Included variables, mixins and layout
-@import '~widget-core-library/dist/scss/app-base-all.scss';
-@import '~widget-core-library/dist/scss/plugins/responsive';
-@import '~widget-core-library/dist/scss/plugins/animation';
+@import '~widget-core-library/dist/scss/core.scss';
 
 //Included widget related styles
+@import 'widget/responsive';
 @import 'widget/variables';
 @import 'widget/general';
 @import 'widget/widget-theme';

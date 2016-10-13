@@ -1,7 +1,3 @@
-import CoreLibrary from 'widget-core-library';
-
-CoreLibrary.development = true;
-
 export default (function () {
    'use strict';
 
@@ -36,8 +32,8 @@ export default (function () {
 
    const LeagueTable = CoreLibrary.Component.subclass({
       defaultArgs: {
-         filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
-         criterionId: null,
+         filter: '/football/england/premier_league', // if null will use CoreLibrary.pageInfo.leaguePaths
+         criterionId: 1001221607,
          updatedTime: '',
          title: null,
          widgetTrackingName: 'gm-league-table-widget'

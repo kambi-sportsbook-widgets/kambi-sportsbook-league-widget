@@ -13,55 +13,12 @@
    <meta name="apple-mobile-web-app-capable" content="yes">
    <meta name="apple-mobile-web-app-status-bar-style" content="black">
    <meta name="apple-mobile-web-app-title" content="">
-   <link rel="stylesheet" type="text/css" rv-href="widgetCss"/>
+   <!--link rel="stylesheet" type="text/css" rv-href="widgetCss"/-->
    <script src="https://c3-static.kambi.com/sb-mobileclient/widget-api/1.0.0.10/kambi-widget-api.js"></script>
 </head>
 
-<body class="kw-body KambiWidget-font" style="{{defaultArgs.style}}" rv-cloak="loaded">
-<div id="main" class="kw-card KambiWidget-card-background-color KambiWidget-card-text-color l-flexbox l-vertical l-expander">
-
-   <!--Table header-->
-   <header class="KambiWidget-header KambiWidget-font KambiWidget-card-border-color l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12" rv-on-click="toggle">
-      <div rv-data-item-attr="column.key"
-           rv-column-header-title="column"
-           class="l-flex-1 text-truncate"
-           rv-each-column="columnLabels">
-               <span rv-if="index | > 1">
-                  {column.value | translate}
-               </span>
-               <span rv-if="index | === 0">
-                  {title}
-               </span>
-      </div>
-      <div rv-each-betoffer="betOffers"
-           class="l-ml-6 l-flex-2 text-truncate"
-           rv-title="betoffer.betOfferType.name"
-           data-item-attr="betOffer">
-           {betoffer.betOfferType.name}
-      </div>
-   </header>
-
-   <!--Main-->
-   <main class="KambiWidget-font l-flexbox l-vertical l-flexed l-pack-start">
-
-      <!--Table body-->
-      <div class="kw-table-item KambiWidget-card-border-color KambiWidget-card-background-color--hoverable l-flexbox l-horizontal l-align-center  l-pl-16 l-pr-16 l-pt-6 l-pb-6"
-           rv-each-row="participants">
-         <div rv-data-item-attr="column.key"
-              rv-title="column.key | translate"
-              class="l-flex-1 text-truncate"
-              rv-each-column="columnLabels">
-              {row | tableCell column}
-         </div>
-         <outcome-component-no-label rv-each-outcome="row.outcomes"
-                                     outcome-attr="outcome"
-                                     event-attr="event"
-                                     data-item-attr="betOffer"
-                                     class="l-flexbox l-flex-2 l-ml-6">
-         </outcome-component-no-label>
-      </div>
-      <div class="kw-table-item l-flexbox l-align-center l-pl-16 l-pr-16 l-pt-6 l-pb-6">{'Last updated' | translate}: {updated}</div>
-   </main>
-</div>
+<!--style="{{defaultArgs.style}}"-->
+<body class="kw-body KambiWidget-font">
+   <div id="root"></div>
 </body>
 </html>
