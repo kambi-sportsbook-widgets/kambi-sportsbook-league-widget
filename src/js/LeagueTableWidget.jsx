@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { coreLibrary, offeringModule, widgetModule, statisticsModule } from 'widget-core-library';
-import { OutcomeComponent } from 'widget-components';
+import TableHeader from './TableHeader';
+import TableBody from './TableBody';
 
 /**
  * Widget header height
@@ -18,7 +19,7 @@ const DEFAULT_HEIGHT = 450;
  * Column labels map
  * @type {{key: string, value: string}[]}
  */
-const COLUMN_LABELS = [
+const COLUMNS = [
    { key: 'position', value: 'Pos' },
    { key: 'participantName', value: 'Club' },
    { key: 'gamesPlayed', value: 'P' },
@@ -33,6 +34,10 @@ const COLUMN_LABELS = [
 
 class LeagueTableWidget extends Component {
 
+   /**
+    * Widget constructor
+    * @param {object} props Widget properties
+    */
    constructor(props) {
       super(props);
 
@@ -42,12 +47,34 @@ class LeagueTableWidget extends Component {
 
       this.state = {
          participants: [],
-         betOffers: []
+         betOffers: [],
+         hidden: false
       };
    }
 
+   /**
+    * Called before mounting widget.
+    */
    componentWillMount() {
       this.refresh();
+   }
+
+   /**
+    * Called on property change.
+    */
+   componentWillReceiveProps() {
+      this.refresh();
+   }
+
+   /**
+    * Called just after finished rendering DOM.
+    */
+   componentDidUpdate() {
+      if (this.state.hidden) {
+         widgetModule.setWidgetHeight(HEADER_HEIGHT);
+      } else {
+         widgetModule.adaptWidgetHeight();
+      }
    }
 
    /**
@@ -141,6 +168,9 @@ class LeagueTableWidget extends Component {
       return null;
    }
 
+   /**
+    * Fetches data from the server and updates state.
+    */
    refresh() {
       const filter = this.filter;
 
@@ -152,15 +182,15 @@ class LeagueTableWidget extends Component {
          this.getCompetitionEvent(filter),
          statisticsModule.getLeagueTableStatistics(filter)
       ]).then(([event, statistics]) => {
-         const criterionId = parseInt(this.scope.args.criterionId, 10);
+         const criterionId = parseInt(this.props.args.criterionId, 10);
 
          // don't look for bet offers if criterion identifier is not set
          const betOffers = Number.isNaN(criterionId) ? []
-            : event.betOffers.filter(bo => bo.criterion.id === this.scope.args.criterionId);
+            : event.betOffers.filter(bo => bo.criterion.id === this.props.args.criterionId);
 
          this.setState({
             title: this.getTitle(event),
-            updated: new Date(statistics.updated),
+            updated: (new Date(statistics.updated)).toString(),
             event: event,
             betOffers: betOffers,
             participants: statistics.leagueTableRows.map((row) => {
@@ -169,84 +199,57 @@ class LeagueTableWidget extends Component {
                return row;
             })
          });
-
-         // recalculate and update widget height
-         widgetModule.adaptWidgetHeight(); /* @todo not sure if this works */
       });
    }
 
+   /**
+    * Hides or show widget.
+    */
    toggle() {
-      /* @todo make this work */
-      if (this.hidden) {
-         widgetModule.adaptWidgetHeight();
-         document.getElementById('main').classList.remove('hidden');
-      } else {
-         widgetModule.setWidgetHeight(HEADER_HEIGHT);
-         document.getElementById('main').classList.add('hidden');
-      }
-
-      this.hidden = !this.hidden;
+      this.setState({ hidden: !this.state.hidden });
    }
 
+   /**
+    * Renders widget.
+    * @returns {XML}
+    */
    render() {
+      const classList = [
+         'kw-card',
+         'KambiWidget-card-background-color',
+         'KambiWidget-card-text-color',
+         'l-flexbox',
+         'l-vertical',
+         'l-expander'
+      ];
+
+      if (this.state.hidden) {
+         classList.push('hidden');
+      }
+
       return (
-         <div id="main" className="kw-card KambiWidget-card-background-color KambiWidget-card-text-color l-flexbox l-vertical l-expander">
-            <header
-               className="KambiWidget-header KambiWidget-font KambiWidget-card-border-color l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12"
+         <div className={classList.join(' ')}>
+            <TableHeader
+               betOffers={this.state.betOffers}
+               columns={COLUMNS}
+               title={this.state.title}
                onClick={this.toggle.bind(this)}
-            >
-               {
-                  COLUMN_LABELS.map((column, i) => {
-                     return (
-                        <div className="l-flex-1 text-truncate">
-                           <span>{i > 0 ? column.value /* @todo translate */ : this.state.title}</span>
-                        </div>
-                     );
-                  })
-               }
-               {
-                  this.state.betOffers.map((betOffer) => {
-                     return (
-                        <div className="l-ml-6 l-flex-2 text-truncate" title={betOffer.betOfferType.name}>
-                           {betOffer.betOfferType.name}
-                        </div>
-                     );
-                  })
-               }
-            </header>
-            <main className="KambiWidget-font l-flexbox l-vertical l-flexed l-pack-start">
-               {
-                  this.state.participants.map((row) => {
-                     return (
-                        <div className="kw-table-item KambiWidget-card-border-color KambiWidget-card-background-color--hoverable l-flexbox l-horizontal l-align-center l-pl-16 l-pr-16 l-pt-6 l-pb-6">
-                           {
-                              COLUMN_LABELS.map((column) => {
-                                 return (
-                                    <div title={column.key} /* @todo translate */ className="l-flex-1 text-truncate">
-                                       {row ? row[column.key] : null}
-                                    </div>
-                                 );
-                              })
-                           }
-                           {
-                              row.outcomes.map((outcome) => {
-                                 /* @todo add class */
-                                 /* @todo resolve data-attr */
-                                 return <OutcomeComponent outcome={outcome} event={this.state.event} />
-                              })
-                           }
-                        </div>
-                     );
-                  })
-               }
-               <div className="kw-table-item l-flexbox l-align-center l-pl-16 l-pr-16 l-pt-6 l-pb-6">Last updated: {this.state.updated}</div>
-            </main>
+            />
+            <TableBody
+               columns={COLUMNS}
+               event={this.state.event}
+               participants={this.state.participants}
+               updated={this.state.updated}
+            />
          </div>
       );
    }
 }
 
 LeagueTableWidget.propTypes = {
+   /**
+    * Widget arguments
+    */
    args: React.PropTypes.object.isRequired
 };
 
