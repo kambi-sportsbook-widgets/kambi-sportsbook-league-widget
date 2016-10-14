@@ -1,34 +1,34 @@
 {
-   "name": "league-table-widget",
-   "version": "2.4.0",
-   "description": "",
-   "main": "dist/index.html",
-   "directories": {
-      "test": "test"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
-   },
-   "dependencies": {
-      "react": "^15.3.2",
-      "react-dom": "^15.3.2",
-      "widget-components": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-components.git#master",
-      "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#v3.1.0"
-   },
-   "devDependencies": {
-      "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v2.0.0"
-   },
-   "scripts": {
-      "clean": "kambi-widgets-cli clean",
-      "prestart": "npm run clean",
-      "start": "kambi-widgets-cli start",
-      "prebuild": "npm run clean",
-      "build": "kambi-widgets-cli build",
-      "preversion": "kambi-widgets-cli preversion",
-      "postversion": "kambi-widgets-cli postversion"
-   },
-   "author": "Andrei Teodorescu <andrei@globalmouth.com",
-   "license": "ISC",
-   "homepage": "https://github.com/kambi-sportsbook-widgets/league-table-widget#readme"
+  "name": "league-table-widget",
+  "version": "3.0.0",
+  "description": "",
+  "main": "dist/index.html",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "widget-components": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-components.git#master",
+    "widget-core-library": "git+ssh://git@github.com/kambi-sportsbook-widgets/widget-core-library.git#v3.1.0"
+  },
+  "devDependencies": {
+    "widget-build-tools": "git+ssh://git@github.com:kambi-sportsbook-widgets/widget-build-tools.git#v2.0.0"
+  },
+  "scripts": {
+    "clean": "kambi-widgets-cli clean",
+    "prestart": "npm run clean",
+    "start": "kambi-widgets-cli start",
+    "prebuild": "npm run clean",
+    "build": "kambi-widgets-cli build",
+    "preversion": "kambi-widgets-cli preversion",
+    "postversion": "kambi-widgets-cli postversion"
+  },
+  "author": "Andrei Teodorescu <andrei@globalmouth.com",
+  "license": "ISC",
+  "homepage": "https://github.com/kambi-sportsbook-widgets/league-table-widget#readme"
 }
