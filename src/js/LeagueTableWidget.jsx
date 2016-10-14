@@ -89,7 +89,7 @@ class LeagueTableWidget extends Component {
       const competitionsFilter = (() => {
          const parts = filter.split('/').filter(termKey => !!termKey);
 
-         for (let i = 0; i < 4 - parts.length; i++) {
+         for (let i = parts.length; i < 4; i++) {
             parts.push('all');
          }
 
@@ -117,7 +117,7 @@ class LeagueTableWidget extends Component {
             });
          })
          .then((event) => {
-            if (event === null) {
+            if (!event) {
                throw new Error(`Competition not found for filter=${filter} and criterionId=${criterionId}`);
             }
 
@@ -181,7 +181,8 @@ class LeagueTableWidget extends Component {
       Promise.all([
          this.getCompetitionEvent(filter),
          statisticsModule.getLeagueTableStatistics(filter)
-      ]).then(([event, statistics]) => {
+      ])
+      .then(([event, statistics]) => {
          const criterionId = parseInt(this.props.args.criterionId, 10);
 
          // don't look for bet offers if criterion identifier is not set
@@ -199,6 +200,10 @@ class LeagueTableWidget extends Component {
                return row;
             })
          });
+      })
+      .catch((error) => {
+         console.error(error);
+         widgetModule.removeWidget();
       });
    }
 
