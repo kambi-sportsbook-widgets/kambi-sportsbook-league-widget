@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { coreLibrary } from 'widget-core-library';
-import LeagueTableWidget from './LeagueTableWidget';
+import { coreLibrary, widgetModule } from 'widget-core-library';
+import LeagueTableWidget from './Components/LeagueTableWidget';
+import store from './Store/store';
 
 coreLibrary.init({
    filter: '/football/england/premier_league', // if null will use CoreLibrary.pageInfo.leaguePaths
@@ -10,9 +11,37 @@ coreLibrary.init({
    title: null,
    widgetTrackingName: 'gm-league-table-widget'
 })
+.then(() => {
+   const filter = (function() {
+      if (coreLibrary.args.filter != null) {
+         return coreLibrary.args.filter;
+      }
+
+      if (coreLibrary.pageInfo.leaguePaths != null && coreLibrary.pageInfo.leaguePaths.length === 1) {
+         return coreLibrary.pageInfo.leaguePaths[0];
+      }
+
+      throw new Error('No filter provided');
+   })();
+
+   return store.getData(filter, coreLibrary.args.criterionId);
+})
 .then(
-   () => {
-      ReactDOM.render(<LeagueTableWidget args={coreLibrary.args} />, document.getElementById('root'));
-   },
-   error => console.error(error)
-);
+   (data) => {
+      ReactDOM.render(
+         <LeagueTableWidget
+            updated={data.updated}
+            event={data.event}
+            betOffers={data.betOffers}
+            statistics={data.statistics}
+            widgetTrackingName={coreLibrary.args.widgetTrackingName}
+            title={coreLibrary.args.title}
+         />,
+         document.getElementById('root')
+      );
+   }
+)
+.catch((error) => {
+   console.error(error);
+   widgetModule.removeWidget();
+});
