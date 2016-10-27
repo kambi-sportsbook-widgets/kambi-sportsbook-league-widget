@@ -1,4 +1,4 @@
-import { offeringModule, statisticsModule } from 'widget-core-library';
+import { offeringModule, statisticsModule } from 'kambi-widget-core-library';
 
 /**
  * Fetches competition event for given filter and criterion identifier.

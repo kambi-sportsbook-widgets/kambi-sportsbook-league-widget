@@ -1,5 +1,5 @@
 import React from 'react';
-import { translationModule } from 'widget-core-library';
+import { translationModule } from 'kambi-widget-core-library';
 
 const TableBody = ({ children, updated }) => {
    const t = translationModule.getTranslation.bind(translationModule);

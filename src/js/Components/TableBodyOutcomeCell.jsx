@@ -1,10 +1,10 @@
 import React from 'react';
-import { OutcomeComponent } from 'widget-components';
+import { OutcomeButton } from 'kambi-widget-components';
 
 const TableBodyOutcomeCell = ({ outcome, event }) => {
    return (
       <div className="l-flexbox l-flex-2 l-ml-6" data-item-attr="betOffer">
-         <OutcomeComponent outcome={outcome} event={event} />
+         <OutcomeButton outcome={outcome} event={event} />
       </div>
    );
 };

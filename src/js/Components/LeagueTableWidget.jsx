@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { coreLibrary, widgetModule, translationModule } from 'widget-core-library';
+import { coreLibrary, widgetModule, translationModule } from 'kambi-widget-core-library';
 import TableHead from './TableHead';
 import TableHeadColumn from './TableHeadColumn';
 import TableHeadOutcomeColumn from './TableHeadOutcomeColumn';
@@ -49,9 +49,9 @@ class LeagueTableWidget extends Component {
    }
 
    /**
-    * Called before mounting widget.
+    * Called after mounting widget.
     */
-   componentWillMount() {
+   componentDidMount() {
       widgetModule.adaptWidgetHeight();
    }
 
@@ -67,6 +67,7 @@ class LeagueTableWidget extends Component {
     * Called just after finished rendering DOM.
     */
    componentDidUpdate() {
+      console.warn(this.props.statistics.length);
       if (this.state.hidden) {
          widgetModule.setWidgetHeight(HEADER_HEIGHT);
       } else {
