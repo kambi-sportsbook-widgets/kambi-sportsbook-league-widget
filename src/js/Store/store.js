@@ -74,7 +74,6 @@ const getData = function(filter, criterionId) {
             : event.betOffers.filter(bo => bo.criterion.id === criterionId);
 
          return {
-            updated: new Date(statistics.updated),
             event: event,
             betOffers: betOffers,
             statistics: statistics.leagueTableRows.map((row) => {

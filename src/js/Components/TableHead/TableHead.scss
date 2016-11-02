@@ -1,0 +1,22 @@
+:local(.table-head) {
+   display: flex;
+   padding: 0 16px;
+   font-size: 12px;
+   justify-content: space-between;
+   flex-flow: row nowrap;
+   vertical-align: middle;
+   background: #f5f5f5;
+   border: #ECECEC 1px solid;
+   height: 36px;
+   width: 100%;
+}
+
+:local(.table-head) > .element {
+   text-overflow: ellipsis;
+   color: #999999;
+   line-height: 36px;
+
+   &--strong {
+      font-weight: bold;
+   }
+}

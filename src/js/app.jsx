@@ -30,7 +30,6 @@ coreLibrary.init({
    (data) => {
       ReactDOM.render(
          <LeagueTableWidget
-            updated={data.updated}
             event={data.event}
             betOffers={data.betOffers}
             statistics={data.statistics}

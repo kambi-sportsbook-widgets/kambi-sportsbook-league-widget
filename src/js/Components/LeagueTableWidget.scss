@@ -1,0 +1,132 @@
+@import '~kambi-widget-core-library/src/scss/core.scss';
+
+:local(.table) {
+   border-spacing: 0;
+   border-collapse: collapse;
+   width: 100%;
+
+   thead {
+      tr {
+         background: #f5f5f5;
+         border: #ECECEC 1px solid;
+         height: 36px;
+
+         th {
+            font-weight: normal;
+            color: #999;
+            font-size: 12px;
+
+            &:first-child {
+               padding-left: 16px;
+            }
+
+            &.title {
+               text-align: left;
+            }
+
+            &.stats,
+            &.outcome {
+               font-weight: bold;
+            }
+         }
+      }
+   }
+
+   tbody {
+      tr {
+         border-bottom: #ECECEC 1px solid;
+         height: 46px;
+
+         td {
+            color: #666;
+            font-size: 14px;
+
+
+            &:first-child {
+               padding-left: 16px;
+            }
+
+            &.position {
+               white-space: nowrap;
+               width: 54px;
+
+               span {
+                  border-radius: 50%;
+                  background: transparent;
+                  width: 22px;
+                  height: 22px;
+                  display: inline-block;
+                  line-height: 21px;
+                  font-size: 12px;
+                  text-align: center;
+               }
+
+               i {
+                  margin: 0 10px 0 12px;
+                  display: inline-block;
+                  border-left: 5px solid transparent;
+                  border-right: 5px solid transparent;
+
+                  &.up {
+                     border-bottom: 10px solid #B8E986;
+                  }
+
+                  &.down {
+                     border-top: 10px solid #FF3A52;
+                  }
+               }
+            }
+
+            &.participant-name {
+               font-weight: bold;
+            }
+
+            &.stats {
+               text-align: center;
+               width: 5%;
+            }
+
+            &.points {
+               font-weight: bold;
+            }
+
+            &.outcome {
+               width: 10%;
+               padding: 0 3px;
+            }
+         }
+      }
+
+      tr:nth-last-child(1),
+      tr:nth-last-child(2),
+      tr:nth-last-child(3) {
+         td.position span {
+            color: #fff;
+            background: #FF3A52;
+         }
+      }
+
+      tr:nth-child(1),
+      tr:nth-child(2),
+      tr:nth-child(3) {
+         td.position span {
+            color: #fff;
+            background: #719D45;
+         }
+      }
+
+      tr:nth-child(4) {
+         td.position span {
+            color: #fff;
+            background: #8CC354;
+         }
+      }
+
+      tr:nth-child(5) {
+         td.position span {
+            color: #fff;
+            background: #F5A623;
+         }
+      }
+   }
+}

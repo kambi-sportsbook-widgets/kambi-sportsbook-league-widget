@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { coreLibrary, widgetModule, translationModule } from 'kambi-widget-core-library';
-import TableHead from './TableHead';
-import TableHeadColumn from './TableHeadColumn';
-import TableHeadOutcomeColumn from './TableHeadOutcomeColumn';
-import TableBody from './TableBody';
-import TableBodyRow from './TableBodyRow';
-import TableBodyCell from './TableBodyCell';
-import TableBodyOutcomeCell from './TableBodyOutcomeCell';
+import { OutcomeButton } from 'kambi-widget-components';
+import styles from './LeagueTableWidget.scss';
 
 /**
  * Widget header height
@@ -19,16 +14,54 @@ const HEADER_HEIGHT = 59;
  * @type {{key: string, value: string}[]}
  */
 const COLUMNS = [
-   { key: 'position', value: 'Pos' },
-   { key: 'participantName', value: 'Club' },
-   { key: 'gamesPlayed', value: 'P' },
-   { key: 'wins', value: 'W' },
-   { key: 'draws', value: 'D' },
-   { key: 'losses', value: 'L' },
-   { key: 'goalsFor', value: 'Gf' },
-   { key: 'goalsAgainst', value: 'Ga' },
-   { key: 'goalsDifference', value: '+/-' },
-   { key: 'points', value: 'Pts' }
+   {
+      key: 'gamesPlayed',
+      className: 'games-played',
+      name: 'Games Played',
+      short: 'P'
+   },
+   {
+      key: 'wins',
+      className: 'wins',
+      name: 'Wins',
+      short: 'W'
+   },
+   {
+      key: 'draws',
+      className: 'draws',
+      name: 'Draws',
+      short: 'D'
+   },
+   {
+      key: 'losses',
+      className: 'losses',
+      name: 'Losses',
+      short: 'L'
+   },
+   {
+      key: 'goalsFor',
+      className: 'goals-for',
+      name: 'Goals for',
+      short: 'Gf'
+   },
+   {
+      key: 'goalsAgainst',
+      className: 'goals-against',
+      name: 'Goals against',
+      short: 'Ga'
+   },
+   {
+      key: 'goalsDifference',
+      className: 'goals-difference',
+      name: 'Difference',
+      short: '+/-'
+   },
+   {
+      key: 'points',
+      className: 'points',
+      name: 'Points',
+      short: 'Pts'
+   }
 ];
 
 class LeagueTableWidget extends Component {
@@ -126,33 +159,54 @@ class LeagueTableWidget extends Component {
 
       return (
          <div className={classList.join(' ')}>
-            <TableHead onClick={this.toggle.bind(this)}>
-               {COLUMNS.map(
-                  (column, i) => <TableHeadColumn
-                     key={column.key}
-                     handle={column.key}
-                     title={['position', 'participantName'].indexOf(column.key) < 0 ? t(column.key) : ''}
-                     value={i > 0 ? t(column.value) : this.title}
-                  />
-               )}
-               {this.props.betOffers.map(
-                  betOffer => <TableHeadOutcomeColumn key={betOffer.id} title={betOffer.betOfferType.name} />
-               )}
-            </TableHead>
-            <TableBody updated={this.props.updated}>
-               {this.props.statistics.map((row) => {
-                  return (
-                     <TableBodyRow key={row.participantId}>
-                        {COLUMNS.map(
-                           column => <TableBodyCell key={column.key} handle={column.key} title={t(column.key)} value={row[column.key]} />
-                        )}
-                        {row.outcomes.map(
-                           outcome => <TableBodyOutcomeCell key={outcome.id} outcome={outcome} event={this.props.event} />
-                        )}
-                     </TableBodyRow>
-                  );
-               })}
-            </TableBody>
+            <table className={styles.table}>
+               <thead onClick={this.toggle.bind(this)}>
+                  <tr>
+                     <th colSpan="2" className="title">
+                        {this.title}
+                     </th>
+                     {COLUMNS.map(column =>
+                        <th key={column.key} className={['stats', column.className].join(' ')}>
+                           {column.short}
+                        </th>
+                     )}
+                     {this.props.betOffers.map(betOffer =>
+                        <th key={betOffer.id} className="outcome">
+                           {betOffer.betOfferType.name}
+                        </th>
+                     )}
+                  </tr>
+               </thead>
+               <tbody>
+                  {this.props.statistics.map((row) => {
+                     return (
+                        <tr key={row.participantId}>
+                           <td className="position">
+                              <span>{row['position']}</span>
+                              {!!Math.round(Math.random()) && <i className={Math.round(Math.random()) ? 'up' : 'down'} />}
+                           </td>
+                           <td className="participant-name">{row['participantName']}</td>
+                           {COLUMNS.map(column =>
+                              <td
+                                 key={column.key}
+                                 title={t(column.name)}
+                                 className={['stats', column.className].join(' ')}
+                              >
+                                 {row[column.key]}
+                              </td>
+                           )}
+                           {row.outcomes.map(outcome =>
+                              <td key={outcome.id} className="outcome">
+                                 <div className="l-flexbox">
+                                    <OutcomeButton outcome={outcome} event={event} />
+                                 </div>
+                              </td>
+                           )}
+                        </tr>
+                     );
+                  })}
+               </tbody>
+            </table>
          </div>
       );
    }
@@ -173,11 +227,6 @@ LeagueTableWidget.propTypes = {
     * Optional event entity
     */
    event: React.PropTypes.object,
-
-   /**
-    * Statistics updated date time
-    */
-   updated: React.PropTypes.instanceOf(Date).isRequired,
 
    /**
     * Fixed widget title (if set)

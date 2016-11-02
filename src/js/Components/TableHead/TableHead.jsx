@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './TableHead.scss';
 
 const TableHead = ({ children, onClick }) => {
    return (
       <header
-         className="KambiWidget-header KambiWidget-font KambiWidget-card-border-color l-flexbox l-horizontal l-pl-16 l-pr-16 l-pt-12 l-pb-12 l-mb-12"
+         className={`KambiWidget-header KambiWidget-font KambiWidget-card-border-color ${styles['table-head']}`}
          onClick={onClick}
       >
          {children}
