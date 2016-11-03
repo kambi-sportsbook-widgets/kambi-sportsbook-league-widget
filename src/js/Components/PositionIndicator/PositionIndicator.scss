@@ -1,0 +1,45 @@
+:local(.triangle) {
+   margin: 0 10px 0 12px;
+   display: inline-block;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+
+   &.up {
+      border-bottom: 10px solid #B8E986;
+   }
+
+   &.down {
+      border-top: 10px solid #FF3A52;
+   }
+}
+
+:local(.position) {
+   border-radius: 50%;
+   background: transparent;
+   width: 22px;
+   height: 22px;
+   display: inline-block;
+   line-height: 21px;
+   font-size: 12px;
+   text-align: center;
+
+   &.green {
+      color: #fff;
+      background: #719D45;
+   }
+
+   &.light-green {
+      color: #fff;
+      background: #8CC354;
+   }
+
+   &.orange {
+      color: #fff;
+      background: #F5A623;
+   }
+
+   &.red {
+      color: #fff;
+      background: #FF3A52;
+   }
+}

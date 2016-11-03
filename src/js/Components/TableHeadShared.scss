@@ -1,0 +1,23 @@
+.table-head-row {
+   border-bottom: #ECECEC 1px solid;
+   background: #f5f5f5;
+}
+
+.table-head-cell {
+   font-weight: normal;
+   color: #999;
+   font-size: 12px;
+   height: 36px;
+
+   &:first-child {
+      padding-left: 16px;
+   }
+
+   &.title {
+      text-align: left;
+   }
+
+   &.margin {
+      width: 16px;
+   }
+}

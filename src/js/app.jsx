@@ -41,6 +41,6 @@ coreLibrary.init({
    }
 )
 .catch((error) => {
-   console.error(error);
    widgetModule.removeWidget();
+   throw error;
 });

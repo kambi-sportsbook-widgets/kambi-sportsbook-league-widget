@@ -1,0 +1,10 @@
+@import '~kambi-widget-core-library/src/scss/core.scss';
+
+:local(.general) {
+   width: 10%;
+   padding: 0 3px;
+
+   .wrapper {
+      @include flexbox;
+   }
+}

@@ -1,0 +1,13 @@
+@import '../TableHeadShared';
+
+:local(.general) {
+   @extend .table-head-row;
+
+   th {
+      @extend .table-head-cell;
+
+      &.column-name {
+         font-weight: bold;
+      }
+   }
+}

@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import { coreLibrary, widgetModule, translationModule } from 'kambi-widget-core-library';
 import { OutcomeButton } from 'kambi-widget-components';
+import TableHeadDesktop from './TableHeadDesktop/TableHeadDesktop';
+import TableHeadMobile from './TableHeadMobile/TableHeadMobile';
+import PositionIndicator from './PositionIndicator/PositionIndicator';
+import TableBody from './TableBody/TableBody';
+import TableBodyPositionCell from './TableBodyPositionCell/TableBodyPositionCell';
+import TableBodyParticipantCell from './TableBodyParticipantCell/TableBodyParticipantCell';
+import TableBodyStatsCell from './TableBodyStatsCell/TableBodyStatsCell';
+import TableBodyOutcomeCell from './TableBodyOutcomeCell/TableBodyOutcomeCell';
 import styles from './LeagueTableWidget.scss';
 
 /**
@@ -77,7 +85,8 @@ class LeagueTableWidget extends Component {
       widgetModule.enableWidgetTransition(true);
 
       this.state = {
-         hidden: false
+         hidden: false,
+         columnGroup: Object.keys(this.columnGroups)[0]
       };
    }
 
@@ -94,13 +103,13 @@ class LeagueTableWidget extends Component {
     */
    componentWillReceiveProps(nextProps) {
       coreLibrary.setWidgetTrackingName(nextProps.widgetTrackingName);
+      this.columnGroupsCache = null;
    }
 
    /**
     * Called just after finished rendering DOM.
     */
    componentDidUpdate() {
-      console.warn(this.props.statistics.length);
       if (this.state.hidden) {
          widgetModule.setWidgetHeight(HEADER_HEIGHT);
       } else {
@@ -130,6 +139,42 @@ class LeagueTableWidget extends Component {
       return '';
    }
 
+   get columnGroups() {
+      return this.columnGroupsCache || (this.columnGroupsCache = {
+         statistics: {
+            title: 'Statistics',
+            columns: COLUMNS,
+            render: function(row) {
+               return this.columns.map(column =>
+                  <TableBodyStatsCell key={column.key} column={column} value={row[column.key]} />
+               );
+            }
+         },
+         outcomes: {
+            title: 'Outcomes',
+            columns: this.props.betOffers.map((betOffer) => {
+               return {
+                  key: '',
+                  className: 'outcome',
+                  name: betOffer.betOfferType.name,
+                  short: betOffer.betOfferType.name
+               };
+            }),
+            render: function(row) {
+               return row.outcomes.map(outcome =>
+                  <TableBodyOutcomeCell key={outcome.id}>
+                     <OutcomeButton outcome={outcome} event={event} />
+                  </TableBodyOutcomeCell>
+               )
+            }
+         }
+      });
+   }
+
+   get columnGroup() {
+      return this.columnGroups[this.state.columnGroup];
+   }
+
    /**
     * Hides or show widget.
     */
@@ -137,77 +182,50 @@ class LeagueTableWidget extends Component {
       this.setState({ hidden: !this.state.hidden });
    }
 
+   columnsChanged(columnGroupKey) {
+      this.setState({
+         columnGroup: columnGroupKey
+      });
+   }
+
    /**
     * Renders widget.
     * @returns {XML}
     */
    render() {
-      const t = translationModule.getTranslation.bind(translationModule);
-
-      const classList = [
-         'kw-card',
-         'KambiWidget-card-background-color',
-         'KambiWidget-card-text-color',
-         'l-flexbox',
-         'l-vertical',
-         'l-expander'
-      ];
-
-      if (this.state.hidden) {
-         classList.push('hidden');
-      }
+      // const t = translationModule.getTranslation.bind(translationModule);
+      /*
+       <TableHeadMobile
+       title={this.title}
+       columnGroups={this.columnGroups}
+       defaultColumnGroup={this.state.columnGroup}
+       onHeadClick={this.toggle.bind(this)}
+       onColumnsChanged={this.columnsChanged.bind(this)}
+       />
+       */
 
       return (
-         <div className={classList.join(' ')}>
-            <table className={styles.table}>
-               <thead onClick={this.toggle.bind(this)}>
-                  <tr>
-                     <th colSpan="2" className="title">
-                        {this.title}
-                     </th>
-                     {COLUMNS.map(column =>
-                        <th key={column.key} className={['stats', column.className].join(' ')}>
-                           {column.short}
-                        </th>
-                     )}
-                     {this.props.betOffers.map(betOffer =>
-                        <th key={betOffer.id} className="outcome">
-                           {betOffer.betOfferType.name}
-                        </th>
-                     )}
-                  </tr>
-               </thead>
-               <tbody>
-                  {this.props.statistics.map((row) => {
-                     return (
-                        <tr key={row.participantId}>
-                           <td className="position">
-                              <span>{row['position']}</span>
-                              {!!Math.round(Math.random()) && <i className={Math.round(Math.random()) ? 'up' : 'down'} />}
-                           </td>
-                           <td className="participant-name">{row['participantName']}</td>
-                           {COLUMNS.map(column =>
-                              <td
-                                 key={column.key}
-                                 title={t(column.name)}
-                                 className={['stats', column.className].join(' ')}
-                              >
-                                 {row[column.key]}
-                              </td>
-                           )}
-                           {row.outcomes.map(outcome =>
-                              <td key={outcome.id} className="outcome">
-                                 <div className="l-flexbox">
-                                    <OutcomeButton outcome={outcome} event={event} />
-                                 </div>
-                              </td>
-                           )}
-                        </tr>
-                     );
-                  })}
-               </tbody>
-            </table>
-         </div>
+         <table className={styles.table}>
+            <TableHeadDesktop
+               title={this.title}
+               columnGroups={this.columnGroups}
+               onHeadClick={this.toggle.bind(this)}
+            />
+            <TableBody>
+               {this.props.statistics.map((row, i) => [
+                  <TableBodyPositionCell key={`pos_${i}`}>
+                     <PositionIndicator
+                        position={row.position}
+                        count={this.props.statistics.length}
+                        change={Math.round(Math.random() * 2) - 1}
+                     />
+                  </TableBodyPositionCell>,
+                  <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
+                  // this.columnGroup.render(row)
+                  Object.keys(this.columnGroups).map(key => this.columnGroups[key].render(row))
+               ])}
+            </TableBody>
+         </table>
       );
    }
 }
