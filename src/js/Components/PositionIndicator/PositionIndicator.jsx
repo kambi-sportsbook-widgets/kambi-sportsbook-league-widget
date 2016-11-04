@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import styles from './PositionIndicator.scss';
 
 const positionCircleClassName = function(position, count) {
+//   return null;
+
    if (position >= 1 && position <= 3) {
       return 'green';
    } else if (position === 4) {
@@ -28,8 +30,19 @@ const PositionIndicator = ({ position, count, change }) => {
 };
 
 PositionIndicator.propTypes = {
+   /**
+    * Current participant position
+    */
    position: PropTypes.number.isRequired,
+
+   /**
+    * Participants count
+    */
    count: PropTypes.number.isRequired,
+
+   /**
+    * Position change from last statistics publication (positive, negative or 0 number)
+    */
    change: PropTypes.number
 };
 

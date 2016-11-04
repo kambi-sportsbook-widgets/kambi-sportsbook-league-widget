@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { PropTypes, Component } from 'react';
 import { translationModule } from 'kambi-widget-core-library';
 import styles from './ColumnPickerButton.scss';
 
 const t = translationModule.getTranslation.bind(translationModule);
 
-class ColumnPickerButton extends React.Component {
+class ColumnPickerButton extends Component {
 
    constructor(props) {
       super(props);
@@ -14,7 +14,11 @@ class ColumnPickerButton extends React.Component {
       };
    }
 
-   onClick() {
+   /**
+    * Changes selected option to next one.
+    * @param {SyntheticEvent} event Click event
+    */
+   onClick(event) {
       const keys = Object.keys(this.props.groups);
 
       const selected = keys[(keys.indexOf(this.state.selected) + 1) % keys.length];
@@ -24,8 +28,14 @@ class ColumnPickerButton extends React.Component {
       });
 
       this.props.onChange(selected);
+
+      event.stopPropagation();
    }
 
+   /**
+    * Renders button.
+    * @returns {XML}
+    */
    render() {
       return (
          <button className={styles.general} onClick={this.onClick.bind(this)}>
@@ -40,12 +50,12 @@ ColumnPickerButton.propTypes = {
    /**
     * Array of options
     */
-   groups: React.PropTypes.object.isRequired,
+   groups: PropTypes.object.isRequired,
 
    /**
     * Option change handler
     */
-   onChange: React.PropTypes.func.isRequired
+   onChange: PropTypes.func.isRequired
 };
 
 export default ColumnPickerButton;

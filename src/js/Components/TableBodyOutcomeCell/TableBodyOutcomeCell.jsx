@@ -12,6 +12,9 @@ const TableBodyOutcomeCell = ({ children }) => {
 };
 
 TableBodyOutcomeCell.propTypes = {
+   /**
+    * Inner element - OutcomeButton
+    */
    children: PropTypes.node.isRequired
 };
 

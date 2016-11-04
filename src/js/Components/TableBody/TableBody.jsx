@@ -15,6 +15,9 @@ const TableBody = ({ children }) => {
 };
 
 TableBody.propTypes = {
+   /**
+    * Inner rows
+    */
    children: PropTypes.arrayOf(PropTypes.node)
 };
 

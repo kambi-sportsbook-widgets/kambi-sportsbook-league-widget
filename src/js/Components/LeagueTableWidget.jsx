@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import { coreLibrary, widgetModule, translationModule } from 'kambi-widget-core-library';
+import React, { Component, PropTypes } from 'react';
+import { coreLibrary, widgetModule } from 'kambi-widget-core-library';
 import { OutcomeButton } from 'kambi-widget-components';
+import Table from './Table/Table';
 import TableHeadDesktop from './TableHeadDesktop/TableHeadDesktop';
 import TableHeadMobile from './TableHeadMobile/TableHeadMobile';
 import PositionIndicator from './PositionIndicator/PositionIndicator';
@@ -9,68 +10,35 @@ import TableBodyPositionCell from './TableBodyPositionCell/TableBodyPositionCell
 import TableBodyParticipantCell from './TableBodyParticipantCell/TableBodyParticipantCell';
 import TableBodyStatsCell from './TableBodyStatsCell/TableBodyStatsCell';
 import TableBodyOutcomeCell from './TableBodyOutcomeCell/TableBodyOutcomeCell';
-import styles from './LeagueTableWidget.scss';
 
 /**
  * Widget header height
  * @type {number}
  */
-const HEADER_HEIGHT = 59;
+const HEADER_HEIGHT = 36;
 
 /**
  * Column labels map
  * @type {{key: string, value: string}[]}
  */
 const COLUMNS = [
-   {
-      key: 'gamesPlayed',
-      className: 'games-played',
-      name: 'Games Played',
-      short: 'P'
-   },
-   {
-      key: 'wins',
-      className: 'wins',
-      name: 'Wins',
-      short: 'W'
-   },
-   {
-      key: 'draws',
-      className: 'draws',
-      name: 'Draws',
-      short: 'D'
-   },
-   {
-      key: 'losses',
-      className: 'losses',
-      name: 'Losses',
-      short: 'L'
-   },
-   {
-      key: 'goalsFor',
-      className: 'goals-for',
-      name: 'Goals for',
-      short: 'Gf'
-   },
-   {
-      key: 'goalsAgainst',
-      className: 'goals-against',
-      name: 'Goals against',
-      short: 'Ga'
-   },
-   {
-      key: 'goalsDifference',
-      className: 'goals-difference',
-      name: 'Difference',
-      short: '+/-'
-   },
-   {
-      key: 'points',
-      className: 'points',
-      name: 'Points',
-      short: 'Pts'
-   }
+   { key: 'gamesPlayed', className: 'games-played', name: 'Games Played', short: 'P' },
+   { key: 'wins', className: 'wins', name: 'Wins', short: 'W' },
+   { key: 'draws', className: 'draws', name: 'Draws', short: 'D' },
+   { key: 'losses', className: 'losses', name: 'Losses', short: 'L' },
+   { key: 'goalsFor', className: 'goals-for', name: 'Goals for', short: 'Gf' },
+   { key: 'goalsAgainst', className: 'goals-against', name: 'Goals against', short: 'Ga' },
+   { key: 'goalsDifference', className: 'goals-difference', name: 'Difference', short: '+/-' },
+   { key: 'points', className: 'points', name: 'Points', short: 'Pts' }
 ];
+
+/**
+ * Determines if mobile layout should be used.
+ * @returns {boolean}
+ */
+const isMobile = function() {
+   return window.innerWidth < 481;
+};
 
 class LeagueTableWidget extends Component {
 
@@ -86,8 +54,18 @@ class LeagueTableWidget extends Component {
 
       this.state = {
          hidden: false,
-         columnGroup: Object.keys(this.columnGroups)[0]
+         columnGroup: Object.keys(this.columnGroups)[0],
+         mobile: isMobile()
       };
+
+      this.updateDimensions = () => {
+         const mobile = isMobile();
+
+         if (this.state.mobile != mobile) {
+            this.columnGroupsCache = null;
+            this.setState({ mobile: mobile });
+         }
+      }
    }
 
    /**
@@ -95,6 +73,7 @@ class LeagueTableWidget extends Component {
     */
    componentDidMount() {
       widgetModule.adaptWidgetHeight();
+      window.addEventListener('resize', this.updateDimensions);
    }
 
    /**
@@ -115,6 +94,13 @@ class LeagueTableWidget extends Component {
       } else {
          widgetModule.adaptWidgetHeight();
       }
+   }
+
+   /**
+    * Called just before removing the component.
+    */
+   componentWillUnmount() {
+      window.removeEventListener('resize', this.updateDimensions);
    }
 
    /**
@@ -139,11 +125,21 @@ class LeagueTableWidget extends Component {
       return '';
    }
 
+   /**
+    * Returns current column group definitions.
+    * @returns {object.<string, object>}
+    */
    get columnGroups() {
       return this.columnGroupsCache || (this.columnGroupsCache = {
          statistics: {
             title: 'Statistics',
-            columns: COLUMNS,
+            columns: COLUMNS.filter((column) => {
+               if (!isMobile()) {
+                  return true;
+               }
+
+               return ['goalsFor', 'goalsAgainst'].indexOf(column.key) < 0;
+            }),
             render: function(row) {
                return this.columns.map(column =>
                   <TableBodyStatsCell key={column.key} column={column} value={row[column.key]} />
@@ -151,7 +147,7 @@ class LeagueTableWidget extends Component {
             }
          },
          outcomes: {
-            title: 'Outcomes',
+            title: 'Outrights',
             columns: this.props.betOffers.map((betOffer) => {
                return {
                   key: '',
@@ -171,17 +167,25 @@ class LeagueTableWidget extends Component {
       });
    }
 
+   /**
+    * Returns currently selected group definition (for mobile layout).
+    * @returns {Object}
+    */
    get columnGroup() {
       return this.columnGroups[this.state.columnGroup];
    }
 
    /**
-    * Hides or show widget.
+    * Hides or shows the widget.
     */
-   toggle() {
+   toggleHidden() {
       this.setState({ hidden: !this.state.hidden });
    }
 
+   /**
+    * Handles selection of different column group (mobile layout).
+    * @param {string} columnGroupKey Column group identifier
+    */
    columnsChanged(columnGroupKey) {
       this.setState({
          columnGroup: columnGroupKey
@@ -193,24 +197,26 @@ class LeagueTableWidget extends Component {
     * @returns {XML}
     */
    render() {
-      // const t = translationModule.getTranslation.bind(translationModule);
-      /*
-       <TableHeadMobile
-       title={this.title}
-       columnGroups={this.columnGroups}
-       defaultColumnGroup={this.state.columnGroup}
-       onHeadClick={this.toggle.bind(this)}
-       onColumnsChanged={this.columnsChanged.bind(this)}
-       />
-       */
-
       return (
-         <table className={styles.table}>
-            <TableHeadDesktop
-               title={this.title}
-               columnGroups={this.columnGroups}
-               onHeadClick={this.toggle.bind(this)}
-            />
+         <Table>
+            {!this.state.mobile &&
+               <TableHeadDesktop
+                  title={this.title}
+                  columnGroups={this.columnGroups}
+                  onHeadClick={this.toggleHidden.bind(this)}
+                  hiddenMode={this.state.hidden}
+               />
+            }
+            {this.state.mobile &&
+               <TableHeadMobile
+                  title={this.title}
+                  columnGroups={this.columnGroups}
+                  defaultColumnGroup={this.state.columnGroup}
+                  onHeadClick={this.toggleHidden.bind(this)}
+                  onColumnsChanged={this.columnsChanged.bind(this)}
+                  hiddenMode={this.state.hidden}
+               />
+            }
             <TableBody>
                {this.props.statistics.map((row, i) => [
                   <TableBodyPositionCell key={`pos_${i}`}>
@@ -221,11 +227,11 @@ class LeagueTableWidget extends Component {
                      />
                   </TableBodyPositionCell>,
                   <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
-                  // this.columnGroup.render(row)
-                  Object.keys(this.columnGroups).map(key => this.columnGroups[key].render(row))
+                  this.state.mobile ? this.columnGroup.render(row)
+                     : Object.keys(this.columnGroups).map(key => this.columnGroups[key].render(row))
                ])}
             </TableBody>
-         </table>
+         </Table>
       );
    }
 }
@@ -234,27 +240,27 @@ LeagueTableWidget.propTypes = {
    /**
     * Statistics table
     */
-   statistics: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+   statistics: PropTypes.arrayOf(PropTypes.object).isRequired,
 
    /**
     * BetOffers list
     */
-   betOffers: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
+   betOffers: PropTypes.arrayOf(PropTypes.object).isRequired,
 
    /**
     * Optional event entity
     */
-   event: React.PropTypes.object,
+   event: PropTypes.object,
 
    /**
     * Fixed widget title (if set)
     */
-   title: React.PropTypes.string,
+   title: PropTypes.string,
 
    /**
     * Widget tracking name
     */
-   widgetTrackingName: React.PropTypes.string
+   widgetTrackingName: PropTypes.string
 };
 
 export default LeagueTableWidget;

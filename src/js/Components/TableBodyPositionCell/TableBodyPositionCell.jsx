@@ -10,7 +10,10 @@ const TableBodyPositionCell = ({ children }) => {
 };
 
 TableBodyPositionCell.propTypes = {
-   children: PropTypes.element
+   /**
+    * Inner element - PositionIndicator
+    */
+   children: PropTypes.element.isRequired
 };
 
 export default TableBodyPositionCell;

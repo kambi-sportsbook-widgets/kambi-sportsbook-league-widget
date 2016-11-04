@@ -1,0 +1,6 @@
+@import '~kambi-widget-core-library/src/scss/core.scss';
+
+// needed for OutcomeButton, should be removed after KSVWI-798
+.l-pack-center {
+   @include justify-content(center);
+}

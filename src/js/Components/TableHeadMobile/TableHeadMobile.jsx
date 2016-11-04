@@ -1,10 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import { translationModule } from 'kambi-widget-core-library';
-import TableHeadMobileRow from '../TableHeadMobileRow/TableHeadMobileRow';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
 import ColumnPickerButton from '../ColumnPickerButton/ColumnPickerButton';
-
-const t = translationModule.getTranslation.bind(translationModule);
+import styles from './TableHeadMobile.scss';
 
 class TableHeadMobile extends Component {
 
@@ -16,24 +13,39 @@ class TableHeadMobile extends Component {
       };
    }
 
+   /**
+    * Handles column group change.
+    * @param {string} columnGroup Column group key
+    */
    columnsChanged(columnGroup) {
       this.setState({ columnGroup });
       this.props.onColumnsChanged(columnGroup);
    }
 
+   /**
+    * Returns currently selected columns group definition.
+    * @returns {object}
+    */
    get columnGroup() {
       return this.props.columnGroups[this.state.columnGroup];
    }
 
+   /**
+    * Renders table header for mobile devices.
+    * @returns {XML}
+    */
    render() {
       return (
          <thead onClick={this.props.onHeadClick}>
-            <TableHeadMobileRow
-               title={this.props.title}
-               colSpan={this.columnGroup.columns.length}
-            >
-               <ColumnPickerButton groups={this.props.columnGroups} onChange={this.columnsChanged.bind(this)} />
-            </TableHeadMobileRow>
+            <tr className={styles['mobile-row']}>
+               <th colSpan="2" className="title">{this.props.title}</th>
+               <th colSpan={this.columnGroup.columns.length} className="column-picker">
+                  {!this.props.hiddenMode &&
+                     <ColumnPickerButton groups={this.props.columnGroups} onChange={this.columnsChanged.bind(this)} />
+                  }
+               </th>
+               <th className="margin" />
+            </tr>
             <TableHeadDefaultRow columnNames={this.columnGroup.columns.map(column => column.short)} />
          </thead>
       );
@@ -41,11 +53,39 @@ class TableHeadMobile extends Component {
 }
 
 TableHeadMobile.propTypes = {
+   /**
+    * Widget's title
+    */
    title: PropTypes.string.isRequired,
+
+   /**
+    * Column groups definitions
+    */
    columnGroups: PropTypes.object.isRequired,
+
+   /**
+    * Default column group key
+    */
    defaultColumnGroup: PropTypes.string.isRequired,
+
+   /**
+    * Called on header click
+    */
    onHeadClick: PropTypes.func.isRequired,
-   onColumnsChanged: PropTypes.func.isRequired
+
+   /**
+    * Called on columns configuration change (with column group key argument)
+    */
+   onColumnsChanged: PropTypes.func.isRequired,
+
+   /**
+    * Should mobile header be displayed in widget's hidden mode?
+    */
+   hiddenMode: PropTypes.bool
+};
+
+TableHeadMobile.defaultProps = {
+   hiddenMode: false
 };
 
 export default TableHeadMobile;

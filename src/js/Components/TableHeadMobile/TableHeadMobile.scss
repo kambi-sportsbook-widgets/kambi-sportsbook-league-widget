@@ -1,6 +1,6 @@
 @import '../TableHeadShared';
 
-:local(.general) {
+:local(.mobile-row) {
    @extend .table-head-row;
 
    th {

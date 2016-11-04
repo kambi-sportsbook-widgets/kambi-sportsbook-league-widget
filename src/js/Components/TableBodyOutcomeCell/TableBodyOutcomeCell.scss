@@ -8,3 +8,9 @@
       @include flexbox;
    }
 }
+
+@media (max-width: 480px) {
+   :local(.general) {
+      width: 17%;
+   }
+}

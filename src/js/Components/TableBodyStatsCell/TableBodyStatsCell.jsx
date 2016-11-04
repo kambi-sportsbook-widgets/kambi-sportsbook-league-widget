@@ -16,7 +16,14 @@ const TableBodyStatsCell = ({ column, value }) => {
 };
 
 TableBodyStatsCell.propTypes = {
+   /**
+    * Statistics column definition
+    */
    column: PropTypes.object.isRequired,
+
+   /**
+    * Statistics value
+    */
    value: PropTypes.number
 };
 

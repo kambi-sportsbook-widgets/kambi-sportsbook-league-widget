@@ -8,6 +8,9 @@ const TableBodyParticipantCell = ({ name }) => {
 };
 
 TableBodyParticipantCell.propTypes = {
+   /**
+    * Participant name
+    */
    name: PropTypes.string.isRequired
 };
 
