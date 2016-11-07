@@ -7,7 +7,6 @@ Displays the league teams with statistics, with data from statistics api
 __`client-widgets.js`__
 
 ```json
-
 ...
 {
     "order": 1,
@@ -15,8 +14,6 @@ __`client-widgets.js`__
     "args": {
         "filter": "/football/england/premier_league/",
         "criterionId": 1001221607,
-        "updatedTime": "08:00 GMT",
-        "style": "padding-top: 12px;",
         "headerDefaultTitle": "Premier League 2015/16"
     }
 },
@@ -27,10 +24,8 @@ __`client-widgets.js`__
 ### The widget accepts the following arguments/s:
 1. `filter` - string - __REQUIRED__ - The league filter
 2. `criterionId` - number - Criterion identifier for bet offers to be matched against
-3. -- not implemented yet -- `updatedTime` - string - defaults to '08:00 GMT' - The timestamp to show when the last update was made
-4. -- not implemented yet -- `style` - string - defaults to '' - Additional style to apply to the <body> element of the widget
-5. `title` - string - Forces title of the widget
-6. `widgetTrackingName` - string - defaults to 'gm-league-table-widget' - tracking name for analytics purposes
+3. `title` - string - Forces title of the widget
+4. `widgetTrackingName` - string - defaults to 'gm-league-table-widget' - tracking name for analytics purposes
 
 
 ### To add specific locale strings to be compiled add the following to the buildparameters.json.
