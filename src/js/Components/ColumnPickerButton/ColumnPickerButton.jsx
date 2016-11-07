@@ -10,24 +10,48 @@ class ColumnPickerButton extends Component {
       super(props);
 
       this.state = {
-         selected: this.props.selected
+         selected: this.props.selected,
+         dropDown: false
       };
+
+      // called on background click when drop down window is open
+      this.onBackgroundClick = () => {
+         // setState prevents event from being processed by onOptionClick handler
+         // so it is moved to the next cycle
+         setTimeout(() => this.setState({ dropDown: false }), 0);
+         window.document.body.removeEventListener('click', this.onBackgroundClick);
+      }
    }
 
    /**
-    * Changes selected option to next one.
+    * Shows drop down box with available options.
     * @param {SyntheticEvent} event Click event
     */
-   onClick(event) {
-      const selected = (this.state.selected + 1) % this.props.options.length;
-
-      this.setState({
-         selected: selected
-      });
-
-      this.props.onChange(selected);
-
+   onButtonClick(event) {
+      // @todo: KSBWI-799 parent containers should take care of this
       event.stopPropagation();
+      this.setState({ dropDown: true });
+      window.document.body.addEventListener('click', this.onBackgroundClick);
+   }
+
+   /**
+    * Called on drop down's option click.
+    * @param {number} idx Option index
+    * @param {SyntheticEvent} event Click event
+    */
+   onOptionClick(idx, event) {
+      // @todo: KSBWI-799 parent containers should take care of this
+      event.stopPropagation();
+
+      // nothing changed - hide drop down
+      if (this.state.selected === idx) {
+         return;
+      }
+
+      // selected different option
+      this.setState({ selected: idx });
+
+      this.props.onChange(idx);
    }
 
    /**
@@ -36,10 +60,28 @@ class ColumnPickerButton extends Component {
     */
    render() {
       return (
-         <button className={styles.general} onClick={this.onClick.bind(this)}>
-            {t(this.props.options[this.state.selected].title)}
-            <i />
-         </button>
+         <div className={styles.general}>
+            <button className={styles.button} onClick={this.onButtonClick.bind(this)}>
+               {t(this.props.options[this.state.selected].title)}
+               <i />
+            </button>
+            {
+               this.state.dropDown &&
+                  <ul className={styles.dropDown}>
+                     {this.props.options.map((option, i) => {
+                        return (
+                           <li
+                              key={option.id}
+                              className={this.state.selected == i ? 'selected' : ''}
+                              onClick={this.onOptionClick.bind(this, i)}
+                           >
+                              {option.title}
+                           </li>
+                        );
+                     })}
+                  </ul>
+            }
+         </div>
       );
    }
 }
