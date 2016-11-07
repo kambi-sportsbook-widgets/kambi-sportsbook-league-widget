@@ -24,8 +24,8 @@ TableHeadDefaultRow.propTypes = {
     * Statistics and/or outcomes columns to be displayed
     */
    columns: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      short: PropTypes.string
+      name: PropTypes.string.isRequired,
+      short: PropTypes.string.isRequired
    })).isRequired,
 
    /**

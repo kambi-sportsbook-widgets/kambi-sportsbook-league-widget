@@ -10,7 +10,7 @@ class ColumnPickerButton extends Component {
       super(props);
 
       this.state = {
-         selected: Object.keys(props.groups)[0]
+         selected: this.props.selected
       };
    }
 
@@ -19,9 +19,7 @@ class ColumnPickerButton extends Component {
     * @param {SyntheticEvent} event Click event
     */
    onClick(event) {
-      const keys = Object.keys(this.props.groups);
-
-      const selected = keys[(keys.indexOf(this.state.selected) + 1) % keys.length];
+      const selected = (this.state.selected + 1) % this.props.options.length;
 
       this.setState({
          selected: selected
@@ -39,7 +37,7 @@ class ColumnPickerButton extends Component {
    render() {
       return (
          <button className={styles.general} onClick={this.onClick.bind(this)}>
-            {t(this.props.groups[this.state.selected].title)}
+            {t(this.props.options[this.state.selected].title)}
             <i />
          </button>
       );
@@ -48,9 +46,17 @@ class ColumnPickerButton extends Component {
 
 ColumnPickerButton.propTypes = {
    /**
-    * Options map (<string, {title}>)
+    * Options array
     */
-   groups: PropTypes.object.isRequired,
+   options: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+   })).isRequired,
+
+   /**
+    * Defines which option should be checked upon component creation
+    */
+   selected: PropTypes.number.isRequired,
 
    /**
     * Option change handler

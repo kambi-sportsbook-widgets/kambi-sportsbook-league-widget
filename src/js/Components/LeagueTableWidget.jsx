@@ -54,7 +54,7 @@ class LeagueTableWidget extends Component {
 
       this.state = {
          hidden: false,
-         columnGroup: Object.keys(this.columnGroups)[0],
+         columnGroupIdx: 0,
          mobile: isMobile()
       };
 
@@ -130,8 +130,9 @@ class LeagueTableWidget extends Component {
     * @returns {object.<string, object>}
     */
    get columnGroups() {
-      return this.columnGroupsCache || (this.columnGroupsCache = {
-         statistics: {
+      return this.columnGroupsCache || (this.columnGroupsCache = [
+         {
+            id: 'statistics',
             title: 'Statistics',
             columns: COLUMNS.filter((column) => {
                if (!isMobile()) {
@@ -146,7 +147,8 @@ class LeagueTableWidget extends Component {
                );
             }
          },
-         outcomes: {
+         {
+            id: 'outcomes',
             title: 'Bet offers',
             columns: this.props.betOffers.map((betOffer) => {
                return {
@@ -164,7 +166,7 @@ class LeagueTableWidget extends Component {
                )
             }
          }
-      });
+      ]);
    }
 
    /**
@@ -172,7 +174,7 @@ class LeagueTableWidget extends Component {
     * @returns {Object}
     */
    get columnGroup() {
-      return this.columnGroups[this.state.columnGroup];
+      return this.columnGroups[this.state.columnGroupIdx];
    }
 
    /**
@@ -184,12 +186,10 @@ class LeagueTableWidget extends Component {
 
    /**
     * Handles selection of different column group (mobile layout).
-    * @param {string} columnGroupKey Column group identifier
+    * @param {number} idx Column group index
     */
-   columnsChanged(columnGroupKey) {
-      this.setState({
-         columnGroup: columnGroupKey
-      });
+   columnGroupChanged(idx) {
+      this.setState({ columnGroupIdx: idx });
    }
 
    /**
@@ -202,7 +202,7 @@ class LeagueTableWidget extends Component {
             {!this.state.mobile &&
                <TableHeadDesktop
                   title={this.title}
-                  columnGroups={this.columnGroups}
+                  columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
                   onHeadClick={this.toggleHidden.bind(this)}
                   hiddenMode={this.state.hidden}
                />
@@ -211,9 +211,9 @@ class LeagueTableWidget extends Component {
                <TableHeadMobile
                   title={this.title}
                   columnGroups={this.columnGroups}
-                  defaultColumnGroup={this.state.columnGroup}
+                  initialColumnGroupIdx={this.state.columnGroupIdx}
+                  onColumnGroupChanged={this.columnGroupChanged.bind(this)}
                   onHeadClick={this.toggleHidden.bind(this)}
-                  onColumnsChanged={this.columnsChanged.bind(this)}
                   hiddenMode={this.state.hidden}
                />
             }
@@ -228,7 +228,7 @@ class LeagueTableWidget extends Component {
                   </TableBodyPositionCell>,
                   <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
                   this.state.mobile ? this.columnGroup.render(row)
-                     : Object.keys(this.columnGroups).map(key => this.columnGroups[key].render(row))
+                     : this.columnGroups.map(columnGroup => columnGroup.render(row))
                ])}
             </TableBody>
          </Table>

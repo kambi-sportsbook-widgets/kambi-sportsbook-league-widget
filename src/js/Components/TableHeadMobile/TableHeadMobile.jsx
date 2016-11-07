@@ -9,17 +9,17 @@ class TableHeadMobile extends Component {
       super(props);
 
       this.state = {
-         columnGroup: this.props.defaultColumnGroup
+         columnGroupIdx: this.props.initialColumnGroupIdx
       };
    }
 
    /**
     * Handles column group change.
-    * @param {string} columnGroup Column group key
+    * @param {number} idx Column group key
     */
-   columnsChanged(columnGroup) {
-      this.setState({ columnGroup });
-      this.props.onColumnsChanged(columnGroup);
+   columnGroupChanged(idx) {
+      this.setState({ columnGroupIdx: idx });
+      this.props.onColumnGroupChanged(idx);
    }
 
    /**
@@ -27,7 +27,7 @@ class TableHeadMobile extends Component {
     * @returns {object}
     */
    get columnGroup() {
-      return this.props.columnGroups[this.state.columnGroup];
+      return this.props.columnGroups[this.state.columnGroupIdx];
    }
 
    /**
@@ -41,7 +41,11 @@ class TableHeadMobile extends Component {
                <th colSpan="2" className="title">{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className="column-picker">
                   {!this.props.hiddenMode &&
-                     <ColumnPickerButton groups={this.props.columnGroups} onChange={this.columnsChanged.bind(this)} />
+                     <ColumnPickerButton
+                        options={this.props.columnGroups}
+                        selected={this.props.initialColumnGroupIdx}
+                        onChange={this.columnGroupChanged.bind(this)}
+                     />
                   }
                </th>
                <th className="margin" />
@@ -61,12 +65,19 @@ TableHeadMobile.propTypes = {
    /**
     * Column groups definitions
     */
-   columnGroups: PropTypes.object.isRequired,
+   columnGroups: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      columns: PropTypes.arrayOf(PropTypes.shape({
+         name: PropTypes.string.isRequired,
+         short: PropTypes.string.isRequired
+      })).isRequired
+   })).isRequired,
 
    /**
-    * Default column group key
+    * Defines which column group should be displayed upon component creation
     */
-   defaultColumnGroup: PropTypes.string.isRequired,
+   initialColumnGroupIdx: PropTypes.number,
 
    /**
     * Called on header click
@@ -74,9 +85,9 @@ TableHeadMobile.propTypes = {
    onHeadClick: PropTypes.func.isRequired,
 
    /**
-    * Called on columns configuration change (with column group key argument)
+    * Called on columns configuration change (with column group index argument)
     */
-   onColumnsChanged: PropTypes.func.isRequired,
+   onColumnGroupChanged: PropTypes.func.isRequired,
 
    /**
     * Should mobile header be displayed in widget's hidden mode?
