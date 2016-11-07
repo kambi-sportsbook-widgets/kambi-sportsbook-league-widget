@@ -3,7 +3,7 @@ import styles from './Table.scss';
 
 const Table = ({ children }) => {
    return (
-      <table className={styles.general}>
+      <table className={['KambiWidget-card-background-color', styles.general].join(' ')}>
          {children}
       </table>
    );

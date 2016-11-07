@@ -28,7 +28,6 @@
    list-style: none;
    margin: 4px;
    padding: 0;
-   background: #fff;
    border-radius: 2px;
    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
    min-width: 280px;
@@ -38,16 +37,8 @@
       font-size: 16px;
       padding: 17px 16px;
       line-height: 20px;
-      color: #999;
       cursor: pointer;
-
-      &:hover {
-         background-color: #e6e6e6;
-      }
-
-      &.selected {
-         color: #13bed3;
-      }
+      white-space: nowrap;
    }
 
    @media (max-width: 480px) {

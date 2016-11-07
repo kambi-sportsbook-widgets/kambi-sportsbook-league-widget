@@ -1,4 +1,8 @@
+@import '../TableBodyShared';
+
 :local(.general) {
+   @extend .table-body-cell;
+
    text-align: center;
    width: 5.5%;
 

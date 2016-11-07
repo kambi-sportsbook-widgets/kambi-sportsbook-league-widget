@@ -69,10 +69,20 @@ class ColumnPickerButton extends Component {
                this.state.dropDown &&
                   <ul className={styles.dropDown}>
                      {this.props.options.map((option, i) => {
+                        const classNames = [
+                           'KambiWidget-card-background-color',
+                           'KambiWidget-card-background-color--hoverable',
+                           'KambiWidget-card-background-color--clickable'
+                        ];
+
+                        if (this.state.selected == i) {
+                           classNames.push('KambiWidget-primary-color');
+                        }
+
                         return (
                            <li
                               key={option.id}
-                              className={this.state.selected == i ? 'selected' : ''}
+                              className={classNames.join(' ')}
                               onClick={this.onOptionClick.bind(this, i)}
                            >
                               {option.title}

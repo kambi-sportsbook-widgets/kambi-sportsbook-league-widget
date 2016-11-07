@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 import styles from './PositionIndicator.scss';
 
 const positionCircleClassName = function(position, count) {
-//   return null;
+   return null;
 
-   if (position >= 1 && position <= 3) {
+/*   if (position >= 1 && position <= 3) {
       return 'green';
    } else if (position === 4) {
       return 'light-green';
@@ -15,6 +15,7 @@ const positionCircleClassName = function(position, count) {
    } else {
       return null;
    }
+   */
 };
 
 const PositionIndicator = ({ position, count, change }) => {

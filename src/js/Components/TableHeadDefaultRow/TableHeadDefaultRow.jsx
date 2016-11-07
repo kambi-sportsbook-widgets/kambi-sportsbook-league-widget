@@ -6,7 +6,7 @@ const t = translationModule.getTranslation.bind(translationModule);
 
 const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
    return (
-      <tr className={styles.general}>
+      <tr className={['KambiWidget-card-border-color', 'KambiWidget-card-support-text-color', styles.general].join(' ')}>
          <th colSpan="2" className="title">{title}</th>
          {columns.map((column, i) => <th key={i} className="column-name" title={t(column.name)}>{hiddenMode ? '' : column.short}</th>)}
          <th className="margin" />

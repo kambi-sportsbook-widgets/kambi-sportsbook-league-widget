@@ -223,7 +223,7 @@ class LeagueTableWidget extends Component {
                      <PositionIndicator
                         position={row.position}
                         count={this.props.statistics.length}
-                        change={Math.round(Math.random() * 2) - 1}
+                        change={0}
                      />
                   </TableBodyPositionCell>,
                   <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,

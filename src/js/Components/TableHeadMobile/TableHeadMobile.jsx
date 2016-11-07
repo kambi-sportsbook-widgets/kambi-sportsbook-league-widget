@@ -37,7 +37,7 @@ class TableHeadMobile extends Component {
    render() {
       return (
          <thead onClick={this.props.onHeadClick}>
-            <tr className={styles['mobile-row']}>
+            <tr className={['KambiWidget-card-border-color', 'KambiWidget-card-support-text-color', styles['mobile-row']].join(' ')}>
                <th colSpan="2" className="title">{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className="column-picker">
                   {!this.props.hiddenMode &&
