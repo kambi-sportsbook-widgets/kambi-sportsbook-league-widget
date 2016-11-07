@@ -147,7 +147,7 @@ class LeagueTableWidget extends Component {
             }
          },
          outcomes: {
-            title: 'Outrights',
+            title: 'Bet offers',
             columns: this.props.betOffers.map((betOffer) => {
                return {
                   key: '',

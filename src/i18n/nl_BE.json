@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Positie",
-   "participantName": "Naam deelnemer",
-   "gamesPlayed": "Gespeelde wedstrijden",
-   "wins": "Zeges",
-   "draws": "Gelijke spelen",
-   "losses": "Nederlagen",
-   "goalsFor": "Doelpunten voor",
-   "goalsAgainst": "Doelpunten tegen",
-   "goalsDifference": "Doelsaldo",
-   "points": "Punten",
-   "Last updated": "Laatst bijgewerkt"
+   "Position": "Positie",
+   "Participant name": "Naam deelnemer",
+   "Games Played": "Gespeelde wedstrijden",
+   "Wins": "Zeges",
+   "Draws": "Gelijke spelen",
+   "Losses": "Nederlagen",
+   "Goals for": "Doelpunten voor",
+   "Goals against": "Doelpunten tegen",
+   "Difference": "Doelsaldo",
+   "Points": "Punten",
+   "Statistics": "Statistieken",
+   "Bet offers": "Wedaanbiedingen"
 }

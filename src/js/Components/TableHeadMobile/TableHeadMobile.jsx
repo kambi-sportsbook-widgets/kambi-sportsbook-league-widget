@@ -46,7 +46,7 @@ class TableHeadMobile extends Component {
                </th>
                <th className="margin" />
             </tr>
-            <TableHeadDefaultRow columnNames={this.columnGroup.columns.map(column => column.short)} />
+            <TableHeadDefaultRow columns={this.columnGroup.columns} />
          </thead>
       );
    }

@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Θέση",
-   "participantName": "Όνομα Ομάδας",
-   "gamesPlayed": "Παιχνίδια που παίχτηκαν",
-   "wins": "Νίκες",
-   "draws": "Ισοπαλίες",
-   "losses": "Ήττες",
-   "goalsFor": "Γκολ υπέρ",
-   "goalsAgainst": "Γκολ εναντίον",
-   "goalsDifference": "Διαφορά",
-   "points": "Πόντοι",
-   "Last updated": "Τελευταία ενημέρωση"
+   "Position": "Θέση",
+   "Participant name": "Όνομα Ομάδας",
+   "Games Played": "Παιχνίδια που παίχτηκαν",
+   "Wins": "Νίκες",
+   "Draws": "Ισοπαλίες",
+   "Losses": "Ήττες",
+   "Goals for": "Γκολ υπέρ",
+   "Goals against": "Γκολ εναντίον",
+   "Difference": "Διαφορά",
+   "Points": "Πόντοι",
+   "Statistics": "Στατιστικά",
+   "Bet offers": "Bet offers"
 }

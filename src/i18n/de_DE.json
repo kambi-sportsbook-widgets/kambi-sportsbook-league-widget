@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Platz",
-   "participantName": "Name des Teilnehmers",
-   "gamesPlayed": "Gespielte Spiele",
-   "wins": "Siege",
-   "draws": "Unentschieden",
-   "losses": "Niederlagen",
-   "goalsFor": "Tore",
-   "goalsAgainst": "Gegentore",
-   "goalsDifference": "Tordifferenz",
-   "points": "Punkte",
-   "Last updated": "Zuletzt aktualisiert"
+   "Position": "Platz",
+   "Participant name": "Name des Teilnehmers",
+   "Games Played": "Gespielte Spiele",
+   "Wins": "Siege",
+   "Draws": "Unentschieden",
+   "Losses": "Niederlagen",
+   "Goals for": "Tore",
+   "Goals against": "Gegentore",
+   "Difference": "Tordifferenz",
+   "Points": "Punkte",
+   "Statistics": "Statistik",
+   "Bet offers": "Wettangebote"
 }

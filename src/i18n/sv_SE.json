@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Placering",
-   "participantName": "Deltagarnamn",
-   "gamesPlayed": "Spelade matcher",
-   "wins": "Vunna",
-   "draws": "Oavgjorda",
-   "losses": "Förluster",
-   "goalsFor": "Mål för",
-   "goalsAgainst": "Mål emot",
-   "goalsDifference": "Målskillnad",
-   "points": "Poäng",
-   "Last updated": "Senast uppdaterat"
+   "Position": "Placering",
+   "Participant name": "Deltagarnamn",
+   "Games Played": "Spelade matcher",
+   "Wins": "Vunna",
+   "Draws": "Oavgjorda",
+   "Losses": "Förluster",
+   "Goals for": "Mål för",
+   "Goals against": "Mål emot",
+   "Difference": "Målskillnad",
+   "Points": "Poäng",
+   "Statistics": "Statistik",
+   "Bet offers": "Odds"
 }

@@ -1,14 +1,14 @@
 {
-   "League table": "Tabel liga",
-   "position": "Loc",
-   "participantName": "Nume echipă",
-   "gamesPlayed": "Meciuri jucate",
-   "wins": "Victorii",
-   "draws": "Egaluri",
-   "losses": "Înfrângeri",
-   "goalsFor": "Goluri marcate",
-   "goalsAgainst": "Goluri primite",
-   "goalsDifference": "Golaveraj",
-   "points": "Puncte",
-   "Last updated": "Ultima actualizare"
+   "Position": "Loc",
+   "Participant name": "Nume echipă",
+   "Games Played": "Meciuri jucate",
+   "Wins": "Victorii",
+   "Draws": "Egaluri",
+   "Losses": "Înfrângeri",
+   "Goals for": "Goluri marcate",
+   "Goals against": "Goluri primite",
+   "Difference": "Golaveraj",
+   "Points": "Puncte",
+   "Statistics": "Statistici",
+   "Bet offers": "Oferte de pariere"
 }

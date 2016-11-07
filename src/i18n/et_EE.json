@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Koht",
-   "participantName": "Osaleja nimi",
-   "gamesPlayed": "Mängitud mänge",
-   "wins": "Võite",
-   "draws": "Viike",
-   "losses": "Kaotusi",
-   "goalsFor": "Löödud väravaid",
-   "goalsAgainst": "Sisselastud väravaid",
-   "goalsDifference": "Vahe",
-   "points": "Punkte",
-   "Last updated": "Viimati uuendatud"
+   "Position": "Koht",
+   "Participant name": "Osaleja nimi",
+   "Games Played": "Mängitud mänge",
+   "Wins": "Võite",
+   "Draws": "Viike",
+   "Losses": "Kaotusi",
+   "Goals for": "Löödud väravaid",
+   "Goals against": "Sisselastud väravaid",
+   "Difference": "Vahe",
+   "Points": "Punkte",
+   "Statistics": "Statistika",
+   "Bet offers": "Panuste pakkumised"
 }

@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Placering",
-   "participantName": "Deltagernavn",
-   "gamesPlayed": "Spillede kampe",
-   "wins": "Vundne",
-   "draws": "Uafgjorte",
-   "losses": "Tabte",
-   "goalsFor": "Mål scoret",
-   "goalsAgainst": "Mål indkasseret",
-   "goalsDifference": "Difference",
-   "points": "Points",
-   "Last updated": "Sidst opdateret"
+   "Position": "Placering",
+   "Participant name": "Deltagernavn",
+   "Games Played": "Spillede kampe",
+   "Wins": "Vundne",
+   "Draws": "Uafgjorte",
+   "Losses": "Tabte",
+   "Goals for": "Mål scoret",
+   "Goals against": "Mål indkasseret",
+   "Difference": "Difference",
+   "Points": "Points",
+   "Statistics": "Statistikker",
+   "Bet offers": "Væddemålsudbud"
 }

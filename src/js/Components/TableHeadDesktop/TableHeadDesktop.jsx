@@ -2,12 +2,12 @@ import React, { PropTypes, Component } from 'react';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
 
 const TableHeadDesktop = ({ columnGroups, title, onHeadClick, hiddenMode }) => {
-   const columnNames = Object.keys(columnGroups)
-      .reduce((names, key) => names.concat(columnGroups[key].columns.map(column => column.short)), []);
+   const columns = Object.keys(columnGroups)
+      .reduce((names, key) => names.concat(columnGroups[key].columns), []);
 
    return (
       <thead onClick={onHeadClick}>
-         <TableHeadDefaultRow columnNames={columnNames} title={title} hiddenMode={hiddenMode} />
+         <TableHeadDefaultRow columns={columns} title={title} hiddenMode={hiddenMode} />
       </thead>
    );
 };

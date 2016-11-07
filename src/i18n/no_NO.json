@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Posisjon",
-   "participantName": "Deltakernavn",
-   "gamesPlayed": "Kamper spilt",
-   "wins": "Seire",
-   "draws": "Uavgjort",
-   "losses": "Tap",
-   "goalsFor": "Mål for",
-   "goalsAgainst": "Mål imot",
-   "goalsDifference": "Målforskjell",
-   "points": "Poeng",
-   "Last updated": "Sist oppdatert"
+   "Position": "Posisjon",
+   "Participant name": "Deltakernavn",
+   "Games Played": "Kamper spilt",
+   "Wins": "Seire",
+   "Draws": "Uavgjort",
+   "Losses": "Tap",
+   "Goals for": "Mål for",
+   "Goals against": "Mål imot",
+   "Difference": "Målforskjell",
+   "Points": "Poeng",
+   "Statistics": "Statistikk",
+   "Bet offers": "Spilltilbud"
 }

@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Helyezés",
-   "participantName": "Csapat neve",
-   "gamesPlayed": "Lejátszott mérkőzések",
-   "wins": "Győzelem",
-   "draws": "Döntetlen",
-   "losses": "Vereség",
-   "goalsFor": "Lőtt gólok száma",
-   "goalsAgainst": "Kapott gólok száma",
-   "goalsDifference": "Gólkülönbség",
-   "points": "Pontszám",
-   "Last updated": "Legutóbbi frissítés"
+   "Position": "Helyezés",
+   "Participant name": "Csapat neve",
+   "Games Played": "Lejátszott mérkőzések",
+   "Wins": "Győzelem",
+   "Draws": "Döntetlen",
+   "Losses": "Vereség",
+   "Goals for": "Lőtt gólok száma",
+   "Goals against": "Kapott gólok száma",
+   "Difference": "Gólkülönbség",
+   "Points": "Pontszám",
+   "Statistics": "Statisztikák",
+   "Bet offers": "Fogadási ajánlatok"
 }

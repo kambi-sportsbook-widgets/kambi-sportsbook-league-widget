@@ -1,14 +1,14 @@
 {
-   "League table": "League Table",
-   "position": "Umístění",
-   "participantName": "Jméno účastníka",
-   "gamesPlayed": "Odehráno",
-   "wins": "Výhry",
-   "draws": "Remízy",
-   "losses": "Porážky",
-   "goalsFor": "Vstřeleno",
-   "goalsAgainst": "Inkasováno",
-   "goalsDifference": "Rozdíl",
-   "points": "Body",
-   "Last updated": "Naposledy aktualizováno"
+   "Position": "Umístění",
+   "Participant name": "Jméno účastníka",
+   "Games Played": "Odehráno",
+   "Wins": "Výhry",
+   "Draws": "Remízy",
+   "Losses": "Porážky",
+   "Goals for": "Vstřeleno",
+   "Goals against": "Inkasováno",
+   "Difference": "Rozdíl",
+   "Points": "Body",
+   "Statistics": "Statistiky",
+   "Bet offers": "Nabídky sázek"
 }
