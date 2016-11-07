@@ -19,7 +19,10 @@ TableBodyStatsCell.propTypes = {
    /**
     * Statistics column definition
     */
-   column: PropTypes.object.isRequired,
+   column: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      className: PropTypes.string.isRequired
+   }).isRequired,
 
    /**
     * Statistics value

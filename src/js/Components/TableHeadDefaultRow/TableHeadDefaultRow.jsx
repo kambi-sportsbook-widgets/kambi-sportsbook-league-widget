@@ -21,10 +21,12 @@ TableHeadDefaultRow.propTypes = {
    title: PropTypes.string,
 
    /**
-    * Statistics and/or outcomes column names to be displayed
-    * @todo add shape
+    * Statistics and/or outcomes columns to be displayed
     */
-   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+   columns: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      short: PropTypes.string
+   })).isRequired,
 
    /**
     * Should mobile header be displayed in widget's hidden mode?

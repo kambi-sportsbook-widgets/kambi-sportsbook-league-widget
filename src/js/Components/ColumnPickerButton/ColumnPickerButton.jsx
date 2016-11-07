@@ -48,7 +48,7 @@ class ColumnPickerButton extends Component {
 
 ColumnPickerButton.propTypes = {
    /**
-    * Array of options
+    * Options map (<string, {title}>)
     */
    groups: PropTypes.object.isRequired,
 
