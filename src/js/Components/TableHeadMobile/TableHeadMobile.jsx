@@ -38,8 +38,8 @@ class TableHeadMobile extends Component {
       return (
          <thead onClick={this.props.onHeadClick}>
             <tr className={['KambiWidget-card-border-color', 'KambiWidget-card-support-text-color', styles['mobile-row']].join(' ')}>
-               <th colSpan="2" className="title">{this.props.title}</th>
-               <th colSpan={this.columnGroup.columns.length} className="column-picker">
+               <th colSpan='2' className='title'>{this.props.title}</th>
+               <th colSpan={this.columnGroup.columns.length} className='column-picker'>
                   {!this.props.hiddenMode &&
                      <ColumnPickerButton
                         options={this.props.columnGroups}
@@ -48,7 +48,7 @@ class TableHeadMobile extends Component {
                      />
                   }
                </th>
-               <th className="margin" />
+               <th className='margin' />
             </tr>
             <TableHeadDefaultRow columns={this.columnGroup.columns} />
          </thead>

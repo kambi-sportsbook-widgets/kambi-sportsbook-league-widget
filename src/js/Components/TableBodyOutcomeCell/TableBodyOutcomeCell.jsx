@@ -4,7 +4,7 @@ import styles from './TableBodyOutcomeCell.scss';
 const TableBodyOutcomeCell = ({ children }) => {
    return (
       <td className={styles.general}>
-         <div className="wrapper">
+         <div className='wrapper'>
             {children}
          </div>
       </td>
