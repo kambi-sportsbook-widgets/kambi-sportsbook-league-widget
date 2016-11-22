@@ -161,7 +161,7 @@ class LeagueTableWidget extends Component {
             render: function(row) {
                return row.outcomes.map(outcome =>
                   <TableBodyOutcomeCell key={outcome.id}>
-                     <OutcomeButton outcome={outcome} event={event} />
+                     <OutcomeButton outcome={outcome} event={event} label={false} />
                   </TableBodyOutcomeCell>
                )
             }
