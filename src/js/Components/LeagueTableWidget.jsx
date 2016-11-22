@@ -50,7 +50,6 @@ class LeagueTableWidget extends Component {
       super(props);
 
       coreLibrary.setWidgetTrackingName(props.widgetTrackingName);
-      widgetModule.enableWidgetTransition(true);
 
       this.state = {
          hidden: false,
