@@ -1,51 +1,37 @@
 # league-table-widget
 
-Displays the league teams with statistics, with data from statistics api
+![](./screenshot.png)
+
+Displays the league teams with statistics, with data from statistics api. Also shows betoffers based on the criterionId provided through the args. By default it shows the betoffers to win and to be placed in the top positions of the tournament provided.
+
+This widget has a mobile mode, when the width of the widget is small a column picker appears in the top right of the widget that allows the user to change the table from showing the statics to show the betoffers.
 
 ## Configuration example:
 
-__`client-widgets.js`__
+Arguments and default values:
 
 ```json
 ...
 {
-    "order": 1,
-    "widgetId": "League widget",
     "args": {
-        "filter": "/football/england/premier_league/",
+        "filter": null,
         "criterionId": 1001221607,
-        "headerDefaultTitle": "Premier League 2015/16"
+        "title": null,
+        "widgetTrackingName": "gm-league-table-widget"
     }
 },
 ...
 
 ```
 
-### The widget accepts the following arguments/s:
-1. `filter` - string - __REQUIRED__ - The league filter
-2. `criterionId` - number - Criterion identifier for bet offers to be matched against
-3. `title` - string - Forces title of the widget
-4. `widgetTrackingName` - string - defaults to 'gm-league-table-widget' - tracking name for analytics purposes
+### The widget accepts the following arguments:
+
+1. `filter` - string - Filter string to force this widget to show a specific competition. Example: '/football/england/premier_league'. If null will use CoreLibrary.pageInfo.leaguePaths
+2. `criterionId` - number - Criterion identifier for bet offers to be matched against. Defaults to the betoffers to win and to be placed in the top positions of the tournament provided. The default only works for FOOTBALL competitions.
+3. `title` - string - Forces title of the widget to this value. If null will use the competition name
+4. `widgetTrackingName` - string - tracking name for analytics purposes
 
 
-### To add specific locale strings to be compiled add the following to the buildparameters.json.
-Each array object must contain key/value pairs, where key is the Label of the string used in template, and the value
-represents the object pointing to Kambi locale.js
+### Build Instructions
 
-```json
-"localeStrings": [
-      {
-         "Draw": "mostpopular.outcomeLabel.draw"
-      }
-   ]
-```
-
-# Other tools
-
-For setting up sass maps, follow this tutorial https://www.hackmonkey.com/2014/sep/configuring-css-source-maps-compass
-
-To use Scss Lint, run "gem install scss_lint"
-
-# Changelog
-
-changelog can be found [here](CHANGELOG.md)
+Please refer to the [core-library](https://github.com/kambi-sportsbook-widgets/widget-core-library)
