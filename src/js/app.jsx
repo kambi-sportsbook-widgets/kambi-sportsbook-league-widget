@@ -5,9 +5,8 @@ import LeagueTableWidget from './Components/LeagueTableWidget';
 import store from './Store/store';
 
 coreLibrary.init({
-   filter: '/football/england/premier_league', // if null will use CoreLibrary.pageInfo.leaguePaths
+   filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
    criterionId: 1001221607,
-   updatedTime: '',
    title: null,
    widgetTrackingName: 'gm-league-table-widget'
 })
@@ -21,7 +20,7 @@ coreLibrary.init({
          return coreLibrary.pageInfo.leaguePaths[0];
       }
 
-      throw new Error('No filter provided');
+      throw new Error('LeagueTable: No filter provided');
    })();
 
    return store.getData(filter, coreLibrary.args.criterionId);
