@@ -1,8 +1,6 @@
 @import '../TableHeadShared';
 
 :local(.general) {
-   @extend .table-head-row;
-
    th {
       @extend .table-head-cell;
 
@@ -10,4 +8,8 @@
          font-weight: bold;
       }
    }
+}
+
+:local(.general-non-collapsable) {
+   @extend .table-head-row;
 }

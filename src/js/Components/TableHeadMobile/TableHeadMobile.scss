@@ -1,8 +1,6 @@
 @import '../TableHeadShared';
 
 :local(.mobile-row) {
-   @extend .table-head-row;
-
    th {
       @extend .table-head-cell;
 
@@ -10,4 +8,8 @@
          text-align: right;
       }
    }
+}
+
+:local(.mobile-row-non-collapsable) {
+   @extend .table-head-row;
 }

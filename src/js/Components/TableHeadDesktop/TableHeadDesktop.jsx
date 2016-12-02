@@ -1,10 +1,15 @@
 import React, { PropTypes, Component } from 'react';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
 
-const TableHeadDesktop = ({ columns, title, onHeadClick, hiddenMode }) => {
+const TableHeadDesktop = ({ columns, title, onHeadClick, hiddenMode, collapsable }) => {
    return (
       <thead onClick={onHeadClick}>
-         <TableHeadDefaultRow columns={columns} title={title} hiddenMode={hiddenMode} />
+         <TableHeadDefaultRow
+            columns={columns}
+            title={title}
+            hiddenMode={hiddenMode}
+            collapsable={collapsable}
+         />
       </thead>
    );
 };
@@ -31,7 +36,12 @@ TableHeadDesktop.propTypes = {
    /**
     * Should mobile header be displayed in widget's hidden mode?
     */
-   hiddenMode: PropTypes.bool
+   hiddenMode: PropTypes.bool,
+
+   /**
+    * If true makes the header black background
+    */
+   collapsable: PropTypes.bool.isRequired
 };
 
 TableHeadDesktop.defaultProps = {

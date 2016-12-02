@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
+import { translationModule } from 'kambi-widget-core-library';
+import { DropdownButton } from 'kambi-widget-components';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
-import ColumnPickerButton from '../ColumnPickerButton/ColumnPickerButton';
 import styles from './TableHeadMobile.scss';
 
 class TableHeadMobile extends Component {
@@ -35,14 +36,30 @@ class TableHeadMobile extends Component {
     * @returns {XML}
     */
    render() {
+      const columnPickerOptions = this.props.columnGroups.map((column) => {
+         return translationModule.getTranslation(column.title);
+      });
+      let headerCssClasses = [
+         'KambiWidget-card-border-color',
+         'KambiWidget-card-support-text-color',
+         styles['mobile-row'],
+         styles['mobile-row-non-collapsable']
+      ];
+      if (this.props.collapsable) {
+         headerCssClasses = [
+            'KambiWidget-header',
+            styles['mobile-row']
+         ];
+      }
+      headerCssClasses = headerCssClasses.join(' ');
       return (
          <thead onClick={this.props.onHeadClick}>
-            <tr className={['KambiWidget-card-border-color', 'KambiWidget-card-support-text-color', styles['mobile-row']].join(' ')}>
+            <tr className={headerCssClasses}>
                <th colSpan='2' className='title'>{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className='column-picker'>
                   {!this.props.hiddenMode &&
-                     <ColumnPickerButton
-                        options={this.props.columnGroups}
+                     <DropdownButton
+                        options={columnPickerOptions}
                         selected={this.props.initialColumnGroupIdx}
                         onChange={this.columnGroupChanged.bind(this)}
                      />
@@ -92,7 +109,12 @@ TableHeadMobile.propTypes = {
    /**
     * Should mobile header be displayed in widget's hidden mode?
     */
-   hiddenMode: PropTypes.bool
+   hiddenMode: PropTypes.bool,
+
+   /**
+    * If true makes the header black background
+    */
+   collapsable: PropTypes.bool.isRequired
 };
 
 TableHeadMobile.defaultProps = {

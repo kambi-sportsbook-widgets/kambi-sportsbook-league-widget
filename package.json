@@ -11,8 +11,8 @@
     "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
   },
   "dependencies": {
-    "kambi-widget-components": "^1.4.0",
-    "kambi-widget-core-library": "^3.5.0",
+    "kambi-widget-components": "^1.7.1",
+    "kambi-widget-core-library": "^3.5.4",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },

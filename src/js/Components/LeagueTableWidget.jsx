@@ -180,7 +180,9 @@ class LeagueTableWidget extends Component {
     * Hides or shows the widget.
     */
    toggleHidden() {
-      this.setState({ hidden: !this.state.hidden });
+      if (this.props.collapsable) {
+         this.setState({ hidden: !this.state.hidden });
+      }
    }
 
    /**
@@ -204,6 +206,7 @@ class LeagueTableWidget extends Component {
                   columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
                   onHeadClick={this.toggleHidden.bind(this)}
                   hiddenMode={this.state.hidden}
+                  collapsable={this.props.collapsable}
                />
             }
             {this.state.mobile &&
@@ -214,6 +217,7 @@ class LeagueTableWidget extends Component {
                   onColumnGroupChanged={this.columnGroupChanged.bind(this)}
                   onHeadClick={this.toggleHidden.bind(this)}
                   hiddenMode={this.state.hidden}
+                  collapsable={this.props.collapsable}
                />
             }
             <TableBody>
@@ -245,6 +249,12 @@ LeagueTableWidget.propTypes = {
     * BetOffers list
     */
    betOffers: PropTypes.arrayOf(PropTypes.object).isRequired,
+
+   /**
+    * True if the widget should be collapsable by clicking in the header
+    * If true also makes the header black
+    */
+   collapsable: PropTypes.bool.isRequired,
 
    /**
     * Optional event entity

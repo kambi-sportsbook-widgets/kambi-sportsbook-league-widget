@@ -4,8 +4,10 @@ import { coreLibrary, widgetModule } from 'kambi-widget-core-library';
 import LeagueTableWidget from './Components/LeagueTableWidget';
 import store from './Store/store';
 
+let collapsable = false;
+
 coreLibrary.init({
-   filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
+   filter: '/football/england/premier_league', // if null will use CoreLibrary.pageInfo.leaguePaths
    criterionId: 1001221607,
    title: null,
    widgetTrackingName: 'gm-league-table-widget'
@@ -17,6 +19,7 @@ coreLibrary.init({
       }
 
       if (coreLibrary.pageInfo.leaguePaths != null && coreLibrary.pageInfo.leaguePaths.length === 1) {
+         collapsable = true;
          return coreLibrary.pageInfo.leaguePaths[0];
       }
 
@@ -34,6 +37,7 @@ coreLibrary.init({
             statistics={data.statistics}
             widgetTrackingName={coreLibrary.args.widgetTrackingName}
             title={coreLibrary.args.title}
+            collapsable={collapsable}
          />,
          document.getElementById('root')
       );
