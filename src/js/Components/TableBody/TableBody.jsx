@@ -5,7 +5,7 @@ const TableBody = ({ children }) => {
    return (
       <tbody>
          {children.map((row, i) =>
-            <tr key={i} className={['KambiWidget-card-border-color', styles.row].join(' ')}>
+            <tr key={i} className={['KambiWidget-card-inner-border', styles.row].join(' ')}>
                {row}
                <td className='margin' />
             </tr>

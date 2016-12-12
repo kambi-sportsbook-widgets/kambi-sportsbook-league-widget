@@ -6,7 +6,8 @@ const t = translationModule.getTranslation.bind(translationModule);
 
 const TableHeadDefaultRow = ({ title, columns, hiddenMode, collapsable }) => {
    let headerCssClasses = [
-      'KambiWidget-card-border-color',
+      'KambiWidget-card-header-border',
+      'KambiWidget-secondary-header',
       'KambiWidget-card-support-text-color',
       styles.general,
       styles['general-non-collapsable']

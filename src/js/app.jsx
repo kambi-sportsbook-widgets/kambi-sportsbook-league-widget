@@ -7,19 +7,23 @@ import store from './Store/store';
 let collapsable = false;
 
 coreLibrary.init({
-   filter: '/football/england/premier_league', // if null will use CoreLibrary.pageInfo.leaguePaths
-   criterionId: 1001221607,
+   filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
+   // filter: '/football/england/premier_league', // for testing
+   criterionId: 1001221607, // football To Win criterionId
    title: null,
    widgetTrackingName: 'gm-league-table-widget'
 })
 .then(() => {
+   if (coreLibrary.pageInfo.pageType !== 'home') {
+      collapsable = true;
+   }
+
    const filter = (function() {
       if (coreLibrary.args.filter != null) {
          return coreLibrary.args.filter;
       }
 
       if (coreLibrary.pageInfo.leaguePaths != null && coreLibrary.pageInfo.leaguePaths.length === 1) {
-         collapsable = true;
          return coreLibrary.pageInfo.leaguePaths[0];
       }
 

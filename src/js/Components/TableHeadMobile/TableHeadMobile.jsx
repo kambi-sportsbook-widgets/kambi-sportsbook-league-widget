@@ -40,7 +40,8 @@ class TableHeadMobile extends Component {
          return translationModule.getTranslation(column.title);
       });
       let headerCssClasses = [
-         'KambiWidget-card-border-color',
+         'KambiWidget-card-header-border',
+         'KambiWidget-secondary-header',
          'KambiWidget-card-support-text-color',
          styles['mobile-row'],
          styles['mobile-row-non-collapsable']
@@ -67,7 +68,10 @@ class TableHeadMobile extends Component {
                </th>
                <th className='margin' />
             </tr>
-            <TableHeadDefaultRow columns={this.columnGroup.columns} />
+            <TableHeadDefaultRow
+               columns={this.columnGroup.columns}
+               collapsable={this.props.collapsable}
+             />
          </thead>
       );
    }
