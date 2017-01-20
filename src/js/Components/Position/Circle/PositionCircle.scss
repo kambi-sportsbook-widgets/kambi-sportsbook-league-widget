@@ -1,19 +1,4 @@
-:local(.triangle) {
-   margin: 0 10px 0 12px;
-   display: inline-block;
-   border-left: 5px solid transparent;
-   border-right: 5px solid transparent;
-
-   &.up {
-      border-bottom: 10px solid #B8E986;
-   }
-
-   &.down {
-      border-top: 10px solid #FF3A52;
-   }
-}
-
-:local(.position) {
+:local(.circle) {
    border-radius: 50%;
    background: transparent;
    width: 22px;
@@ -21,7 +6,7 @@
    display: inline-block;
    line-height: 21px;
    text-align: center;
-   font-size: 14px;
+   font-size: 12px;
 
    &.green {
       color: #fff;
@@ -38,8 +23,22 @@
       background: #F5A623;
    }
 
+   &.light-orange {
+      color: #fff;
+      background: #f5c52a;
+   }
+
+   &.light-red {
+      color: #fff;
+      background: #ff6f5c;
+   }
+
    &.red {
       color: #fff;
       background: #FF3A52;
+   }
+
+   &.transparent {
+      background: transparent;
    }
 }

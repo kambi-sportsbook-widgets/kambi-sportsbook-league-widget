@@ -1,0 +1,29 @@
+:local(.legend) {
+   display: flex;
+   padding: 0 16px;
+   margin: 10px 0;
+   flex-wrap: wrap;
+
+   li {
+      flex: 1;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 10px 20px 10px 0;
+
+      :local(.circle) {
+         flex: 0;
+         line-height: 0;
+         margin-right: 8px;
+      }
+
+      p {
+         flex: 1;
+         color: #999;
+         font-size: 12px;
+         margin: 0;
+         line-height: 14px;
+         min-width: 100px;
+      }
+   }
+}

@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { coreLibrary, widgetModule } from 'kambi-widget-core-library';
 import LeagueTableWidget from './Components/LeagueTableWidget';
-import store from './Store/store';
-
-let collapsable = false;
+import store from './Service/store';
+import position from './Service/position';
 
 coreLibrary.init({
    filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
@@ -14,9 +13,7 @@ coreLibrary.init({
    widgetTrackingName: 'gm-league-table-widget'
 })
 .then(() => {
-   if (coreLibrary.pageInfo.pageType !== 'home') {
-      collapsable = true;
-   }
+   coreLibrary.setWidgetTrackingName(coreLibrary.args.widgetTrackingName);
 
    const filter = (function() {
       if (coreLibrary.args.filter != null) {
@@ -30,18 +27,23 @@ coreLibrary.init({
       throw new Error('LeagueTable: No filter provided');
    })();
 
-   return store.getData(filter, coreLibrary.args.criterionId);
+   return Promise.all([
+      store.getData(filter, coreLibrary.args.criterionId),
+      position.getLegend(filter),
+      position.getColorMatcher(filter)
+   ]);
 })
 .then(
-   (data) => {
+   ([data, positionLegend, positionColorMatcher]) => {
       ReactDOM.render(
          <LeagueTableWidget
             event={data.event}
             betOffers={data.betOffers}
             statistics={data.statistics}
-            widgetTrackingName={coreLibrary.args.widgetTrackingName}
             title={coreLibrary.args.title}
-            collapsable={collapsable}
+            collapsable={coreLibrary.pageInfo.pageType !== 'home'}
+            positionLegend={positionLegend}
+            positionColorMatcher={positionColorMatcher}
          />,
          document.getElementById('root')
       );

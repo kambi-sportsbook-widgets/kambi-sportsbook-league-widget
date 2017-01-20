@@ -4,12 +4,13 @@ import { OutcomeButton } from 'kambi-widget-components';
 import Table from './Table/Table';
 import TableHeadDesktop from './TableHeadDesktop/TableHeadDesktop';
 import TableHeadMobile from './TableHeadMobile/TableHeadMobile';
-import PositionIndicator from './PositionIndicator/PositionIndicator';
+import PositionIndicator from './Position/Indicator/PositionIndicator';
 import TableBody from './TableBody/TableBody';
 import TableBodyPositionCell from './TableBodyPositionCell/TableBodyPositionCell';
 import TableBodyParticipantCell from './TableBodyParticipantCell/TableBodyParticipantCell';
 import TableBodyStatsCell from './TableBodyStatsCell/TableBodyStatsCell';
 import TableBodyOutcomeCell from './TableBodyOutcomeCell/TableBodyOutcomeCell';
+import Legend from './Legend/Legend';
 
 /**
  * Widget header height
@@ -49,22 +50,13 @@ class LeagueTableWidget extends Component {
    constructor(props) {
       super(props);
 
-      coreLibrary.setWidgetTrackingName(props.widgetTrackingName);
-
       this.state = {
          hidden: false,
          columnGroupIdx: 0,
          mobile: isMobile()
       };
 
-      this.updateDimensions = () => {
-         const mobile = isMobile();
-
-         if (this.state.mobile != mobile) {
-            this.columnGroupsCache = null;
-            this.setState({ mobile: mobile });
-         }
-      }
+      this.updateDimensions = this.updateDimensions.bind(this);
    }
 
    /**
@@ -194,47 +186,63 @@ class LeagueTableWidget extends Component {
    }
 
    /**
+    * Updates widget layout on container resize.
+    */
+   updateDimensions() {
+      const mobile = isMobile();
+
+      if (this.state.mobile != mobile) {
+         this.columnGroupsCache = null;
+         this.setState({ mobile: mobile });
+      }
+   }
+
+   /**
     * Renders widget.
     * @returns {XML}
     */
    render() {
       return (
-         <Table>
-            {!this.state.mobile &&
-               <TableHeadDesktop
-                  title={this.title}
-                  columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
-                  onHeadClick={this.toggleHidden.bind(this)}
-                  hiddenMode={this.state.hidden}
-                  collapsable={this.props.collapsable}
-               />
-            }
-            {this.state.mobile &&
-               <TableHeadMobile
-                  title={this.title}
-                  columnGroups={this.columnGroups}
-                  initialColumnGroupIdx={this.state.columnGroupIdx}
-                  onColumnGroupChanged={this.columnGroupChanged.bind(this)}
-                  onHeadClick={this.toggleHidden.bind(this)}
-                  hiddenMode={this.state.hidden}
-                  collapsable={this.props.collapsable}
-               />
-            }
-            <TableBody>
-               {this.props.statistics.map((row, i) => [
-                  <TableBodyPositionCell key={`pos_${i}`}>
-                     <PositionIndicator
-                        position={row.position}
-                        count={this.props.statistics.length}
-                        change={0}
-                     />
-                  </TableBodyPositionCell>,
-                  <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
-                  this.state.mobile ? this.columnGroup.render(row)
-                     : this.columnGroups.map(columnGroup => columnGroup.render(row))
-               ])}
-            </TableBody>
-         </Table>
+         <div>
+            <Table>
+               {!this.state.mobile &&
+                  <TableHeadDesktop
+                     title={this.title}
+                     columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
+                     onHeadClick={this.toggleHidden.bind(this)}
+                     hiddenMode={this.state.hidden}
+                     collapsable={this.props.collapsable}
+                  />
+               }
+               {this.state.mobile &&
+                  <TableHeadMobile
+                     title={this.title}
+                     columnGroups={this.columnGroups}
+                     initialColumnGroupIdx={this.state.columnGroupIdx}
+                     onColumnGroupChanged={this.columnGroupChanged.bind(this)}
+                     onHeadClick={this.toggleHidden.bind(this)}
+                     hiddenMode={this.state.hidden}
+                     collapsable={this.props.collapsable}
+                  />
+               }
+               <TableBody>
+                  {this.props.statistics.map((row, i) => [
+                     <TableBodyPositionCell key={`pos_${i}`}>
+                        <PositionIndicator
+                           position={row.position}
+                           color={this.props.positionColorMatcher(row.position)}
+                           change={0}
+                        />
+                     </TableBodyPositionCell>,
+                     <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
+                     this.state.mobile ? this.columnGroup.render(row)
+                        : this.columnGroups.map(columnGroup => columnGroup.render(row))
+                  ])}
+               </TableBody>
+            </Table>
+            {!!this.props.positionLegend.length &&
+               <Legend items={this.props.positionLegend} />}
+         </div>
       );
    }
 }
@@ -267,9 +275,23 @@ LeagueTableWidget.propTypes = {
    title: PropTypes.string,
 
    /**
-    * Widget tracking name
+    * Position color legend
     */
-   widgetTrackingName: PropTypes.string
+   positionLegend: PropTypes.arrayOf(PropTypes.shape({
+      color: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired
+   })),
+
+   /**
+    * Function which maps team position to circle color (accepted by Circle element)
+    */
+   positionColorMatcher: PropTypes.func
+
+};
+
+LeagueTableWidget.defaultProps = {
+   positionLegend: [],
+   positionColorMatcher: () => 'transparent'
 };
 
 export default LeagueTableWidget;
