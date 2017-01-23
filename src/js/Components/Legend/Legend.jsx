@@ -9,7 +9,7 @@ const Legend = ({ items }) => (
    <ul className={styles.legend}>
       {items.map((item, i) => (
          <li key={i}>
-            <div className={styles.circle}><PositionCircle color={item.color} /></div>
+            <div className={styles.circle}><PositionCircle color={PositionCircle.COLORS[item.color]} /></div>
             <p>{t(item.description)}</p>
          </li>
       ))}

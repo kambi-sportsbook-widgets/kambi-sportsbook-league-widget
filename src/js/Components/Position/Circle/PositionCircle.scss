@@ -1,6 +1,18 @@
+:local(.wrapper) {
+   border-radius: 50%;
+   width: 22px;
+   height: 22px;
+   display: inline-block;
+   background: #fff;
+   line-height: 0;
+
+   &.no-circle {
+      background: transparent;
+   }
+}
+
 :local(.circle) {
    border-radius: 50%;
-   background: transparent;
    width: 22px;
    height: 22px;
    display: inline-block;
@@ -8,34 +20,8 @@
    text-align: center;
    font-size: 12px;
 
-   &.green {
-      color: #fff;
-      background: #719D45;
-   }
-
-   &.light-green {
-      color: #fff;
-      background: #8CC354;
-   }
-
-   &.orange {
-      color: #fff;
-      background: #F5A623;
-   }
-
-   &.light-orange {
-      color: #fff;
-      background: #f5c52a;
-   }
-
-   &.light-red {
-      color: #fff;
-      background: #ff6f5c;
-   }
-
-   &.red {
-      color: #fff;
-      background: #FF3A52;
+   &.light {
+      opacity: .6;
    }
 
    &.transparent {
