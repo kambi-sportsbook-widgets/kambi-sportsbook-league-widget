@@ -150,11 +150,12 @@ class LeagueTableWidget extends Component {
                };
             }),
             render: function(row) {
-               return row.outcomes.map(outcome =>
-                  <TableBodyOutcomeCell key={outcome.id}>
-                     <OutcomeButton outcome={outcome} label={false} />
+               return row.outcomes.map((outcome, i) =>
+                  <TableBodyOutcomeCell key={i}>
+                     {outcome &&
+                        <OutcomeButton outcome={outcome} label={false} />}
                   </TableBodyOutcomeCell>
-               )
+               );
             }
          }
       ]);
