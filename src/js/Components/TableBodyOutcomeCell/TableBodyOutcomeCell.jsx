@@ -15,7 +15,7 @@ TableBodyOutcomeCell.propTypes = {
    /**
     * Inner element - OutcomeButton
     */
-   children: PropTypes.node.isRequired
+   children: PropTypes.node
 };
 
 export default TableBodyOutcomeCell;
