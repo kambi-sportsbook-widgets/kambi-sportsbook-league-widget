@@ -15,7 +15,7 @@ coreLibrary.init({
 .then(() => {
    coreLibrary.setWidgetTrackingName(coreLibrary.args.widgetTrackingName);
 
-   const filter = (function() {
+   let filter = (function() {
       if (coreLibrary.args.filter != null) {
          return coreLibrary.args.filter;
       }
@@ -26,6 +26,11 @@ coreLibrary.init({
 
       throw new Error('LeagueTable: No filter provided');
    })();
+
+   // the rest of the code expects that the filter string starts with '/'
+   if (filter[0] !== '/') {
+      filter = '/' + filter;
+   }
 
    return Promise.all([
       store.getData(filter, coreLibrary.args.criterionId),
