@@ -44,17 +44,10 @@ class TableHeadMobile extends Component {
          'KambiWidget-secondary-header',
          'KambiWidget-card-support-text-color',
          styles['mobile-row'],
-         styles['mobile-row-non-collapsable']
       ];
-      if (this.props.collapsable) {
-         headerCssClasses = [
-            'KambiWidget-header',
-            styles['mobile-row']
-         ];
-      }
       headerCssClasses = headerCssClasses.join(' ');
       return (
-         <thead onClick={this.props.onHeadClick}>
+         <thead>
             <tr className={headerCssClasses}>
                <th colSpan='2' className='title'>{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className='column-picker'>
@@ -70,7 +63,6 @@ class TableHeadMobile extends Component {
             </tr>
             <TableHeadDefaultRow
                columns={this.columnGroup.columns}
-               collapsable={this.props.collapsable}
              />
          </thead>
       );
@@ -101,11 +93,6 @@ TableHeadMobile.propTypes = {
    initialColumnGroupIdx: PropTypes.number,
 
    /**
-    * Called on header click
-    */
-   onHeadClick: PropTypes.func.isRequired,
-
-   /**
     * Called on columns configuration change (with column group index argument)
     */
    onColumnGroupChanged: PropTypes.func.isRequired,
@@ -114,11 +101,6 @@ TableHeadMobile.propTypes = {
     * Should mobile header be displayed in widget's hidden mode?
     */
    hiddenMode: PropTypes.bool,
-
-   /**
-    * If true makes the header black background
-    */
-   collapsable: PropTypes.bool.isRequired
 };
 
 TableHeadMobile.defaultProps = {

@@ -4,21 +4,13 @@ import styles from './TableHeadDefaultRow.scss';
 
 const t = translationModule.getTranslation.bind(translationModule);
 
-const TableHeadDefaultRow = ({ title, columns, hiddenMode, collapsable }) => {
+const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
    let headerCssClasses = [
       'KambiWidget-card-header-border',
       'KambiWidget-secondary-header',
       'KambiWidget-card-support-text-color',
-      styles.general,
-      styles['general-non-collapsable']
+      styles.general
    ];
-
-   if (collapsable === true) {
-      headerCssClasses = [
-         'KambiWidget-header',
-         styles.general
-      ];
-   }
 
    headerCssClasses = headerCssClasses.join(' ');
 
@@ -61,11 +53,6 @@ TableHeadDefaultRow.propTypes = {
     * Should mobile header be displayed in widget's hidden mode?
     */
    hiddenMode: PropTypes.bool,
-
-   /**
-    * If true makes the header black background
-    */
-   collapsable: PropTypes.bool.isRequired
 };
 
 TableHeadDefaultRow.defaultProps = {

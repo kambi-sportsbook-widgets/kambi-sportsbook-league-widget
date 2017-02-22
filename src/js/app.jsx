@@ -46,7 +46,6 @@ coreLibrary.init({
             betOffers={data.betOffers}
             statistics={data.statistics}
             title={coreLibrary.args.title}
-            collapsable={coreLibrary.pageInfo.pageType !== 'home'}
             positionLegend={positionLegend}
             positionColorMatcher={positionColorMatcher}
          />,
