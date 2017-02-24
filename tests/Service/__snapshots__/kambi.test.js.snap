@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Kambi service handles Kambi API returning empty events set 1`] = `[Error: Competition not found for filter=/test/filter and criterionId=123]`;
+
+exports[`Kambi service handles Kambi API returning empty response for getEvent request 1`] = `[Error: Event not found]`;
+
+exports[`Kambi service handles Kambi API returning incorrect response for eventsByFilter request 1`] = `[Error: Invalid response from Kambi API]`;
+
+exports[`Kambi service returns correct data when criterionId is given 1`] = `
+Object {
+  "betOffers": Array [
+    Object {
+      "criterion": Object {
+        "id": 123,
+      },
+      "outcomes": Array [
+        Object {
+          "participantId": 1000,
+        },
+      ],
+    },
+  ],
+  "event": Object {
+    "betOffers": Array [
+      Object {
+        "criterion": Object {
+          "id": 123,
+        },
+        "outcomes": Array [
+          Object {
+            "participantId": 1000,
+          },
+        ],
+      },
+    ],
+    "event": Object {
+      "id": 100,
+      "type": "ET_COMPETITION",
+    },
+  },
+  "statistics": Array [
+    Object {
+      "goalsAgainst": 200,
+      "goalsDifference": -100,
+      "goalsFor": 100,
+      "outcomes": Array [
+        Object {
+          "participantId": 1000,
+        },
+      ],
+      "participantId": 1000,
+    },
+  ],
+}
+`;
+
+exports[`Kambi service returns correct data when criterionId is not given 1`] = `
+Object {
+  "betOffers": Array [],
+  "event": Object {
+    "event": Object {
+      "id": 100,
+      "type": "ET_COMPETITION",
+    },
+  },
+  "statistics": Array [
+    Object {
+      "goalsAgainst": 200,
+      "goalsDifference": -100,
+      "goalsFor": 100,
+      "outcomes": Array [],
+    },
+  ],
+}
+`;

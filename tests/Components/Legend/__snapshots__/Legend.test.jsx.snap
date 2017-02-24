@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legend DOM rendering renders correctly with empty items list 1`] = `
+<ul
+  className="legend"
+/>
+`;
+
+exports[`Legend DOM rendering renders correctly with items 1`] = `
+<ul
+  className="legend"
+>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--win"
+        />
+      </span>
+    </div>
+    <p>
+      0th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--win light"
+        />
+      </span>
+    </div>
+    <p>
+      1th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--draw"
+        />
+      </span>
+    </div>
+    <p>
+      2th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--draw light"
+        />
+      </span>
+    </div>
+    <p>
+      3th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--lose"
+        />
+      </span>
+    </div>
+    <p>
+      4th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper false"
+      >
+        <span
+          className="circle KambiWidget-box--lose light"
+        />
+      </span>
+    </div>
+    <p>
+      5th item
+    </p>
+  </li>
+  <li>
+    <div
+      className="circle"
+    >
+      <span
+        className="wrapper no-circle"
+      >
+        <span
+          className="circle transparent"
+        />
+      </span>
+    </div>
+    <p>
+      6th item
+    </p>
+  </li>
+</ul>
+`;

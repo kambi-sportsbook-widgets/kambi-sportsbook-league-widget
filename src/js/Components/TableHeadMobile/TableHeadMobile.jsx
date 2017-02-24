@@ -122,7 +122,8 @@ TableHeadMobile.propTypes = {
 };
 
 TableHeadMobile.defaultProps = {
-   hiddenMode: false
+   hiddenMode: false,
+   initialColumnGroupIdx: 0
 };
 
 export default TableHeadMobile;

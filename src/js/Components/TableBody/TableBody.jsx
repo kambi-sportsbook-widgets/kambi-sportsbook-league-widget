@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
+import React, { Children, PropTypes } from 'react';
 import styles from './TableBody.scss';
 
 const TableBody = ({ children }) => {
    return (
       <tbody>
-         {children.map((row, i) =>
+         {Children.map(children, (row, i) =>
             <tr key={i} className={['KambiWidget-card-inner-border', styles.row].join(' ')}>
                {row}
                <td className='margin' />
@@ -18,7 +18,7 @@ TableBody.propTypes = {
    /**
     * Inner rows
     */
-   children: PropTypes.arrayOf(PropTypes.node)
+   children: PropTypes.node
 };
 
 export default TableBody;

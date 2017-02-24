@@ -72,7 +72,6 @@ class LeagueTableWidget extends Component {
     * @param {object} nextProps New properties
     */
    componentWillReceiveProps(nextProps) {
-      coreLibrary.setWidgetTrackingName(nextProps.widgetTrackingName);
       this.columnGroupsCache = null;
    }
 

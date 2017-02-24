@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table DOM rendering renders correctly with children 1`] = `
+<table
+  className="KambiWidget-card-background-color general"
+>
+  <tr>
+    <td />
+    <td />
+  </tr>
+  <tr>
+    <td />
+    <td />
+  </tr>
+</table>
+`;
+
+exports[`Table DOM rendering renders correctly without children 1`] = `
+<table
+  className="KambiWidget-card-background-color general"
+/>
+`;

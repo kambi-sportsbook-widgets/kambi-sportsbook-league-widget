@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeadDesktop DOM rendering renders correctly when collapsable 1`] = `
+<thead
+  onClick={[Function]}
+>
+  <tr
+    className="KambiWidget-header general"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-name"
+      title="Test column 1"
+    >
+      TC1
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;
+
+exports[`TableHeadDesktop DOM rendering renders correctly when in hidden mode 1`] = `
+<thead
+  onClick={[Function]}
+>
+  <tr
+    className="KambiWidget-header general"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-name"
+      title="Test column 1"
+    >
+      
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;
+
+exports[`TableHeadDesktop DOM rendering renders correctly when not collapsable 1`] = `
+<thead
+  onClick={[Function]}
+>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general general-non-collapsable"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-name"
+      title="Test column 1"
+    >
+      TC1
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;

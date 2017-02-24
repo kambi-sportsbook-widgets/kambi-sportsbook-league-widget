@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBodyParticipantCell DOM rendering renders correctly 1`] = `
+<td
+  className="general"
+  title="Translated: \\"Participant name\\""
+>
+  Antoni
+</td>
+`;

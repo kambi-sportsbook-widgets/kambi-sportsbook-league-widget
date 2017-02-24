@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { coreLibrary, widgetModule } from 'kambi-widget-core-library';
 import LeagueTableWidget from './Components/LeagueTableWidget';
-import store from './Service/store';
+import kambi from './Service/kambi';
 import position from './Service/position';
 
 coreLibrary.init({
@@ -33,7 +33,7 @@ coreLibrary.init({
    }
 
    return Promise.all([
-      store.getData(filter, coreLibrary.args.criterionId),
+      kambi.getData(filter, coreLibrary.args.criterionId),
       position.getLegend(filter),
       position.getColorMatcher(filter)
    ]);
