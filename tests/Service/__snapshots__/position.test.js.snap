@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`position service all leagues are correctly configured 1`] = `
+Array [
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "LIGHT_RED",
+      "description": "Relegation Play-off",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "LIGHT_RED",
+      "description": "Relegation Play-off",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Champions League Qualifiers",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "Europa League",
+    },
+    Object {
+      "color": "LIGHT_ORANGE",
+      "description": "Europa League Play-off",
+    },
+    Object {
+      "color": "LIGHT_RED",
+      "description": "Relegation Play-off",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+]
+`;
+
+exports[`position service returns position color matcher correctly 1`] = `
+Array [
+  Array [
+    "GREEN",
+    null,
+  ],
+  Array [
+    "GREEN",
+    null,
+  ],
+  Array [
+    "GREEN",
+    null,
+  ],
+  Array [
+    "GREEN",
+    null,
+  ],
+  Array [
+    "GREEN",
+    null,
+  ],
+  Array [
+    "GREEN",
+    null,
+  ],
+]
+`;

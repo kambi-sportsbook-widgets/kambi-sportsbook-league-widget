@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PositionCircle DOM rendering renders correctly with default props 1`] = `
+<span
+  className="wrapper no-circle"
+>
+  <span
+    className="circle transparent"
+  />
+</span>
+`;
+
+exports[`PositionCircle DOM rendering renders correctly with given child element 1`] = `
+<span
+  className="wrapper no-circle"
+>
+  <span
+    className="circle transparent"
+  >
+    t
+  </span>
+</span>
+`;
+
+exports[`PositionCircle DOM rendering renders correctly with given color 1`] = `
+<span
+  className="wrapper false"
+>
+  <span
+    className="circle KambiWidget-box--win"
+  />
+</span>
+`;
+
+exports[`PositionCircle DOM rendering renders correctly with transparent color 1`] = `
+<span
+  className="wrapper no-circle"
+>
+  <span
+    className="circle transparent"
+  />
+</span>
+`;

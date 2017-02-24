@@ -4,13 +4,11 @@ import styles from './TableBodyPositionCell.scss';
 
 const t = translationModule.getTranslation.bind(translationModule);
 
-const TableBodyPositionCell = ({ children }) => {
-   return (
-      <td className={styles.general} title={t('Position')}>
-         {children}
-      </td>
-   );
-};
+const TableBodyPositionCell = ({ children }) => (
+   <td className={styles.general} title={t('Position')}>
+      {children}
+   </td>
+);
 
 TableBodyPositionCell.propTypes = {
    /**

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeadDesktop DOM rendering renders correctly 1`] = `
+<thead>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-name"
+      title="Test column 1"
+    >
+      TC1
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBody DOM rendering renders correctly with children 1`] = `
+<tbody>
+  <tr
+    className="KambiWidget-card-inner-border row"
+  >
+    <tr>
+      <td />
+      <td />
+    </tr>
+    <td
+      className="margin"
+    />
+  </tr>
+  <tr
+    className="KambiWidget-card-inner-border row"
+  >
+    <tr>
+      <td />
+      <td />
+    </tr>
+    <td
+      className="margin"
+    />
+  </tr>
+</tbody>
+`;
+
+exports[`TableBody DOM rendering renders correctly without children 1`] = `<tbody />`;

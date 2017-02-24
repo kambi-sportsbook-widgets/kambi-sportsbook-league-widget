@@ -51,13 +51,11 @@ class TableHeadMobile extends Component {
             <tr className={headerCssClasses}>
                <th colSpan='2' className='title'>{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className='column-picker'>
-                  {!this.props.hiddenMode &&
-                     <DropdownButton
-                        options={columnPickerOptions}
-                        selected={this.props.initialColumnGroupIdx}
-                        onChange={this.columnGroupChanged.bind(this)}
-                     />
-                  }
+                  <DropdownButton
+                     options={columnPickerOptions}
+                     selected={this.props.initialColumnGroupIdx}
+                     onChange={this.columnGroupChanged.bind(this)}
+                  />
                </th>
                <th className='margin' />
             </tr>
@@ -96,15 +94,10 @@ TableHeadMobile.propTypes = {
     * Called on columns configuration change (with column group index argument)
     */
    onColumnGroupChanged: PropTypes.func.isRequired,
-
-   /**
-    * Should mobile header be displayed in widget's hidden mode?
-    */
-   hiddenMode: PropTypes.bool,
 };
 
 TableHeadMobile.defaultProps = {
-   hiddenMode: false
+   initialColumnGroupIdx: 0
 };
 
 export default TableHeadMobile;

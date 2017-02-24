@@ -69,7 +69,7 @@ const CONFIG = {
 const find = function(filter) {
    // strip all following "/all"'s
    const matches = filter.match(/(\/all)*\/?$/),
-      sanitized = filter.substring(0, filter.length - (matches ? matches[0].length : 0));
+      sanitized = filter.substring(0, filter.length - matches[0].length);
 
    return CONFIG.hasOwnProperty(sanitized) ? CONFIG[sanitized]
       : [];
@@ -82,10 +82,6 @@ const find = function(filter) {
  */
 const getLegend = function(filter) {
    const config = find(filter);
-
-   if (!config) {
-      return Promise.resolve([]);
-   }
 
    // Promise returned as there will (?) be API for colors in the future
    return Promise.resolve(

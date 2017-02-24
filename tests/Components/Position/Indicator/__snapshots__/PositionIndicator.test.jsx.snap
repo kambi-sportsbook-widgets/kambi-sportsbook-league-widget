@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PositionIndicator DOM rendering renders correctly with color 1`] = `
+<span>
+  <span
+    className="wrapper false"
+  >
+    <span
+      className="circle KambiWidget-box--win"
+    >
+      1
+    </span>
+  </span>
+</span>
+`;
+
+exports[`PositionIndicator DOM rendering renders correctly with default props 1`] = `
+<span>
+  <span
+    className="wrapper no-circle"
+  >
+    <span
+      className="circle transparent"
+    >
+      1
+    </span>
+  </span>
+</span>
+`;
+
+exports[`PositionIndicator DOM rendering renders correctly with negative position change 1`] = `
+<span>
+  <span
+    className="wrapper no-circle"
+  >
+    <span
+      className="circle transparent"
+    >
+      4
+    </span>
+  </span>
+  <i
+    className="triangle down"
+  />
+</span>
+`;
+
+exports[`PositionIndicator DOM rendering renders correctly with positive position change 1`] = `
+<span>
+  <span
+    className="wrapper no-circle"
+  >
+    <span
+      className="circle transparent"
+    >
+      1
+    </span>
+  </span>
+  <i
+    className="triangle up"
+  />
+</span>
+`;

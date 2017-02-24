@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHeadMobile DOM rendering renders correctly 1`] = `
+<thead>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-picker"
+      colSpan={2}
+    >
+      <div
+        className="general"
+      >
+        <button
+          className="KambiWidget-card-support-text-color button"
+          onClick={[Function]}
+        >
+          Translated: "Column group 1"
+          <i />
+        </button>
+      </div>
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      
+    </th>
+    <th
+      className="column-name"
+      title="Translated: \\"Column 1-1\\""
+    >
+      c11
+    </th>
+    <th
+      className="column-name"
+      title="Translated: \\"Column 1-2\\""
+    >
+      c12
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;
+
+exports[`TableHeadMobile DOM rendering renders correctly with initial column group specified 1`] = `
+<thead>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      Test title
+    </th>
+    <th
+      className="column-picker"
+      colSpan={2}
+    >
+      <div
+        className="general"
+      >
+        <button
+          className="KambiWidget-card-support-text-color button"
+          onClick={[Function]}
+        >
+          Translated: "Column group 2"
+          <i />
+        </button>
+      </div>
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+  <tr
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
+  >
+    <th
+      className="title"
+      colSpan="2"
+    >
+      
+    </th>
+    <th
+      className="column-name"
+      title="Translated: \\"Column 2-1\\""
+    >
+      c21
+    </th>
+    <th
+      className="column-name"
+      title="Translated: \\"Column 2-2\\""
+    >
+      c22
+    </th>
+    <th
+      className="margin"
+    />
+  </tr>
+</thead>
+`;

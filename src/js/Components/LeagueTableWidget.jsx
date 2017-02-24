@@ -13,12 +13,6 @@ import TableBodyOutcomeCell from './TableBodyOutcomeCell/TableBodyOutcomeCell';
 import Legend from './Legend/Legend';
 
 /**
- * Widget header height
- * @type {number}
- */
-const HEADER_HEIGHT = 36;
-
-/**
  * Column labels map
  * @type {{key: string, value: string}[]}
  */
@@ -51,7 +45,6 @@ class LeagueTableWidget extends Component {
       super(props);
 
       this.state = {
-         hidden: false,
          columnGroupIdx: 0,
          mobile: isMobile()
       };
@@ -79,11 +72,7 @@ class LeagueTableWidget extends Component {
     * Called just after finished rendering DOM.
     */
    componentDidUpdate() {
-      if (this.state.hidden) {
-         widgetModule.setWidgetHeight(HEADER_HEIGHT);
-      } else {
-         widgetModule.adaptWidgetHeight();
-      }
+      widgetModule.adaptWidgetHeight();
    }
 
    /**
@@ -200,7 +189,6 @@ class LeagueTableWidget extends Component {
                   <TableHeadDesktop
                      title={this.title}
                      columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
-                     hiddenMode={this.state.hidden}
                   />
                }
                {this.state.mobile &&
@@ -209,7 +197,6 @@ class LeagueTableWidget extends Component {
                      columnGroups={this.columnGroups}
                      initialColumnGroupIdx={this.state.columnGroupIdx}
                      onColumnGroupChanged={this.columnGroupChanged.bind(this)}
-                     hiddenMode={this.state.hidden}
                   />
                }
                <TableBody>

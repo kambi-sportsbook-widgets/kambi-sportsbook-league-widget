@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBodyOutcomeCell DOM rendering renders correctly with children 1`] = `
+<td
+  className="general"
+>
+  <div
+    className="wrapper"
+  >
+    <div>
+      Test
+    </div>
+  </div>
+</td>
+`;
+
+exports[`TableBodyOutcomeCell DOM rendering renders correctly without children 1`] = `
+<td
+  className="general"
+>
+  <div
+    className="wrapper"
+  />
+</td>
+`;

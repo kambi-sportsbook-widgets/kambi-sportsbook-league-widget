@@ -7,7 +7,6 @@ const TableHeadDesktop = ({ columns, title, hiddenMode }) => {
          <TableHeadDefaultRow
             columns={columns}
             title={title}
-            hiddenMode={hiddenMode}
          />
       </thead>
    );
@@ -26,15 +25,6 @@ TableHeadDesktop.propTypes = {
       name: PropTypes.string.isRequired,
       short: PropTypes.string.isRequired
    })).isRequired,
-
-   /**
-    * Should mobile header be displayed in widget's hidden mode?
-    */
-   hiddenMode: PropTypes.bool,
-};
-
-TableHeadDesktop.defaultProps = {
-   hiddenMode: false
 };
 
 export default TableHeadDesktop;
