@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
 
-const TableHeadDesktop = ({ columns, title, hiddenMode }) => {
+const TableHeadDesktop = ({ columns, title }) => {
    return (
       <thead>
          <TableHeadDefaultRow
