@@ -3,7 +3,7 @@ import styles from './TableBody.scss';
 
 const TableBody = ({ children }) => {
    // todo: use TableBodyRow (KSBWI-908)
-   if (!children instanceof Array) {
+   if (!(children instanceof Array)) {
       children = [];
    }
 
