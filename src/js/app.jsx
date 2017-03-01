@@ -40,12 +40,15 @@ coreLibrary.init({
 })
 .then(
    ([data, positionLegend, positionColorMatcher]) => {
+      let title = coreLibrary.args.title;
+      if (title == null) {
+         title = data.title;
+      }
       ReactDOM.render(
          <LeagueTableWidget
-            event={data.event}
             betOffers={data.betOffers}
             statistics={data.statistics}
-            title={coreLibrary.args.title}
+            title={title}
             positionLegend={positionLegend}
             positionColorMatcher={positionColorMatcher}
          />,

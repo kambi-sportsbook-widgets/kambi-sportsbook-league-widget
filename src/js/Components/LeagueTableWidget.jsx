@@ -83,28 +83,6 @@ class LeagueTableWidget extends Component {
    }
 
    /**
-    * Returns proper widget title.
-    * @returns {string}
-    */
-   get title() {
-      if (this.props.title) {
-         return this.props.title;
-      }
-
-      if (this.props.event) {
-         const path = this.props.event.event.path;
-
-         if (path.length >= 3) {
-            return path[2].name;
-         } else if (path.length >= 1) {
-            return path[0].name;
-         }
-      }
-
-      return '';
-   }
-
-   /**
     * Returns current column group definitions.
     * @returns {object.<string, object>}
     */
@@ -187,13 +165,14 @@ class LeagueTableWidget extends Component {
             <Table>
                {!this.state.mobile &&
                   <TableHeadDesktop
-                     title={this.title}
+                     title={this.props.title}
                      columns={this.columnGroups.reduce((names, columnGroup) => names.concat(columnGroup.columns), [])}
                   />
                }
                {this.state.mobile &&
                   <TableHeadMobile
-                     title={this.title}
+                     title={this.props.title}
+                     showColumnPicker={this.props.betOffers.length > 0}
                      columnGroups={this.columnGroups}
                      initialColumnGroupIdx={this.state.columnGroupIdx}
                      onColumnGroupChanged={this.columnGroupChanged.bind(this)}
@@ -233,14 +212,9 @@ LeagueTableWidget.propTypes = {
    betOffers: PropTypes.arrayOf(PropTypes.object).isRequired,
 
    /**
-    * Optional event entity
+    * Title of the widget
     */
-   event: PropTypes.object,
-
-   /**
-    * Fixed widget title (if set)
-    */
-   title: PropTypes.string,
+   title: PropTypes.string.isRequired,
 
    /**
     * Position color legend

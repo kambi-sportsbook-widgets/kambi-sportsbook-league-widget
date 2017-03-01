@@ -46,16 +46,21 @@ class TableHeadMobile extends Component {
          styles['mobile-row'],
       ];
       headerCssClasses = headerCssClasses.join(' ');
+
       return (
          <thead>
             <tr className={headerCssClasses}>
                <th colSpan='2' className='title'>{this.props.title}</th>
                <th colSpan={this.columnGroup.columns.length} className='column-picker'>
-                  <DropdownButton
-                     options={columnPickerOptions}
-                     selected={this.props.initialColumnGroupIdx}
-                     onChange={this.columnGroupChanged.bind(this)}
-                  />
+                  {
+                     this.props.showColumnPicker ?
+                        <DropdownButton
+                           options={columnPickerOptions}
+                           selected={this.props.initialColumnGroupIdx}
+                           onChange={this.columnGroupChanged.bind(this)}
+                        />
+                     : null
+                  }
                </th>
                <th className='margin' />
             </tr>
@@ -84,6 +89,11 @@ TableHeadMobile.propTypes = {
          short: PropTypes.string.isRequired
       })).isRequired
    })).isRequired,
+
+   /**
+    * If true shows the column picker
+    */
+   showColumnPicker: PropTypes.bool.isRequired,
 
    /**
     * Defines which column group should be displayed upon component creation

@@ -1,15 +1,33 @@
 import { offeringModule, statisticsModule } from 'kambi-widget-core-library';
 
+let title = '';
+
+/**
+ * Sets the title based on the event path attribute
+ * Does not need to be the event with the rightbetoffers as all events will have the same path
+ * @param {Object} event
+ */
+const setTitle = (event) => {
+   const path = event.event.path;
+
+   if (path.length >= 3) {
+      title = path[2].name;
+   } else if (path.length >= 1) {
+      title = path[0].name;
+   }
+};
+
 /**
  * Fetches competition event for given filter and criterion identifier.
  * @param {String} filter
  * @param {number} criterionId Criterion identifier
  * @returns {Promise.<Object>}
  */
-const getCompetitionEvent = function(filter, criterionId) {
+const getCompetitionEvent = (filter, criterionId) => {
    // modify filter to match only competitions
    const competitionsFilter = (() => {
-      const parts = filter.split('/').filter(termKey => !!termKey);
+      const parts = filter.split('/')
+         .filter(termKey => termKey); // removes empty strings
 
       for (let i = parts.length; i < 4; i++) {
          parts.push('all');
@@ -33,26 +51,27 @@ const getCompetitionEvent = function(filter, criterionId) {
          }
 
          // search for event which is a competition and has a betOffer with given criterion identifier
-         return response.events.find((ev) => {
+         const event = response.events.find((ev) => {
             return ev.event.type === 'ET_COMPETITION' &&
                ev.betOffers.find(bo => bo.criterion.id === criterionId);
          });
-      })
-      .then((event) => {
-         if (!event) {
-            throw new Error(`Competition not found for filter=${filter} and criterionId=${criterionId}`);
+
+         if (event == null) {
+            console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
+            setTitle(response.events[0]);
+            return null;
          }
 
-         // following request will respond with all betOffers
-         return offeringModule.getEvent(event.event.id);
+         return offeringModule.getEvent(event.event.id)
+            .then((event) => {
+               setTitle(event);
+               return event;
+            }).catch(() => {
+               console.warn('Event not found. No Betoffers to show');
+               setTitle(response.events[0]);
+               return null;
+            });
       })
-      .then((event) => {
-         if (event === null) {
-            throw new Error('Event not found');
-         }
-
-         return event;
-      });
 };
 
 /**
@@ -61,7 +80,7 @@ const getCompetitionEvent = function(filter, criterionId) {
  * @param {number|null} criterionId Criterion identifier
  * @returns {Promise.<object>}
  */
-const getData = function(filter, criterionId) {
+const getData = (filter, criterionId) => {
    criterionId = parseInt(criterionId, 10);
 
    return Promise.all([
@@ -70,11 +89,15 @@ const getData = function(filter, criterionId) {
    ])
       .then(([event, statistics]) => {
          // don't look for bet offers if criterion identifier is not set
-         const betOffers = Number.isNaN(criterionId) ? []
-            : event.betOffers.filter(bo => bo.criterion.id === criterionId);
+         let betOffers;
+         if (Number.isNaN(criterionId) || event == null) {
+            betOffers = [];
+         } else {
+            betOffers = event.betOffers.filter(bo => bo.criterion.id === criterionId)
+         }
 
          return {
-            event: event,
+            title: title,
             betOffers: betOffers,
             statistics: statistics.leagueTableRows.map((row) => {
                row.goalsDifference = row.goalsFor - row.goalsAgainst;
