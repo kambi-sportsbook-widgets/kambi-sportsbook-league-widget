@@ -4,16 +4,21 @@ let title = '';
 
 /**
  * Sets the title based on the event path attribute
- * Does not need to be the event with the rightbetoffers as all events will have the same path
+ * Does not need to be the event with the right betoffers as all events will have the same path
  * @param {Object} event
  */
 const setTitle = (event) => {
-   const path = event.event.path;
+   try {
+      const path = event.event.path;
 
-   if (path.length >= 3) {
-      title = path[2].name;
-   } else if (path.length >= 1) {
-      title = path[0].name;
+      if (path.length >= 3) {
+         title = path[2].name;
+      } else if (path.length >= 1) {
+         title = path[0].name;
+      }
+   } catch (e) {
+      // there might not be any events at all
+      return '';
    }
 };
 
