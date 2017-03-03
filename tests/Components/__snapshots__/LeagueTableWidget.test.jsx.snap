@@ -13,7 +13,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
           className="title"
           colSpan="2"
         >
-          
+          League Table
         </th>
         <th
           className="column-name"
@@ -86,24 +86,12 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
           className="title"
           colSpan="2"
         >
-          
+          League Table
         </th>
         <th
           className="column-picker"
           colSpan={6}
-        >
-          <div
-            className="general"
-          >
-            <button
-              className="KambiWidget-card-support-text-color button"
-              onClick={[Function]}
-            >
-              Translated: "Statistics"
-              <i />
-            </button>
-          </div>
-        </th>
+        />
         <th
           className="margin"
         />
@@ -165,4221 +153,2542 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
 
 exports[`LeagueTableWidget DOM rendering renders correctly in mobile mode 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-picker"
-          colSpan={6}
-        >
-          <div
-            className="general"
-          >
-            <button
-              className="KambiWidget-card-support-text-color button"
-              onClick={[Function]}
-            >
-              Translated: "Statistics"
-              <i />
-            </button>
-          </div>
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with custom position color matcher 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="LIGHT_GREEN"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper false"
-            >
-              <span
-                className="circle KambiWidget-box--win light"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="ORANGE"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper false"
-            >
-              <span
-                className="circle KambiWidget-box--draw"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
-</div>
-`;
-
-exports[`LeagueTableWidget DOM rendering renders correctly with given title 1`] = `
-<div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          Test title
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
-        />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with no data 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="margin"
-        />
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with position legend 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
-  <ul
-    className="legend"
-  >
-    <li>
-      <div
-        className="circle"
-      >
-        <span
-          className="wrapper no-circle"
-        >
-          <span
-            className="circle transparent"
-          />
-        </span>
-      </div>
-      <p>
-        Translated: "Test legend description"
-      </p>
-    </li>
-  </ul>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
+  <Legend
+    items={
+      Array [
+        Object {
+          "color": "KambiWidget-box--win",
+          "description": "Test legend description",
+        },
+      ]
+    }
+  />
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with title extracted from event's path (0 parts) 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with title extracted from event's path (2 parts) 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          p1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly with title extracted from event's path (3 parts) 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          p3
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 1\\""
-        >
-          Test BetOffer 1
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Test BetOffer 2\\""
-        >
-          Test BetOffer 2
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 1",
+            "short": "Test BetOffer 1",
+          },
+          Object {
+            "className": "outcome",
+            "key": "",
+            "name": "Test BetOffer 2",
+            "short": "Test BetOffer 2",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`] = `
 <div>
-  <table
-    className="KambiWidget-card-background-color general"
-  >
-    <thead>
-      <tr
-        className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-      >
-        <th
-          className="title"
-          colSpan="2"
-        >
-          
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Games Played\\""
-        >
-          P
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Wins\\""
-        >
-          W
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Draws\\""
-        >
-          D
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Losses\\""
-        >
-          L
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals for\\""
-        >
-          Gf
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Goals against\\""
-        >
-          Ga
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Difference\\""
-        >
-          +/-
-        </th>
-        <th
-          className="column-name"
-          title="Translated: \\"Points\\""
-        >
-          Pts
-        </th>
-        <th
-          className="margin"
+  <Table>
+    <TableHeadDesktop
+      columns={
+        Array [
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          },
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          },
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          },
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          },
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          },
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          },
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          },
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          },
+        ]
+      }
+      title="League Table"
+    />
+    <TableBody>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={1}
         />
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                1
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="FC Pęzino"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={1}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={1}
+      />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 101,
+              "id": 1,
+              "odds": 1001,
+              "oddsAmerican": "1.1",
+              "oddsFractional": "1.1",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          FC Pęzino
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 102,
+              "id": 2,
+              "odds": 1002,
+              "oddsAmerican": "1.2",
+              "oddsFractional": "1.2",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyOutcomeCell>
+      <TableBodyPositionCell>
+        <PositionIndicator
+          change={0}
+          color="transparent"
+          position={2}
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
+      </TableBodyPositionCell>
+      <TableBodyParticipantCell
+        name="Błękitni Stargard"
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "games-played",
+            "key": "gamesPlayed",
+            "name": "Games Played",
+            "short": "P",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "wins",
+            "key": "wins",
+            "name": "Wins",
+            "short": "W",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "draws",
+            "key": "draws",
+            "name": "Draws",
+            "short": "D",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "losses",
+            "key": "losses",
+            "name": "Losses",
+            "short": "L",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-for",
+            "key": "goalsFor",
+            "name": "Goals for",
+            "short": "Gf",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-against",
+            "key": "goalsAgainst",
+            "name": "Goals against",
+            "short": "Ga",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "goals-difference",
+            "key": "goalsDifference",
+            "name": "Difference",
+            "short": "+/-",
+          }
+        }
+        value={2}
+      />
+      <TableBodyStatsCell
+        column={
+          Object {
+            "className": "points",
+            "key": "points",
+            "name": "Points",
+            "short": "Pts",
+          }
+        }
+        value={2}
+      />
+      <TableBodyOutcomeCell />
+      <TableBodyOutcomeCell>
+        <OutcomeButton
+          label={false}
+          outcome={
+            Object {
+              "betOfferId": 104,
+              "id": 4,
+              "odds": 1004,
+              "oddsAmerican": "1.4",
+              "oddsFractional": "1.4",
+            }
+          }
         />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          1
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Position\\""
-        >
-          <span>
-            <span
-              className="wrapper no-circle"
-            >
-              <span
-                className="circle transparent"
-              >
-                2
-              </span>
-            </span>
-          </span>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-          title="Translated: \\"Participant name\\""
-        >
-          Błękitni Stargard
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general games-played"
-          title="Translated: \\"Games Played\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general wins"
-          title="Translated: \\"Wins\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general draws"
-          title="Translated: \\"Draws\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general losses"
-          title="Translated: \\"Losses\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-for"
-          title="Translated: \\"Goals for\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-against"
-          title="Translated: \\"Goals against\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general goals-difference"
-          title="Translated: \\"Difference\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general points"
-          title="Translated: \\"Points\\""
-        >
-          2
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          />
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-      <tr
-        className="KambiWidget-card-inner-border row"
-      >
-        <td
-          className="general"
-        >
-          <div
-            className="wrapper"
-          >
-            <button
-              className="l-flex-1 kw-link KambiWidget-outcome general"
-              disabled={false}
-              onClick={[Function]}
-              role="button"
-              type="button"
-            >
-              <div
-                className="KambiWidget-outcome__odds-wrapper"
-              >
-                <span
-                  className="KambiWidget-outcome__odds"
-                >
-                  1.0
-                </span>
-              </div>
-            </button>
-          </div>
-        </td>
-        <td
-          className="margin"
-        />
-      </tr>
-    </tbody>
-  </table>
+      </TableBodyOutcomeCell>
+    </TableBody>
+  </Table>
 </div>
 `;
 
 exports[`LeagueTableWidget interface handles columns group change events correctly 1`] = `
-"<LeagueTableWidget statistics={{...}} betOffers={{...}} positionLegend={{...}} positionColorMatcher={[Function]}>
+"<LeagueTableWidget statistics={{...}} betOffers={{...}} title=\\"League Table\\" positionLegend={{...}} positionColorMatcher={[Function]}>
   <div>
     <Table>
       <table className=\\"KambiWidget-card-background-color general\\">
-        <TableHeadMobile title=\\"\\" columnGroups={{...}} initialColumnGroupIdx={0} onColumnGroupChanged={[Function]}>
+        <TableHeadMobile title=\\"League Table\\" showColumnPicker={true} columnGroups={{...}} initialColumnGroupIdx={0} onColumnGroupChanged={[Function]}>
           <thead>
             <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row\\">
-              <th colSpan=\\"2\\" className=\\"title\\" />
+              <th colSpan=\\"2\\" className=\\"title\\">
+                League Table
+              </th>
               <th colSpan={6} className=\\"column-picker\\">
                 <DropdownButton options={{...}} selected={0} onChange={[Function]} horizontalAlignment=\\"right\\" verticalAlignment=\\"top\\">
                   <div className=\\"general\\">
@@ -4444,57 +2753,36 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                   </PositionIndicator>
                 </td>
               </TableBodyPositionCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyParticipantCell name=\\"FC Pęzino\\">
                 <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
                   FC Pęzino
                 </td>
               </TableBodyParticipantCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
                   1
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
                   1
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
                   1
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
                   1
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
                   1
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={1}>
                 <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
                   1
@@ -4518,57 +2806,36 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                   </PositionIndicator>
                 </td>
               </TableBodyPositionCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
                 <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
                   Błękitni Stargard
                 </td>
               </TableBodyParticipantCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
                   2
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
                   2
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
                   2
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
                   2
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
                   2
                 </td>
               </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyStatsCell column={{...}} value={2}>
                 <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
                   2
@@ -4585,14 +2852,16 @@ exports[`LeagueTableWidget interface handles columns group change events correct
 `;
 
 exports[`LeagueTableWidget interface handles columns group change events correctly 2`] = `
-"<LeagueTableWidget statistics={{...}} betOffers={{...}} positionLegend={{...}} positionColorMatcher={[Function]}>
+"<LeagueTableWidget statistics={{...}} betOffers={{...}} title=\\"League Table\\" positionLegend={{...}} positionColorMatcher={[Function]}>
   <div>
     <Table>
       <table className=\\"KambiWidget-card-background-color general\\">
-        <TableHeadMobile title=\\"\\" columnGroups={{...}} initialColumnGroupIdx={1} onColumnGroupChanged={[Function]}>
+        <TableHeadMobile title=\\"League Table\\" showColumnPicker={true} columnGroups={{...}} initialColumnGroupIdx={1} onColumnGroupChanged={[Function]}>
           <thead>
             <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row\\">
-              <th colSpan=\\"2\\" className=\\"title\\" />
+              <th colSpan=\\"2\\" className=\\"title\\">
+                League Table
+              </th>
               <th colSpan={2} className=\\"column-picker\\">
                 <DropdownButton options={{...}} selected={1} onChange={[Function]} horizontalAlignment=\\"right\\" verticalAlignment=\\"top\\">
                   <div className=\\"general\\">
@@ -4637,17 +2906,11 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                   </PositionIndicator>
                 </td>
               </TableBodyPositionCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyParticipantCell name=\\"FC Pęzino\\">
                 <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
                   FC Pęzino
                 </td>
               </TableBodyParticipantCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyOutcomeCell>
                 <td className=\\"general\\">
                   <div className=\\"wrapper\\">
@@ -4665,9 +2928,6 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                   </div>
                 </td>
               </TableBodyOutcomeCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyOutcomeCell>
                 <td className=\\"general\\">
                   <div className=\\"wrapper\\">
@@ -4703,25 +2963,16 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                   </PositionIndicator>
                 </td>
               </TableBodyPositionCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
                 <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
                   Błękitni Stargard
                 </td>
               </TableBodyParticipantCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyOutcomeCell>
                 <td className=\\"general\\">
                   <div className=\\"wrapper\\" />
                 </td>
               </TableBodyOutcomeCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
               <TableBodyOutcomeCell>
                 <td className=\\"general\\">
                   <div className=\\"wrapper\\">

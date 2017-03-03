@@ -3,6 +3,7 @@
 import kambi from '../../src/js/Service/kambi';
 import { offeringModule, statisticsModule } from 'kambi-widget-core-library';
 
+
 jest.mock('kambi-widget-core-library', () => ({
    offeringModule: {
       getEventsByFilter: jest.fn(),
@@ -14,6 +15,17 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('Kambi service', () => {
+   beforeEach(() => {
+      offeringModule.getEventsByFilter = jest.fn();
+
+      offeringModule.getEvent = jest.fn();
+
+      statisticsModule.getLeagueTableStatistics = jest.fn();
+
+      console.warn = jest.fn((msg) => {
+         return msg;
+      });
+   });
 
    it('handles Kambi API returning incorrect response for eventsByFilter request', () => {
       offeringModule.getEventsByFilter = jest.fn(() => new Promise(resolve => resolve(null)));
@@ -62,7 +74,7 @@ describe('Kambi service', () => {
 
       offeringModule.getEvent = jest.fn((eventId) => {
          expect(eventId).toEqual(eventMock.event.id);
-         return eventMock;
+         return Promise.resolve(eventMock);
       });
 
       statisticsModule.getLeagueTableStatistics = jest.fn((filter) => {
@@ -108,7 +120,7 @@ describe('Kambi service', () => {
          .then(data => {
             expect(data).toMatchSnapshot();
             expect(offeringModule.getEventsByFilter).toHaveBeenCalledTimes(1);
-            expect(offeringModule.getEvent).toHaveBeenCalledTimes(1);
+            expect(offeringModule.getEvent).toHaveBeenCalledTimes(0);
             expect(statisticsModule.getLeagueTableStatistics).toHaveBeenCalledTimes(1);
          })
    });

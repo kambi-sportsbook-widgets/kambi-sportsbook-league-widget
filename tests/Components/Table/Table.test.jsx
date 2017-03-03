@@ -1,27 +1,25 @@
 /* eslint-env jest */
 import React, { Children } from 'react';
 import Table from '../../../src/js/Components/Table/Table';
-import ReactTestRenderer from 'react-test-renderer';
+import ReactTestUtils from 'react-addons-test-utils';
+
+const renderer = ReactTestUtils.createRenderer();
 
 describe('Table DOM rendering', () => {
 
    it('renders correctly without children', () => {
-      const tree = ReactTestRenderer.create(
+      expect(renderer.render(
          <Table />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
+      )).toMatchSnapshot();
    });
 
    it('renders correctly with children', () => {
-      const tree = ReactTestRenderer.create(
+      expect(renderer.render(
          <Table>
-            <tr><td/><td/></tr>
-            <tr><td/><td/></tr>
+            <tr><td /><td /></tr>
+            <tr><td /><td /></tr>
          </Table>
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
+      )).toMatchSnapshot();
    });
 
 });

@@ -15,47 +15,77 @@ exports[`TableHeadMobile DOM rendering renders correctly 1`] = `
       className="column-picker"
       colSpan={2}
     >
-      <div
-        className="general"
-      >
-        <button
-          className="KambiWidget-card-support-text-color button"
-          onClick={[Function]}
-        >
-          Translated: "Column group 1"
-          <i />
-        </button>
-      </div>
+      <DropdownButton
+        horizontalAlignment="right"
+        onChange={[Function]}
+        options={
+          Array [
+            "Translated: \\"Column group 1\\"",
+            "Translated: \\"Column group 2\\"",
+          ]
+        }
+        selected={0}
+        verticalAlignment="top"
+      />
     </th>
     <th
       className="margin"
     />
   </tr>
+  <TableHeadDefaultRow
+    columns={
+      Array [
+        Object {
+          "name": "Column 1-1",
+          "short": "c11",
+        },
+        Object {
+          "name": "Column 1-2",
+          "short": "c12",
+        },
+      ]
+    }
+    hiddenMode={false}
+    title=""
+  />
+</thead>
+`;
+
+exports[`TableHeadMobile DOM rendering renders correctly when showColumnPicker is false 1`] = `
+<thead>
   <tr
-    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
+    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row"
   >
     <th
       className="title"
       colSpan="2"
     >
-      
+      Test title
     </th>
     <th
-      className="column-name"
-      title="Translated: \\"Column 1-1\\""
-    >
-      c11
-    </th>
-    <th
-      className="column-name"
-      title="Translated: \\"Column 1-2\\""
-    >
-      c12
-    </th>
+      className="column-picker"
+      colSpan={2}
+    />
     <th
       className="margin"
     />
   </tr>
+  <TableHeadDefaultRow
+    columns={
+      Array [
+        Object {
+          "name": "Column 1-1",
+          "short": "c11",
+        },
+        Object {
+          "name": "Column 1-2",
+          "short": "c12",
+        },
+      ]
+    }
+    hiddenMode={false}
+    title=""
+  />
 </thead>
 `;
 
@@ -74,46 +104,38 @@ exports[`TableHeadMobile DOM rendering renders correctly with initial column gro
       className="column-picker"
       colSpan={2}
     >
-      <div
-        className="general"
-      >
-        <button
-          className="KambiWidget-card-support-text-color button"
-          onClick={[Function]}
-        >
-          Translated: "Column group 2"
-          <i />
-        </button>
-      </div>
+      <DropdownButton
+        horizontalAlignment="right"
+        onChange={[Function]}
+        options={
+          Array [
+            "Translated: \\"Column group 1\\"",
+            "Translated: \\"Column group 2\\"",
+          ]
+        }
+        selected={1}
+        verticalAlignment="top"
+      />
     </th>
     <th
       className="margin"
     />
   </tr>
-  <tr
-    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-  >
-    <th
-      className="title"
-      colSpan="2"
-    >
-      
-    </th>
-    <th
-      className="column-name"
-      title="Translated: \\"Column 2-1\\""
-    >
-      c21
-    </th>
-    <th
-      className="column-name"
-      title="Translated: \\"Column 2-2\\""
-    >
-      c22
-    </th>
-    <th
-      className="margin"
-    />
-  </tr>
+  <TableHeadDefaultRow
+    columns={
+      Array [
+        Object {
+          "name": "Column 1-1",
+          "short": "c11",
+        },
+        Object {
+          "name": "Column 1-2",
+          "short": "c12",
+        },
+      ]
+    }
+    hiddenMode={false}
+    title=""
+  />
 </thead>
 `;

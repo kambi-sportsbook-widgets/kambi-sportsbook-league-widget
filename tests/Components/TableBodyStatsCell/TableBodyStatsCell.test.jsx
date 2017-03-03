@@ -1,7 +1,9 @@
 /* eslint-env jest */
 import React, { Children } from 'react';
 import TableBodyStatsCell from '../../../src/js/Components/TableBodyStatsCell/TableBodyStatsCell';
-import ReactTestRenderer from 'react-test-renderer';
+import ReactTestUtils from 'react-addons-test-utils';
+
+const renderer = ReactTestUtils.createRenderer();
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -12,19 +14,15 @@ jest.mock('kambi-widget-core-library', () => ({
 describe('TableBodyStatsCell DOM rendering', () => {
 
    it('renders correctly without value', () => {
-      const tree = ReactTestRenderer.create(
+      expect(renderer.render(
          <TableBodyStatsCell column={{name: 'Test stat name', className: 'test-stat-name'}} />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
+      )).toMatchSnapshot();
    });
 
    it('renders correctly with value', () => {
-      const tree = ReactTestRenderer.create(
+      expect(renderer.render(
          <TableBodyStatsCell column={{name: 'Test stat name', className: 'test-stat-name'}}>5</TableBodyStatsCell>
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
+      )).toMatchSnapshot();
    });
 
 });

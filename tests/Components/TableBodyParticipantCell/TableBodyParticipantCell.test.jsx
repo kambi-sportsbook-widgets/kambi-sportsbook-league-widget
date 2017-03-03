@@ -1,7 +1,10 @@
 /* eslint-env jest */
 import React, { Children } from 'react';
 import TableBodyParticipantCell from '../../../src/js/Components/TableBodyParticipantCell/TableBodyParticipantCell';
-import ReactTestRenderer from 'react-test-renderer';
+
+import ReactTestUtils from 'react-addons-test-utils';
+
+const renderer = ReactTestUtils.createRenderer();
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -12,11 +15,9 @@ jest.mock('kambi-widget-core-library', () => ({
 describe('TableBodyParticipantCell DOM rendering', () => {
 
    it('renders correctly', () => {
-      const tree = ReactTestRenderer.create(
+      expect(renderer.render(
          <TableBodyParticipantCell name="Antoni" />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
+      )).toMatchSnapshot();
    });
 
 });

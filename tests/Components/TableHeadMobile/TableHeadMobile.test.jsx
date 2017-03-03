@@ -1,8 +1,10 @@
 /* eslint-env jest */
 import React, { Children } from 'react';
 import TableHeadMobile from '../../../src/js/Components/TableHeadMobile/TableHeadMobile';
-import ReactTestRenderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
+import ReactTestUtils from 'react-addons-test-utils';
+
+const renderer = ReactTestUtils.createRenderer();
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -32,26 +34,41 @@ const columnGroups = [
 describe('TableHeadMobile DOM rendering', () => {
 
    it('renders correctly', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <TableHeadMobile
             title="Test title"
             columnGroups={columnGroups}
             onColumnGroupChanged={() => false}
+            showColumnPicker={true}
          />
-      ).toJSON();
+      );
+
+      expect(tree).toMatchSnapshot();
+   });
+
+   it('renders correctly when showColumnPicker is false', () => {
+      const tree = renderer.render(
+         <TableHeadMobile
+            title="Test title"
+            columnGroups={columnGroups}
+            onColumnGroupChanged={() => false}
+            showColumnPicker={false}
+         />
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly with initial column group specified', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <TableHeadMobile
             title="Test title"
             columnGroups={columnGroups}
             onColumnGroupChanged={() => false}
             initialColumnGroupIdx={1}
+            showColumnPicker={true}
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
@@ -70,6 +87,7 @@ describe('TableHeadMobile interface', () => {
                title="Test title"
                columnGroups={columnGroups}
                onColumnGroupChanged={onColumnGroupChangedMock}
+               showColumnPicker={true}
             />
          </table>
       );

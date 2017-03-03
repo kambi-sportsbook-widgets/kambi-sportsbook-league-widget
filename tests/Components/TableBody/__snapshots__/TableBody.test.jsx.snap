@@ -27,4 +27,8 @@ exports[`TableBody DOM rendering renders correctly with children 1`] = `
 </tbody>
 `;
 
-exports[`TableBody DOM rendering renders correctly without children 1`] = `<tbody />`;
+exports[`TableBody DOM rendering renders correctly without children 1`] = `
+<tbody>
+  
+</tbody>
+`;

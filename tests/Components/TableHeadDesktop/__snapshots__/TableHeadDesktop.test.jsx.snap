@@ -2,24 +2,17 @@
 
 exports[`TableHeadDesktop DOM rendering renders correctly 1`] = `
 <thead>
-  <tr
-    className="KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general"
-  >
-    <th
-      className="title"
-      colSpan="2"
-    >
-      Test title
-    </th>
-    <th
-      className="column-name"
-      title="Test column 1"
-    >
-      TC1
-    </th>
-    <th
-      className="margin"
-    />
-  </tr>
+  <TableHeadDefaultRow
+    columns={
+      Array [
+        Object {
+          "name": "Test column 1",
+          "short": "TC1",
+        },
+      ]
+    }
+    hiddenMode={false}
+    title="Test title"
+  />
 </thead>
 `;

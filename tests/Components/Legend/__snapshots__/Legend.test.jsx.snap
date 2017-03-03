@@ -3,7 +3,9 @@
 exports[`Legend DOM rendering renders correctly with empty items list 1`] = `
 <ul
   className="legend"
-/>
+>
+  
+</ul>
 `;
 
 exports[`Legend DOM rendering renders correctly with items 1`] = `
@@ -14,13 +16,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--win"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--win"
+      />
     </div>
     <p>
       0th item
@@ -30,13 +28,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--win light"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--win light"
+      />
     </div>
     <p>
       1th item
@@ -46,13 +40,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--draw"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--draw"
+      />
     </div>
     <p>
       2th item
@@ -62,13 +52,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--draw light"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--draw light"
+      />
     </div>
     <p>
       3th item
@@ -78,13 +64,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--lose"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--lose"
+      />
     </div>
     <p>
       4th item
@@ -94,13 +76,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper false"
-      >
-        <span
-          className="circle KambiWidget-box--lose light"
-        />
-      </span>
+      <PositionCircle
+        color="KambiWidget-box--lose light"
+      />
     </div>
     <p>
       5th item
@@ -110,13 +88,9 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
     <div
       className="circle"
     >
-      <span
-        className="wrapper no-circle"
-      >
-        <span
-          className="circle transparent"
-        />
-      </span>
+      <PositionCircle
+        color="transparent"
+      />
     </div>
     <p>
       6th item

@@ -2,9 +2,12 @@
 import React, { Children } from 'react';
 import LeagueTableWidget from '../../src/js/Components/LeagueTableWidget';
 import PositionCircle from '../../src/js/Components/Position/Circle/PositionCircle';
-import ReactTestRenderer from 'react-test-renderer';
 import { mount, shallow } from 'enzyme';
 import { widgetModule } from 'kambi-widget-core-library';
+import ReactTestRenderer from 'react-test-renderer';
+import ReactTestUtils from 'react-addons-test-utils';
+
+const renderer = ReactTestUtils.createRenderer();
 
 jest.mock('kambi-widget-core-library', () => ({
    eventsModule: {
@@ -88,36 +91,42 @@ const betOffersMock = [
 ];
 
 describe('LeagueTableWidget DOM rendering', () => {
+   beforeEach(() => {
+      window.innerWidth = 1024;
+   });
 
    it('renders correctly with no data', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={[]}
             betOffers={[]}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly without bet offers', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={[]}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly with bet offers', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
@@ -126,74 +135,67 @@ describe('LeagueTableWidget DOM rendering', () => {
       const tmpInnerWidth = window.innerWidth;
       window.innerWidth = 480;
 
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
 
       window.innerWidth = tmpInnerWidth;
    });
 
-   it('renders correctly with given title', () => {
-      const tree = ReactTestRenderer.create(
-         <LeagueTableWidget
-            statistics={statisticsMock}
-            betOffers={betOffersMock}
-            title="Test title"
-         />
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
-   });
-
    it('renders correctly with title extracted from event\'s path (3 parts)', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
             event={{event: {path: [{name: 'p1'}, {name: 'p2'}, {name: 'p3'}]}}}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly with title extracted from event\'s path (2 parts)', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
             event={{event: {path: [{name: 'p1'}, {name: 'p2'}]}}}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly with title extracted from event\'s path (0 parts)', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
             event={{event: {path: []}}}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
 
    it('renders correctly with position legend', () => {
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
             positionLegend={[{color: PositionCircle.COLORS.GREEN, description: 'Test legend description'}]}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(tree).toMatchSnapshot();
    });
@@ -201,13 +203,14 @@ describe('LeagueTableWidget DOM rendering', () => {
    it('renders correctly with custom position color matcher', () => {
       const positionColorMatcherMock = jest.fn(position => Object.keys(PositionCircle.COLORS)[position]);
 
-      const tree = ReactTestRenderer.create(
+      const tree = renderer.render(
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
             positionColorMatcher={positionColorMatcherMock}
+            title='League Table'
          />
-      ).toJSON();
+      );
 
       expect(positionColorMatcherMock).toHaveBeenCalledTimes(2);
 
@@ -215,10 +218,14 @@ describe('LeagueTableWidget DOM rendering', () => {
    });
 
    it('renders correctly after switching to mobile mode', () => {
+      // using ReactTestRenderer to test interactions
+      // ReactTestRenderer does deep rendering
+      // ReactTestUtils does not actually mount the object, so it does not work for this test
       const tree = ReactTestRenderer.create(
          <LeagueTableWidget
             statistics={[]}
             betOffers={[]}
+            title='League Table'
          />
       );
 
@@ -243,6 +250,7 @@ describe('LeagueTableWidget interface', () => {
          <LeagueTableWidget
             statistics={[]}
             betOffers={[]}
+            title='League Table'
          />
       );
       wrapper.unmount();
@@ -253,6 +261,7 @@ describe('LeagueTableWidget interface', () => {
          <LeagueTableWidget
             statistics={[]}
             betOffers={[]}
+            title='League Table'
          />
       );
 
@@ -272,6 +281,7 @@ describe('LeagueTableWidget interface', () => {
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
+            title='League Table'
          />
       );
 
