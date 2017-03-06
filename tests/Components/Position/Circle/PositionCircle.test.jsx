@@ -3,10 +3,12 @@ import React, { Children } from 'react';
 import PositionCircle from '../../../../src/js/Components/Position/Circle/PositionCircle';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('PositionCircle DOM rendering', () => {
-
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
    it('renders correctly with default props', () => {
       expect(renderer.render(
          <PositionCircle />

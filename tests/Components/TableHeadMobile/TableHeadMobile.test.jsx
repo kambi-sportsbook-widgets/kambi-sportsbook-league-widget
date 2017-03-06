@@ -4,7 +4,7 @@ import TableHeadMobile from '../../../src/js/Components/TableHeadMobile/TableHea
 import { mount, shallow } from 'enzyme';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -32,6 +32,9 @@ const columnGroups = [
 ];
 
 describe('TableHeadMobile DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly', () => {
       const tree = renderer.render(

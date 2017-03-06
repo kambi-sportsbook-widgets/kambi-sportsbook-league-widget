@@ -3,9 +3,12 @@ import React, { Children } from 'react';
 import Table from '../../../src/js/Components/Table/Table';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('Table DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly without children', () => {
       expect(renderer.render(

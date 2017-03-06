@@ -3,7 +3,7 @@ import React, { Children } from 'react';
 import TableBodyStatsCell from '../../../src/js/Components/TableBodyStatsCell/TableBodyStatsCell';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -12,6 +12,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableBodyStatsCell DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly without value', () => {
       expect(renderer.render(

@@ -154,59 +154,76 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
 exports[`LeagueTableWidget DOM rendering renders correctly in mobile mode 1`] = `
 <div>
   <Table>
-    <TableHeadDesktop
-      columns={
+    <TableHeadMobile
+      columnGroups={
         Array [
           Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
+            "columns": Array [
+              Object {
+                "className": "games-played",
+                "key": "gamesPlayed",
+                "name": "Games Played",
+                "short": "P",
+              },
+              Object {
+                "className": "wins",
+                "key": "wins",
+                "name": "Wins",
+                "short": "W",
+              },
+              Object {
+                "className": "draws",
+                "key": "draws",
+                "name": "Draws",
+                "short": "D",
+              },
+              Object {
+                "className": "losses",
+                "key": "losses",
+                "name": "Losses",
+                "short": "L",
+              },
+              Object {
+                "className": "goals-difference",
+                "key": "goalsDifference",
+                "name": "Difference",
+                "short": "+/-",
+              },
+              Object {
+                "className": "points",
+                "key": "points",
+                "name": "Points",
+                "short": "Pts",
+              },
+            ],
+            "id": "statistics",
+            "render": [Function],
+            "title": "Statistics",
           },
           Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          },
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          },
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          },
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          },
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          },
-          Object {
-            "className": "outcome",
-            "key": "",
-            "name": "Test BetOffer 1",
-            "short": "Test BetOffer 1",
-          },
-          Object {
-            "className": "outcome",
-            "key": "",
-            "name": "Test BetOffer 2",
-            "short": "Test BetOffer 2",
+            "columns": Array [
+              Object {
+                "className": "outcome",
+                "key": "",
+                "name": "Test BetOffer 1",
+                "short": "Test BetOffer 1",
+              },
+              Object {
+                "className": "outcome",
+                "key": "",
+                "name": "Test BetOffer 2",
+                "short": "Test BetOffer 2",
+              },
+            ],
+            "id": "outcomes",
+            "render": [Function],
+            "title": "Bet offers",
           },
         ]
       }
+      initialColumnGroupIdx={0}
+      onColumnGroupChanged={[Function]}
+      showColumnPicker={true}
       title="League Table"
     />
     <TableBody>
@@ -286,34 +303,6 @@ exports[`LeagueTableWidget DOM rendering renders correctly in mobile mode 1`] = 
         }
         value={1}
       />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
-            Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
-            }
-          }
-        />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
-            Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
-            }
-          }
-        />
-      </TableBodyOutcomeCell>
       <TableBodyPositionCell>
         <PositionIndicator
           change={0}
@@ -390,21 +379,6 @@ exports[`LeagueTableWidget DOM rendering renders correctly in mobile mode 1`] = 
         }
         value={2}
       />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
-            Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
-            }
-          }
-        />
-      </TableBodyOutcomeCell>
     </TableBody>
   </Table>
 </div>

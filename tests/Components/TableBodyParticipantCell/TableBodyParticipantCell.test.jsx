@@ -4,7 +4,7 @@ import TableBodyParticipantCell from '../../../src/js/Components/TableBodyPartic
 
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -13,6 +13,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableBodyParticipantCell DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly', () => {
       expect(renderer.render(

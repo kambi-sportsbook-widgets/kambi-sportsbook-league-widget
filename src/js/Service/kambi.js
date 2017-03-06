@@ -11,11 +11,9 @@ const setTitle = (event) => {
    try {
       const path = event.event.path;
 
-      if (path.length >= 3) {
-         title = path[2].name;
-      } else if (path.length >= 1) {
-         title = path[0].name;
-      }
+      const idx = path.length >= 3 ? 2 : path.length - 1;
+
+      title = path[idx].name;
    } catch (e) {
       // there might not be any events at all
       return '';

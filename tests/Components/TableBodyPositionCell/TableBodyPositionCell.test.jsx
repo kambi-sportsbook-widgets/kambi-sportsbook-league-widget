@@ -3,7 +3,7 @@ import React, { Children } from 'react';
 import TableBodyPositionCell from '../../../src/js/Components/TableBodyPositionCell/TableBodyPositionCell';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -12,6 +12,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableBodyPositionCell DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly', () => {
       expect(renderer.render(

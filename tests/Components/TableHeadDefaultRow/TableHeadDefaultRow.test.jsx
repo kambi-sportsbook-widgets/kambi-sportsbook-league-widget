@@ -3,7 +3,7 @@ import React, { Children } from 'react';
 import TableHeadDefaultRow from '../../../src/js/Components/TableHeadDefaultRow/TableHeadDefaultRow';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    translationModule: {
@@ -12,6 +12,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableHeadDefaultRow DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly when not collapsable', () => {
       expect(renderer.render(

@@ -3,9 +3,13 @@ import React, { Children } from 'react';
 import TableHeadDesktop from '../../../src/js/Components/TableHeadDesktop/TableHeadDesktop';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('TableHeadDesktop DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
+
    it('renders correctly', () => {
       expect(renderer.render(
          <TableHeadDesktop

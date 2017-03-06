@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Kambi service fails to fetch event proper getting title from event third path 1`] = `
+Object {
+  "betOffers": Array [],
+  "statistics": Array [
+    Object {
+      "goalsAgainst": 200,
+      "goalsDifference": -100,
+      "goalsFor": 100,
+      "outcomes": Array [],
+    },
+  ],
+  "title": "path3",
+}
+`;
+
 exports[`Kambi service handles Kambi API returning empty events set 1`] = `[TypeError: Cannot read property 'leagueTableRows' of undefined]`;
 
 exports[`Kambi service handles Kambi API returning empty response for getEvent request 1`] = `[TypeError: Cannot read property 'leagueTableRows' of undefined]`;
@@ -33,7 +48,7 @@ Object {
       "participantId": 1000,
     },
   ],
-  "title": "",
+  "title": "path3",
 }
 `;
 
@@ -48,6 +63,6 @@ Object {
       "outcomes": Array [],
     },
   ],
-  "title": "",
+  "title": "path3",
 }
 `;

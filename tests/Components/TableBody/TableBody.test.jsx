@@ -3,9 +3,12 @@ import React, { Children } from 'react';
 import TableBody from '../../../src/js/Components/TableBody/TableBody';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('TableBody DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly without children', () => {
       expect(renderer.render(

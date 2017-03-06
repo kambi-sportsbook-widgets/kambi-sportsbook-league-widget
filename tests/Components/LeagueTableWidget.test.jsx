@@ -7,7 +7,7 @@ import { widgetModule } from 'kambi-widget-core-library';
 import ReactTestRenderer from 'react-test-renderer';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 jest.mock('kambi-widget-core-library', () => ({
    eventsModule: {
@@ -92,6 +92,7 @@ const betOffersMock = [
 
 describe('LeagueTableWidget DOM rendering', () => {
    beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
       window.innerWidth = 1024;
    });
 

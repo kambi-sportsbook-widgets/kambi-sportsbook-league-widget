@@ -125,12 +125,12 @@ exports[`TableHeadMobile DOM rendering renders correctly with initial column gro
     columns={
       Array [
         Object {
-          "name": "Column 1-1",
-          "short": "c11",
+          "name": "Column 2-1",
+          "short": "c21",
         },
         Object {
-          "name": "Column 1-2",
-          "short": "c12",
+          "name": "Column 2-2",
+          "short": "c22",
         },
       ]
     }

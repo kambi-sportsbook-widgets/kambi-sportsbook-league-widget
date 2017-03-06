@@ -3,9 +3,12 @@ import React, { Children } from 'react';
 import PositionIndicator from '../../../../src/js/Components/Position/Indicator/PositionIndicator';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('PositionIndicator DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly with default props', () => {
       expect(renderer.render(

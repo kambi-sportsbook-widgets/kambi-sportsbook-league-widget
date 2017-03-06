@@ -4,9 +4,12 @@ import Legend from '../../../src/js/Components/Legend/Legend';
 import PositionCircle from '../../../src/js/Components/Position/Circle/PositionCircle';
 import ReactTestUtils from 'react-addons-test-utils';
 
-const renderer = ReactTestUtils.createRenderer();
+let renderer;
 
 describe('Legend DOM rendering', () => {
+   beforeEach(() => {
+      renderer = ReactTestUtils.createRenderer();
+   });
 
    it('renders correctly with empty items list', () => {
       expect(renderer.render(

@@ -41,6 +41,70 @@ describe('Kambi service', () => {
          .catch(e => expect(e).toMatchSnapshot());
    });
 
+   it('fails to fetch event proper getting title from event third path', () => {
+      offeringModule.getEventsByFilter = jest.fn(() => {
+         return new Promise((resolve) => {
+            resolve({
+               events: [
+                  {
+                     event: {
+                        id: 111,
+                        path: [
+                           {
+                              name: 'path1'
+                           },
+                           {
+                              name: 'path2'
+                           },
+                           {
+                              name: 'path3'
+                           },
+                        ],
+                        type: 'ET_COMPETITION'
+                     },
+                     betOffers: [
+                        {
+                           criterion: {
+                              id: 123
+                           }
+                        }
+                     ]
+                  }
+               ]
+            })
+         });
+      });
+
+      offeringModule.getEvent = jest.fn(() => {
+         return new Promise((resolve, reject) => {
+            reject();
+         })
+      });
+
+      const leagueTableStatisticsMock = {
+         leagueTableRows: [
+            {
+               goalsFor: 100,
+               goalsAgainst: 200
+            }
+         ]
+      };
+
+      statisticsModule.getLeagueTableStatistics = jest.fn((filter) => {
+         expect(filter).toEqual('/test/filter');
+         return new Promise(resolve => resolve(leagueTableStatisticsMock));
+      });
+
+      return kambi.getData('/test/filter', 123)
+         .then((data) => {
+            expect(data).toMatchSnapshot();
+            expect(offeringModule.getEventsByFilter).toHaveBeenCalledTimes(1);
+            expect(statisticsModule.getLeagueTableStatistics).toHaveBeenCalledTimes(1);
+            expect(offeringModule.getEvent).toHaveBeenCalledTimes(1);
+         })
+   });
+
+
    it('handles Kambi API returning empty response for getEvent request', () => {
       const eventMock = { event: { id: 100, type: 'ET_COMPETITION' } };
 
