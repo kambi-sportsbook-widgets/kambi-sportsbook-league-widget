@@ -13,8 +13,6 @@ coreLibrary.init({
    widgetTrackingName: 'gm-league-table-widget'
 })
 .then(() => {
-   coreLibrary.setWidgetTrackingName(coreLibrary.args.widgetTrackingName);
-
    let filter = (function() {
       if (coreLibrary.args.filter != null) {
          return coreLibrary.args.filter;
