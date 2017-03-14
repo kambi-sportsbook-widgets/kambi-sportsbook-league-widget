@@ -2,33 +2,15 @@
 
 exports[`TableBody DOM rendering renders correctly with children 1`] = `
 <tbody>
-  <tr
-    className="KambiWidget-card-inner-border row"
-  >
-    <tr>
-      <td />
-      <td />
-    </tr>
-    <td
-      className="margin"
-    />
+  <tr>
+    <td />
+    <td />
   </tr>
-  <tr
-    className="KambiWidget-card-inner-border row"
-  >
-    <tr>
-      <td />
-      <td />
-    </tr>
-    <td
-      className="margin"
-    />
+  <tr>
+    <td />
+    <td />
   </tr>
 </tbody>
 `;
 
-exports[`TableBody DOM rendering renders correctly without children 1`] = `
-<tbody>
-  
-</tbody>
-`;
+exports[`TableBody DOM rendering renders correctly without children 1`] = `<tbody />`;

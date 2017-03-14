@@ -227,158 +227,162 @@ exports[`LeagueTableWidget DOM rendering renders correctly in mobile mode 1`] = 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
           }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
+          value={1}
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
           }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
           }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
           }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
           }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
           }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
+          value={1}
+        />
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
           }
-        }
-        value={2}
-      />
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -455,245 +459,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -770,245 +778,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="LIGHT_GREEN"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="LIGHT_GREEN"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="ORANGE"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="ORANGE"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -1150,245 +1162,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
   <Legend
@@ -1475,245 +1491,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -1790,245 +1810,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -2105,245 +2129,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -2408,245 +2436,249 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
       title="League Table"
     />
     <TableBody>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={1}
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={1}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="FC Pęzino"
         />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="FC Pęzino"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={1}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={1}
-      />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 101,
-              "id": 1,
-              "odds": 1001,
-              "oddsAmerican": "1.1",
-              "oddsFractional": "1.1",
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 102,
-              "id": 2,
-              "odds": 1002,
-              "oddsAmerican": "1.2",
-              "oddsFractional": "1.2",
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
-      <TableBodyPositionCell>
-        <PositionIndicator
-          change={0}
-          color="transparent"
-          position={2}
-        />
-      </TableBodyPositionCell>
-      <TableBodyParticipantCell
-        name="Błękitni Stargard"
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "games-played",
-            "key": "gamesPlayed",
-            "name": "Games Played",
-            "short": "P",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "wins",
-            "key": "wins",
-            "name": "Wins",
-            "short": "W",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "draws",
-            "key": "draws",
-            "name": "Draws",
-            "short": "D",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "losses",
-            "key": "losses",
-            "name": "Losses",
-            "short": "L",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-for",
-            "key": "goalsFor",
-            "name": "Goals for",
-            "short": "Gf",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-against",
-            "key": "goalsAgainst",
-            "name": "Goals against",
-            "short": "Ga",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "goals-difference",
-            "key": "goalsDifference",
-            "name": "Difference",
-            "short": "+/-",
-          }
-        }
-        value={2}
-      />
-      <TableBodyStatsCell
-        column={
-          Object {
-            "className": "points",
-            "key": "points",
-            "name": "Points",
-            "short": "Pts",
-          }
-        }
-        value={2}
-      />
-      <TableBodyOutcomeCell />
-      <TableBodyOutcomeCell>
-        <OutcomeButton
-          label={false}
-          outcome={
+        <TableBodyStatsCell
+          column={
             Object {
-              "betOfferId": 104,
-              "id": 4,
-              "odds": 1004,
-              "oddsAmerican": "1.4",
-              "oddsFractional": "1.4",
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
             }
           }
+          value={1}
         />
-      </TableBodyOutcomeCell>
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={1}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={1}
+        />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 101,
+                "id": 1,
+                "odds": 1001,
+                "oddsAmerican": "1.1",
+                "oddsFractional": "1.1",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 102,
+                "id": 2,
+                "odds": 1002,
+                "oddsAmerican": "1.2",
+                "oddsFractional": "1.2",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
+      <TableBodyRow>
+        <TableBodyPositionCell>
+          <PositionIndicator
+            change={0}
+            color="transparent"
+            position={2}
+          />
+        </TableBodyPositionCell>
+        <TableBodyParticipantCell
+          name="Błękitni Stargard"
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "games-played",
+              "key": "gamesPlayed",
+              "name": "Games Played",
+              "short": "P",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "wins",
+              "key": "wins",
+              "name": "Wins",
+              "short": "W",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "draws",
+              "key": "draws",
+              "name": "Draws",
+              "short": "D",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "losses",
+              "key": "losses",
+              "name": "Losses",
+              "short": "L",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-for",
+              "key": "goalsFor",
+              "name": "Goals for",
+              "short": "Gf",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-against",
+              "key": "goalsAgainst",
+              "name": "Goals against",
+              "short": "Ga",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "goals-difference",
+              "key": "goalsDifference",
+              "name": "Difference",
+              "short": "+/-",
+            }
+          }
+          value={2}
+        />
+        <TableBodyStatsCell
+          column={
+            Object {
+              "className": "points",
+              "key": "points",
+              "name": "Points",
+              "short": "Pts",
+            }
+          }
+          value={2}
+        />
+        <TableBodyOutcomeCell />
+        <TableBodyOutcomeCell>
+          <OutcomeButton
+            label={false}
+            outcome={
+              Object {
+                "betOfferId": 104,
+                "id": 4,
+                "odds": 1004,
+                "oddsAmerican": "1.4",
+                "oddsFractional": "1.4",
+              }
+            }
+          />
+        </TableBodyOutcomeCell>
+      </TableBodyRow>
     </TableBody>
   </Table>
 </div>
@@ -2711,112 +2743,116 @@ exports[`LeagueTableWidget interface handles columns group change events correct
         </TableHeadMobile>
         <TableBody>
           <tbody>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
-              <TableBodyPositionCell>
-                <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                  <PositionIndicator position={1} color=\\"transparent\\" change={0}>
-                    <span>
-                      <PositionCircle color=\\"transparent\\">
-                        <span className=\\"wrapper no-circle\\">
-                          <span className=\\"circle transparent\\">
-                            1
+            <TableBodyRow>
+              <tr className=\\"KambiWidget-card-inner-border row\\">
+                <TableBodyPositionCell>
+                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
+                    <PositionIndicator position={1} color=\\"transparent\\" change={0}>
+                      <span>
+                        <PositionCircle color=\\"transparent\\">
+                          <span className=\\"wrapper no-circle\\">
+                            <span className=\\"circle transparent\\">
+                              1
+                            </span>
                           </span>
-                        </span>
-                      </PositionCircle>
-                    </span>
-                  </PositionIndicator>
-                </td>
-              </TableBodyPositionCell>
-              <TableBodyParticipantCell name=\\"FC Pęzino\\">
-                <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                  FC Pęzino
-                </td>
-              </TableBodyParticipantCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={1}>
-                <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                  1
-                </td>
-              </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
-              <TableBodyPositionCell>
-                <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                  <PositionIndicator position={2} color=\\"transparent\\" change={0}>
-                    <span>
-                      <PositionCircle color=\\"transparent\\">
-                        <span className=\\"wrapper no-circle\\">
-                          <span className=\\"circle transparent\\">
-                            2
+                        </PositionCircle>
+                      </span>
+                    </PositionIndicator>
+                  </td>
+                </TableBodyPositionCell>
+                <TableBodyParticipantCell name=\\"FC Pęzino\\">
+                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
+                    FC Pęzino
+                  </td>
+                </TableBodyParticipantCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={1}>
+                  <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
+                    1
+                  </td>
+                </TableBodyStatsCell>
+                <td className=\\"margin\\" />
+              </tr>
+            </TableBodyRow>
+            <TableBodyRow>
+              <tr className=\\"KambiWidget-card-inner-border row\\">
+                <TableBodyPositionCell>
+                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
+                    <PositionIndicator position={2} color=\\"transparent\\" change={0}>
+                      <span>
+                        <PositionCircle color=\\"transparent\\">
+                          <span className=\\"wrapper no-circle\\">
+                            <span className=\\"circle transparent\\">
+                              2
+                            </span>
                           </span>
-                        </span>
-                      </PositionCircle>
-                    </span>
-                  </PositionIndicator>
-                </td>
-              </TableBodyPositionCell>
-              <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
-                <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                  Błękitni Stargard
-                </td>
-              </TableBodyParticipantCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <TableBodyStatsCell column={{...}} value={2}>
-                <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                  2
-                </td>
-              </TableBodyStatsCell>
-              <td className=\\"margin\\" />
-            </tr>
+                        </PositionCircle>
+                      </span>
+                    </PositionIndicator>
+                  </td>
+                </TableBodyPositionCell>
+                <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
+                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
+                    Błękitni Stargard
+                  </td>
+                </TableBodyParticipantCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <TableBodyStatsCell column={{...}} value={2}>
+                  <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
+                    2
+                  </td>
+                </TableBodyStatsCell>
+                <td className=\\"margin\\" />
+              </tr>
+            </TableBodyRow>
           </tbody>
         </TableBody>
       </table>
@@ -2864,108 +2900,112 @@ exports[`LeagueTableWidget interface handles columns group change events correct
         </TableHeadMobile>
         <TableBody>
           <tbody>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
-              <TableBodyPositionCell>
-                <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                  <PositionIndicator position={1} color=\\"transparent\\" change={0}>
-                    <span>
-                      <PositionCircle color=\\"transparent\\">
-                        <span className=\\"wrapper no-circle\\">
-                          <span className=\\"circle transparent\\">
-                            1
+            <TableBodyRow>
+              <tr className=\\"KambiWidget-card-inner-border row\\">
+                <TableBodyPositionCell>
+                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
+                    <PositionIndicator position={1} color=\\"transparent\\" change={0}>
+                      <span>
+                        <PositionCircle color=\\"transparent\\">
+                          <span className=\\"wrapper no-circle\\">
+                            <span className=\\"circle transparent\\">
+                              1
+                            </span>
                           </span>
-                        </span>
-                      </PositionCircle>
-                    </span>
-                  </PositionIndicator>
-                </td>
-              </TableBodyPositionCell>
-              <TableBodyParticipantCell name=\\"FC Pęzino\\">
-                <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                  FC Pęzino
-                </td>
-              </TableBodyParticipantCell>
-              <TableBodyOutcomeCell>
-                <td className=\\"general\\">
-                  <div className=\\"wrapper\\">
-                    <OutcomeButton outcome={{...}} label={false}>
-                      <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                        <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                          <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                            <span className=\\"KambiWidget-outcome__odds\\">
-                              1.0
+                        </PositionCircle>
+                      </span>
+                    </PositionIndicator>
+                  </td>
+                </TableBodyPositionCell>
+                <TableBodyParticipantCell name=\\"FC Pęzino\\">
+                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
+                    FC Pęzino
+                  </td>
+                </TableBodyParticipantCell>
+                <TableBodyOutcomeCell>
+                  <td className=\\"general\\">
+                    <div className=\\"wrapper\\">
+                      <OutcomeButton outcome={{...}} label={false}>
+                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
+                          <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
+                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
+                              <span className=\\"KambiWidget-outcome__odds\\">
+                                1.0
+                              </span>
+                            </div>
+                          </button>
+                        </OutcomeButtonUI>
+                      </OutcomeButton>
+                    </div>
+                  </td>
+                </TableBodyOutcomeCell>
+                <TableBodyOutcomeCell>
+                  <td className=\\"general\\">
+                    <div className=\\"wrapper\\">
+                      <OutcomeButton outcome={{...}} label={false}>
+                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
+                          <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
+                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
+                              <span className=\\"KambiWidget-outcome__odds\\">
+                                1.0
+                              </span>
+                            </div>
+                          </button>
+                        </OutcomeButtonUI>
+                      </OutcomeButton>
+                    </div>
+                  </td>
+                </TableBodyOutcomeCell>
+                <td className=\\"margin\\" />
+              </tr>
+            </TableBodyRow>
+            <TableBodyRow>
+              <tr className=\\"KambiWidget-card-inner-border row\\">
+                <TableBodyPositionCell>
+                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
+                    <PositionIndicator position={2} color=\\"transparent\\" change={0}>
+                      <span>
+                        <PositionCircle color=\\"transparent\\">
+                          <span className=\\"wrapper no-circle\\">
+                            <span className=\\"circle transparent\\">
+                              2
                             </span>
-                          </div>
-                        </button>
-                      </OutcomeButtonUI>
-                    </OutcomeButton>
-                  </div>
-                </td>
-              </TableBodyOutcomeCell>
-              <TableBodyOutcomeCell>
-                <td className=\\"general\\">
-                  <div className=\\"wrapper\\">
-                    <OutcomeButton outcome={{...}} label={false}>
-                      <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                        <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                          <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                            <span className=\\"KambiWidget-outcome__odds\\">
-                              1.0
-                            </span>
-                          </div>
-                        </button>
-                      </OutcomeButtonUI>
-                    </OutcomeButton>
-                  </div>
-                </td>
-              </TableBodyOutcomeCell>
-              <td className=\\"margin\\" />
-            </tr>
-            <tr className=\\"KambiWidget-card-inner-border row\\">
-              <TableBodyPositionCell>
-                <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                  <PositionIndicator position={2} color=\\"transparent\\" change={0}>
-                    <span>
-                      <PositionCircle color=\\"transparent\\">
-                        <span className=\\"wrapper no-circle\\">
-                          <span className=\\"circle transparent\\">
-                            2
                           </span>
-                        </span>
-                      </PositionCircle>
-                    </span>
-                  </PositionIndicator>
-                </td>
-              </TableBodyPositionCell>
-              <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
-                <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                  Błękitni Stargard
-                </td>
-              </TableBodyParticipantCell>
-              <TableBodyOutcomeCell>
-                <td className=\\"general\\">
-                  <div className=\\"wrapper\\" />
-                </td>
-              </TableBodyOutcomeCell>
-              <TableBodyOutcomeCell>
-                <td className=\\"general\\">
-                  <div className=\\"wrapper\\">
-                    <OutcomeButton outcome={{...}} label={false}>
-                      <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                        <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                          <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                            <span className=\\"KambiWidget-outcome__odds\\">
-                              1.0
-                            </span>
-                          </div>
-                        </button>
-                      </OutcomeButtonUI>
-                    </OutcomeButton>
-                  </div>
-                </td>
-              </TableBodyOutcomeCell>
-              <td className=\\"margin\\" />
-            </tr>
+                        </PositionCircle>
+                      </span>
+                    </PositionIndicator>
+                  </td>
+                </TableBodyPositionCell>
+                <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
+                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
+                    Błękitni Stargard
+                  </td>
+                </TableBodyParticipantCell>
+                <TableBodyOutcomeCell>
+                  <td className=\\"general\\">
+                    <div className=\\"wrapper\\" />
+                  </td>
+                </TableBodyOutcomeCell>
+                <TableBodyOutcomeCell>
+                  <td className=\\"general\\">
+                    <div className=\\"wrapper\\">
+                      <OutcomeButton outcome={{...}} label={false}>
+                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
+                          <button type=\\"button\\" role=\\"button\\" className=\\"l-flex-1 kw-link KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
+                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
+                              <span className=\\"KambiWidget-outcome__odds\\">
+                                1.0
+                              </span>
+                            </div>
+                          </button>
+                        </OutcomeButtonUI>
+                      </OutcomeButton>
+                    </div>
+                  </td>
+                </TableBodyOutcomeCell>
+                <td className=\\"margin\\" />
+              </tr>
+            </TableBodyRow>
           </tbody>
         </TableBody>
       </table>

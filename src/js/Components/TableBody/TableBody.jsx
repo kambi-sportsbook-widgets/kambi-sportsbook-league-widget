@@ -1,23 +1,8 @@
-import React, { Children, PropTypes } from 'react';
-import styles from './TableBody.scss';
+import React, { PropTypes } from 'react';
 
-const TableBody = ({ children }) => {
-   // todo: use TableBodyRow (KSBWI-908)
-   if (!(children instanceof Array)) {
-      children = [];
-   }
-
-   return (
-      <tbody>
-         {children.map((row, i) =>
-            <tr key={i} className={['KambiWidget-card-inner-border', styles.row].join(' ')}>
-               {row}
-               <td className='margin' />
-            </tr>
-         )}
-      </tbody>
-   );
-};
+const TableBody = ({ children }) => (
+   <tbody>{children}</tbody>
+);
 
 TableBody.propTypes = {
    /**

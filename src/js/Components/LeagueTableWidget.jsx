@@ -10,6 +10,7 @@ import TableBodyPositionCell from './TableBodyPositionCell/TableBodyPositionCell
 import TableBodyParticipantCell from './TableBodyParticipantCell/TableBodyParticipantCell';
 import TableBodyStatsCell from './TableBodyStatsCell/TableBodyStatsCell';
 import TableBodyOutcomeCell from './TableBodyOutcomeCell/TableBodyOutcomeCell';
+import TableBodyRow from './TableBodyRow/TableBodyRow';
 import Legend from './Legend/Legend';
 
 /**
@@ -179,18 +180,19 @@ class LeagueTableWidget extends Component {
                   />
                }
                <TableBody>
-                  {this.props.statistics.map((row, i) => [
-                     <TableBodyPositionCell key={`pos_${i}`}>
-                        <PositionIndicator
-                           position={row.position}
-                           color={this.props.positionColorMatcher(row.position)}
-                           change={0}
-                        />
-                     </TableBodyPositionCell>,
-                     <TableBodyParticipantCell key={`par_${i}`} name={row.participantName} />,
-                     this.state.mobile ? this.columnGroup.render(row)
-                        : this.columnGroups.map(columnGroup => columnGroup.render(row))
-                  ])}
+                  {this.props.statistics.map((row, i) =>
+                     <TableBodyRow key={`pos_${i}`}>
+                        <TableBodyPositionCell>
+                           <PositionIndicator
+                              position={row.position}
+                              color={this.props.positionColorMatcher(row.position)}
+                              change={0}
+                           />
+                        </TableBodyPositionCell>
+                        <TableBodyParticipantCell name={row.participantName} />
+                        {this.state.mobile ? this.columnGroup.render(row)
+                           : this.columnGroups.map(columnGroup => columnGroup.render(row))}
+                     </TableBodyRow>)}
                </TableBody>
             </Table>
             {!!this.props.positionLegend.length &&

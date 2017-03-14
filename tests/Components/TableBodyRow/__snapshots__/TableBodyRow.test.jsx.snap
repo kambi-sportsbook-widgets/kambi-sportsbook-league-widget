@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableBodyRow DOM rendering renders correctly with children 1`] = `
+<tr
+  className="KambiWidget-card-inner-border row"
+>
+  <td />
+  <td />
+  <td
+    className="margin"
+  />
+</tr>
+`;
+
+exports[`TableBodyRow DOM rendering renders correctly without children 1`] = `
+<tr
+  className="KambiWidget-card-inner-border row"
+>
+  <td
+    className="margin"
+  />
+</tr>
+`;
