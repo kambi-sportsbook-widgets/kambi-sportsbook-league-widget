@@ -91,7 +91,7 @@ describe('Kambi service', () => {
       };
 
       statisticsModule.getLeagueTableStatistics = jest.fn((filter) => {
-         expect(filter).toEqual('/test/filter');
+         expect(filter).toEqual('/test/filter/all');
          return new Promise(resolve => resolve(leagueTableStatisticsMock));
       });
 
@@ -142,7 +142,7 @@ describe('Kambi service', () => {
       });
 
       statisticsModule.getLeagueTableStatistics = jest.fn((filter) => {
-         expect(filter).toEqual('/test/filter');
+         expect(filter).toEqual('/test/filter/all');
          return new Promise(resolve => resolve(leagueTableStatisticsMock));
       });
 
@@ -176,7 +176,7 @@ describe('Kambi service', () => {
       });
 
       statisticsModule.getLeagueTableStatistics = jest.fn((filter) => {
-         expect(filter).toEqual('/test/filter');
+         expect(filter).toEqual('/test/filter/all');
          return new Promise(resolve => resolve(leagueTableStatisticsMock));
       });
 

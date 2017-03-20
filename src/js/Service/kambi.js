@@ -86,6 +86,14 @@ const getCompetitionEvent = (filter, criterionId) => {
 const getData = (filter, criterionId) => {
    criterionId = parseInt(criterionId, 10);
 
+   const parts = filter.split('/')
+      .filter(termKey => termKey); // removes empty strings
+
+   for (let i = parts.length; i < 3; i++) {
+      parts.push('all');
+   }
+   filter = '/' + parts.join('/');
+
    return Promise.all([
       getCompetitionEvent(filter, criterionId),
       statisticsModule.getLeagueTableStatistics(filter)
