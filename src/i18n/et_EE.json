@@ -1,14 +1,15 @@
 {
+   "Add": "Lisa",
    "Position": "Koht",
    "Participant name": "Osaleja nimi",
-   "Games Played": "Mängitud mänge",
-   "Wins": "Võite",
-   "Draws": "Viike",
-   "Losses": "Kaotusi",
+   "Games Played": "Mängud",
+   "Wins": "Võidud",
+   "Draws": "Viigid",
+   "Losses": "Kaotused",
    "Goals for": "Löödud väravaid",
-   "Goals against": "Sisselastud väravaid",
+   "Goals against": "Väravaid vastu",
    "Difference": "Vahe",
-   "Points": "Punkte",
+   "Points": "Punktid",
    "Statistics": "Statistika",
    "Bet offers": "Panuste pakkumised"
 }

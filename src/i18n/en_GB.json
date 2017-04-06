@@ -1,10 +1,12 @@
 {
+   "Add": "Add",
    "Position": "Position",
    "Participant name": "Participant name",
    "Games Played": "Games Played",
    "Wins": "Wins",
    "Draws": "Draws",
    "Losses": "Losses",
+   "Games played": "Games played",
    "Goals for": "Goals for",
    "Goals against": "Goals against",
    "Difference": "Difference",
