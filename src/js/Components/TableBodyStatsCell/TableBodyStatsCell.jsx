@@ -10,7 +10,7 @@ const TableBodyStatsCell = ({ column, value }) => {
          title={t(column.name)}
          className={[styles.general, column.className].join(' ')}
       >
-         {value}
+         {t(value)}
       </td>
    );
 };

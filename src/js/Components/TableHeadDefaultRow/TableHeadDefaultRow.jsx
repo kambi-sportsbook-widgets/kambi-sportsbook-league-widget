@@ -24,7 +24,7 @@ const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
                <th
                   key={i}
                   className='column-name'
-                  title={t(column.name)}
+                  title={t(column.short)}
                >
                   {hiddenMode ? '' : column.short}
                </th>
