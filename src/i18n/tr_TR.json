@@ -1,14 +1,25 @@
 {
+   "Add": "Add",
    "Position": "Position",
    "Participant name": "Participant name",
    "Games Played": "Games Played",
+   "P": "P",
    "Wins": "Wins",
+   "W": "W",
    "Draws": "Draws",
+   "D": "D",
    "Losses": "Losses",
+   "L": "L",
    "Goals for": "Goals for",
+   "Gf": "Gf",
    "Goals against": "Goals against",
+   "Ga": "Ga",
    "Difference": "Difference",
    "Points": "Points",
+   "Pts": "Pts",
    "Statistics": "Statistics",
-   "Bet offers": "Bet offers"
+   "Bet offers": "Bet offers",
+   "Relegation": "Relegation",
+   "Relegation Play-off": "Relegation Play-off",
+   "Play-off": "Play-off"
 }
