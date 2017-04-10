@@ -10,7 +10,7 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly in hidden mode 1`] 
   />
   <th
     className="column-name"
-    title="Translated: \\"Test column 1\\""
+    title="Translated: \\"TC1\\""
   />
   <th
     className="margin"
@@ -28,9 +28,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly when collapsable 1`
   />
   <th
     className="column-name"
-    title="Translated: \\"Test column 1\\""
+    title="Translated: \\"TC1\\""
   >
-    TC1
+    Translated: "TC1"
   </th>
   <th
     className="margin"
@@ -48,9 +48,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly when not collapsabl
   />
   <th
     className="column-name"
-    title="Translated: \\"Test column 1\\""
+    title="Translated: \\"TC1\\""
   >
-    TC1
+    Translated: "TC1"
   </th>
   <th
     className="margin"
@@ -68,15 +68,15 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly with many columns 1
   />
   <th
     className="column-name"
-    title="Translated: \\"Test column 1\\""
+    title="Translated: \\"TC1\\""
   >
-    TC1
+    Translated: "TC1"
   </th>
   <th
     className="column-name"
-    title="Translated: \\"Test column 2\\""
+    title="Translated: \\"TC2\\""
   >
-    TC2
+    Translated: "TC2"
   </th>
   <th
     className="margin"
@@ -96,9 +96,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly with title 1`] = `
   </th>
   <th
     className="column-name"
-    title="Translated: \\"Test column 1\\""
+    title="Translated: \\"TC1\\""
   >
-    TC1
+    Translated: "TC1"
   </th>
   <th
     className="margin"

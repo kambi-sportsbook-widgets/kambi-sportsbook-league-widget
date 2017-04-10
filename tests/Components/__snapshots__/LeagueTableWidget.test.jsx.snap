@@ -17,51 +17,51 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Games Played\\""
+          title="Translated: \\"P\\""
         >
-          P
+          Translated: "P"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Wins\\""
+          title="Translated: \\"W\\""
         >
-          W
+          Translated: "W"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Draws\\""
+          title="Translated: \\"D\\""
         >
-          D
+          Translated: "D"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Losses\\""
+          title="Translated: \\"L\\""
         >
-          L
+          Translated: "L"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Goals for\\""
+          title="Translated: \\"Gf\\""
         >
-          Gf
+          Translated: "Gf"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Goals against\\""
+          title="Translated: \\"Ga\\""
         >
-          Ga
+          Translated: "Ga"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Difference\\""
+          title="Translated: \\"+/-\\""
         >
-          +/-
+          Translated: "+/-"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Points\\""
+          title="Translated: \\"Pts\\""
         >
-          Pts
+          Translated: "Pts"
         </th>
         <th
           className="margin"
@@ -107,39 +107,39 @@ exports[`LeagueTableWidget DOM rendering renders correctly after switching to mo
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Games Played\\""
+          title="Translated: \\"P\\""
         >
-          P
+          Translated: "P"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Wins\\""
+          title="Translated: \\"W\\""
         >
-          W
+          Translated: "W"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Draws\\""
+          title="Translated: \\"D\\""
         >
-          D
+          Translated: "D"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Losses\\""
+          title="Translated: \\"L\\""
         >
-          L
+          Translated: "L"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Difference\\""
+          title="Translated: \\"+/-\\""
         >
-          +/-
+          Translated: "+/-"
         </th>
         <th
           className="column-name"
-          title="Translated: \\"Points\\""
+          title="Translated: \\"Pts\\""
         >
-          Pts
+          Translated: "Pts"
         </th>
         <th
           className="margin"
@@ -2718,23 +2718,23 @@ exports[`LeagueTableWidget interface handles columns group change events correct
             <TableHeadDefaultRow columns={{...}} title=\\"\\" hiddenMode={false}>
               <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general\\">
                 <th colSpan=\\"2\\" className=\\"title\\" />
-                <th className=\\"column-name\\" title=\\"Translated: \\"Games Played\\"\\">
-                  P
+                <th className=\\"column-name\\" title=\\"Translated: \\"P\\"\\">
+                  Translated: &quot;P&quot;
                 </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Wins\\"\\">
-                  W
+                <th className=\\"column-name\\" title=\\"Translated: \\"W\\"\\">
+                  Translated: &quot;W&quot;
                 </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Draws\\"\\">
-                  D
+                <th className=\\"column-name\\" title=\\"Translated: \\"D\\"\\">
+                  Translated: &quot;D&quot;
                 </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Losses\\"\\">
-                  L
+                <th className=\\"column-name\\" title=\\"Translated: \\"L\\"\\">
+                  Translated: &quot;L&quot;
                 </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Difference\\"\\">
-                  +/-
+                <th className=\\"column-name\\" title=\\"Translated: \\"+/-\\"\\">
+                  Translated: &quot;+/-&quot;
                 </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Points\\"\\">
-                  Pts
+                <th className=\\"column-name\\" title=\\"Translated: \\"Pts\\"\\">
+                  Translated: &quot;Pts&quot;
                 </th>
                 <th className=\\"margin\\" />
               </tr>
@@ -2767,32 +2767,32 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                 </TableBodyParticipantCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={1}>
                   <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                    1
+                    Translated: &quot;1&quot;
                   </td>
                 </TableBodyStatsCell>
                 <td className=\\"margin\\" />
@@ -2822,32 +2822,32 @@ exports[`LeagueTableWidget interface handles columns group change events correct
                 </TableBodyParticipantCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <TableBodyStatsCell column={{...}} value={2}>
                   <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                    2
+                    Translated: &quot;2&quot;
                   </td>
                 </TableBodyStatsCell>
                 <td className=\\"margin\\" />
@@ -2888,10 +2888,10 @@ exports[`LeagueTableWidget interface handles columns group change events correct
               <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general\\">
                 <th colSpan=\\"2\\" className=\\"title\\" />
                 <th className=\\"column-name\\" title=\\"Translated: \\"Test BetOffer 1\\"\\">
-                  Test BetOffer 1
+                  Translated: &quot;Test BetOffer 1&quot;
                 </th>
                 <th className=\\"column-name\\" title=\\"Translated: \\"Test BetOffer 2\\"\\">
-                  Test BetOffer 2
+                  Translated: &quot;Test BetOffer 2&quot;
                 </th>
                 <th className=\\"margin\\" />
               </tr>

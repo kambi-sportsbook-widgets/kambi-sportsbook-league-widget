@@ -4,12 +4,16 @@ exports[`TableBodyStatsCell DOM rendering renders correctly with value 1`] = `
 <td
   className="general test-stat-name"
   title="Translated: \\"Test stat name\\""
-/>
+>
+  Translated: "undefined"
+</td>
 `;
 
 exports[`TableBodyStatsCell DOM rendering renders correctly without value 1`] = `
 <td
   className="general test-stat-name"
   title="Translated: \\"Test stat name\\""
-/>
+>
+  Translated: "undefined"
+</td>
 `;
