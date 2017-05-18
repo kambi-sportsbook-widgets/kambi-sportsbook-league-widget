@@ -5,7 +5,7 @@ import PositionCircle from '../Circle/PositionCircle';
 const PositionIndicator = ({ position, color, change }) => {
    return (
       <span>
-         <PositionCircle color={PositionCircle.COLORS[color]}>{position}</PositionCircle>
+         <PositionCircle color={color}>{position}</PositionCircle>
          {change !== 0 &&
             <i className={[styles.triangle, change > 0 ? 'up' : 'down'].join(' ')} />}
       </span>
