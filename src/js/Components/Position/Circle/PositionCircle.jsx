@@ -65,7 +65,9 @@ PositionCircle.propTypes = {
 };
 
 PositionCircle.defaultProps = {
-   color: COLORS.TRANSPARENT
+   color: null
 };
+
+PositionCircle.COLORS = COLORS;
 
 export default PositionCircle;

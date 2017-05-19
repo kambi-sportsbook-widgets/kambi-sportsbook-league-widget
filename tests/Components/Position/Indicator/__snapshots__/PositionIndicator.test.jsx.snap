@@ -3,7 +3,7 @@
 exports[`PositionIndicator DOM rendering renders correctly with color 1`] = `
 <span>
   <PositionCircle
-    color="KambiWidget-box--win"
+    color="GREEN"
   >
     1
   </PositionCircle>
@@ -13,7 +13,7 @@ exports[`PositionIndicator DOM rendering renders correctly with color 1`] = `
 exports[`PositionIndicator DOM rendering renders correctly with default props 1`] = `
 <span>
   <PositionCircle
-    color="transparent"
+    color={null}
   >
     1
   </PositionCircle>
@@ -23,7 +23,7 @@ exports[`PositionIndicator DOM rendering renders correctly with default props 1`
 exports[`PositionIndicator DOM rendering renders correctly with negative position change 1`] = `
 <span>
   <PositionCircle
-    color="transparent"
+    color={null}
   >
     4
   </PositionCircle>
@@ -36,7 +36,7 @@ exports[`PositionIndicator DOM rendering renders correctly with negative positio
 exports[`PositionIndicator DOM rendering renders correctly with positive position change 1`] = `
 <span>
   <PositionCircle
-    color="transparent"
+    color={null}
   >
     1
   </PositionCircle>

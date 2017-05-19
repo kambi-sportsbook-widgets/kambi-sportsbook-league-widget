@@ -19,8 +19,6 @@ exports[`Kambi service handles Kambi API returning empty events set 1`] = `[Type
 
 exports[`Kambi service handles Kambi API returning empty response for getEvent request 1`] = `[TypeError: Cannot read property 'leagueTableRows' of undefined]`;
 
-exports[`Kambi service handles Kambi API returning incorrect response for eventsByFilter request 1`] = `[Error: Invalid response from Kambi API]`;
-
 exports[`Kambi service returns correct data when criterionId is given 1`] = `
 Object {
   "betOffers": Array [
@@ -48,7 +46,7 @@ Object {
       "participantId": 1000,
     },
   ],
-  "title": "path3",
+  "title": "",
 }
 `;
 
@@ -63,6 +61,6 @@ Object {
       "outcomes": Array [],
     },
   ],
-  "title": "path3",
+  "title": "",
 }
 `;

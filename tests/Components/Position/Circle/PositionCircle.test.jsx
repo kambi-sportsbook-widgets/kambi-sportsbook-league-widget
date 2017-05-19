@@ -17,13 +17,13 @@ describe('PositionCircle DOM rendering', () => {
 
    it('renders correctly with given color', () => {
       expect(renderer.render(
-         <PositionCircle color={PositionCircle.COLORS.GREEN} />
+         <PositionCircle color='GREEN' />
       )).toMatchSnapshot();
    });
 
    it('renders correctly with transparent color', () => {
       expect(renderer.render(
-         <PositionCircle color={PositionCircle.COLORS.TRANSPARENT} />
+         <PositionCircle color='TRANSPARENT' />
       )).toMatchSnapshot();
    });
 

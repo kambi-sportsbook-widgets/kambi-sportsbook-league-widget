@@ -27,13 +27,6 @@ describe('Kambi service', () => {
       });
    });
 
-   it('handles Kambi API returning incorrect response for eventsByFilter request', () => {
-      offeringModule.getEventsByFilter = jest.fn(() => new Promise(resolve => resolve(null)));
-
-      return kambi.getData('/test/filter')
-         .catch(e => expect(e).toMatchSnapshot());
-   });
-
    it('handles Kambi API returning empty events set', () => {
       offeringModule.getEventsByFilter = jest.fn(() => new Promise(resolve => resolve({ events: [] })));
 
@@ -49,6 +42,7 @@ describe('Kambi service', () => {
                   {
                      event: {
                         id: 111,
+                        start: 1495193733875,
                         path: [
                            {
                               name: 'path1'
@@ -106,9 +100,11 @@ describe('Kambi service', () => {
 
 
    it('handles Kambi API returning empty response for getEvent request', () => {
-      const eventMock = { event: { id: 100, type: 'ET_COMPETITION' } };
+      const eventMock = { event: {
+         id: 100, start: 1495193733875, type: 'ET_COMPETITION'
+      } };
 
-      offeringModule.getEventsByFilter = jest.fn(() => new Promise(resolve => resolve({events: [eventMock]})));
+      offeringModule.getEventsByFilter = jest.fn(() => new Promise(resolve => resolve({ events: [eventMock] })));
 
       offeringModule.getEvent = jest.fn(eventId => null);
 
@@ -118,7 +114,7 @@ describe('Kambi service', () => {
 
    it('returns correct data when criterionId is given', () => {
       const eventMock = {
-         event: { id: 100, type: 'ET_COMPETITION' },
+         event: { id: 100, start: 1495193733875, type: 'ET_COMPETITION' },
          betOffers: [ {
             criterion: { id: 123 },
             outcomes: [ { participantId: 1000 } ]
@@ -157,7 +153,7 @@ describe('Kambi service', () => {
 
    it('returns correct data when criterionId is not given', () => {
       const eventMock = {
-         event: { id: 100, type: 'ET_COMPETITION' }
+         event: { id: 100, start: 1495193733875, type: 'ET_COMPETITION' }
       };
 
       const leagueTableStatisticsMock = { leagueTableRows: [ {
@@ -180,10 +176,10 @@ describe('Kambi service', () => {
          return new Promise(resolve => resolve(leagueTableStatisticsMock));
       });
 
-      return kambi.getData('/test/filter')
+      return kambi.getData('/test/filter', null)
          .then(data => {
             expect(data).toMatchSnapshot();
-            expect(offeringModule.getEventsByFilter).toHaveBeenCalledTimes(1);
+            expect(offeringModule.getEventsByFilter).toHaveBeenCalledTimes(0);
             expect(offeringModule.getEvent).toHaveBeenCalledTimes(0);
             expect(statisticsModule.getLeagueTableStatistics).toHaveBeenCalledTimes(1);
          })

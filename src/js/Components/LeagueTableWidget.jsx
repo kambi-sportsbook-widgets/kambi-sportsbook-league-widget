@@ -235,7 +235,7 @@ LeagueTableWidget.propTypes = {
 
 LeagueTableWidget.defaultProps = {
    positionLegend: [],
-   positionColorMatcher: () => 'transparent'
+   positionColorMatcher: () => 'TRANSPARENT'
 };
 
 export default LeagueTableWidget;

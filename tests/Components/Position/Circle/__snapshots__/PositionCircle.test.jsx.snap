@@ -2,20 +2,20 @@
 
 exports[`PositionCircle DOM rendering renders correctly with default props 1`] = `
 <span
-  className="wrapper no-circle"
+  className="wrapper transparent"
 >
   <span
-    className="circle transparent"
+    className=" KambiWidget-card-text-color"
   />
 </span>
 `;
 
 exports[`PositionCircle DOM rendering renders correctly with given child element 1`] = `
 <span
-  className="wrapper no-circle"
+  className="wrapper transparent"
 >
   <span
-    className="circle transparent"
+    className=" KambiWidget-card-text-color"
   >
     t
   </span>
@@ -24,20 +24,20 @@ exports[`PositionCircle DOM rendering renders correctly with given child element
 
 exports[`PositionCircle DOM rendering renders correctly with given color 1`] = `
 <span
-  className="wrapper false"
+  className="wrapper KambiWidget-winPrimaryColor dark"
 >
   <span
-    className="circle KambiWidget-box--win"
+    className=" KambiWidget-winSecondaryColor"
   />
 </span>
 `;
 
 exports[`PositionCircle DOM rendering renders correctly with transparent color 1`] = `
 <span
-  className="wrapper no-circle"
+  className="wrapper transparent"
 >
   <span
-    className="circle transparent"
+    className=" KambiWidget-card-text-color"
   />
 </span>
 `;

@@ -17,7 +17,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--win"
+        color="GREEN"
       />
     </div>
     <p>
@@ -29,7 +29,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--win light"
+        color="LIGHT_GREEN"
       />
     </div>
     <p>
@@ -41,7 +41,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--draw"
+        color="ORANGE"
       />
     </div>
     <p>
@@ -53,7 +53,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--draw light"
+        color="LIGHT_ORANGE"
       />
     </div>
     <p>
@@ -65,7 +65,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--lose"
+        color="RED"
       />
     </div>
     <p>
@@ -77,7 +77,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="KambiWidget-box--lose light"
+        color="LIGHT_RED"
       />
     </div>
     <p>
@@ -89,7 +89,7 @@ exports[`Legend DOM rendering renders correctly with items 1`] = `
       className="circle"
     >
       <PositionCircle
-        color="transparent"
+        color="TRANSPARENT"
       />
     </div>
     <p>
