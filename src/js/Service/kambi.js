@@ -16,7 +16,7 @@ const setTitle = (event) => {
       title = path[idx].name;
    } catch (e) {
       // there might not be any events at all
-      return '';
+      title = '';
    }
 };
 
@@ -27,6 +27,10 @@ const setTitle = (event) => {
  * @returns {Promise.<Object>}
  */
 const getCompetitionEvent = (filter, criterionId) => {
+   if (Number.isNaN(criterionId)) {
+      return Promise.resolve(null);
+   }
+
    // modify filter to match only competitions
    const competitionsFilter = (() => {
       const parts = filter.split('/')
@@ -44,36 +48,47 @@ const getCompetitionEvent = (filter, criterionId) => {
    // fetch competitions for previously prepared filter
    return offeringModule.getEventsByFilter(competitionsFilter)
       .then((response) => {
-         if (!response || !Array.isArray(response.events)) {
-            throw new Error('Invalid response from Kambi API');
-         }
-
-         // if criterion identifier is not set just find first event which is a competition
-         if (Number.isNaN(criterionId)) {
-            return response.events.find(ev => ev.event.type === 'ET_COMPETITION');
-         }
-
-         // search for event which is a competition and has a betOffer with given criterion identifier
-         const event = response.events.find((ev) => {
-            return ev.event.type === 'ET_COMPETITION' &&
-               ev.betOffers.find(bo => bo.criterion.id === criterionId);
-         });
-
-         if (event == null) {
-            console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
-            setTitle(response.events[0]);
+         if (!response || !Array.isArray(response.events) || response.events.length === 0) {
             return null;
          }
 
-         return offeringModule.getEvent(event.event.id)
-            .then((event) => {
+         // filtering the response to contain just the lowest year events.
+         let lowestYear = Number.MAX_VALUE;
+         response.events.forEach((ev) => {
+            const evYear = (new Date(ev.event.start)).getYear();
+            if (evYear < lowestYear) {
+               lowestYear = evYear;
+            }
+         });
+
+         const filteredEvents = response.events.filter((ev) => {
+            const evYear = (new Date(ev.event.start)).getYear();
+            return evYear === lowestYear;
+         });
+
+         return Promise.all(
+            filteredEvents.map(ev =>
+               offeringModule.getEvent(ev.event.id)
+                  .catch((res) => {
+                     return null;
+                  })
+            ))
+            .then((response2) => {
+               response2 = response2.filter(res => res !== null);
+               // search for event which is a competition and has a betOffer with given criterion identifier
+               const event = response2.find((ev) => {
+                  return ev.event.type === 'ET_COMPETITION' &&
+                     ev.betOffers.find(bo => bo.criterion.id === criterionId);
+               });
+
+               if (event == null) {
+                  console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
+                  setTitle(response.events[0]); // original response
+                  return null;
+               }
                setTitle(event);
                return event;
-            }).catch(() => {
-               console.warn('Event not found. No Betoffers to show');
-               setTitle(response.events[0]);
-               return null;
-            });
+            })
       })
 };
 
