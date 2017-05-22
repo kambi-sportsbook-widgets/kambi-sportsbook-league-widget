@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { coreLibrary, widgetModule } from 'kambi-widget-core-library';
 import { OutcomeButton } from 'kambi-widget-components';
 import Table from './Table/Table';

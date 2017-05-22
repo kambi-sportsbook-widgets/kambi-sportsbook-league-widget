@@ -1,7 +1,7 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import TableHeadDefaultRow from '../../../src/js/Components/TableHeadDefaultRow/TableHeadDefaultRow';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
@@ -12,8 +12,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableHeadDefaultRow DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly when not collapsable', () => {

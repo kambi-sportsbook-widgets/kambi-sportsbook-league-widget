@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { translationModule } from 'kambi-widget-core-library';
 import { DropdownButton } from 'kambi-widget-components';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';

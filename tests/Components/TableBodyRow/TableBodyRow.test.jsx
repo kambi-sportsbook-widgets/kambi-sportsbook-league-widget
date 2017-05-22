@@ -1,13 +1,14 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import TableBodyRow from '../../../src/js/Components/TableBodyRow/TableBodyRow';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
 describe('TableBodyRow DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly without children', () => {

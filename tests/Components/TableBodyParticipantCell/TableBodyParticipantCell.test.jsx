@@ -1,8 +1,7 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import TableBodyParticipantCell from '../../../src/js/Components/TableBodyParticipantCell/TableBodyParticipantCell';
-
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
@@ -13,8 +12,9 @@ jest.mock('kambi-widget-core-library', () => ({
 }));
 
 describe('TableBodyParticipantCell DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly', () => {

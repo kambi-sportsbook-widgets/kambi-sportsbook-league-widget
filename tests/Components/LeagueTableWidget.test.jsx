@@ -1,11 +1,11 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
+import ReactTestRenderer from 'react-test-renderer';
+import { mount, shallow } from 'enzyme';
 import LeagueTableWidget from '../../src/js/Components/LeagueTableWidget';
 import PositionCircle from '../../src/js/Components/Position/Circle/PositionCircle';
-import { mount, shallow } from 'enzyme';
 import { widgetModule } from 'kambi-widget-core-library';
-import ReactTestRenderer from 'react-test-renderer';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
@@ -91,8 +91,9 @@ const betOffersMock = [
 ];
 
 describe('LeagueTableWidget DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
       window.innerWidth = 1024;
    });
 
@@ -193,7 +194,7 @@ describe('LeagueTableWidget DOM rendering', () => {
          <LeagueTableWidget
             statistics={statisticsMock}
             betOffers={betOffersMock}
-            positionLegend={[{color: PositionCircle.COLORS.GREEN, description: 'Test legend description'}]}
+            positionLegend={[{color: 'GREEN', description: 'Test legend description'}]}
             title='League Table'
          />
       );
@@ -245,6 +246,10 @@ describe('LeagueTableWidget DOM rendering', () => {
 });
 
 describe('LeagueTableWidget interface', () => {
+
+   beforeEach(() => {
+      renderer = new ReactShallowRenderer();
+   });
 
    it('unmounts correctly', () => {
       const wrapper = mount(

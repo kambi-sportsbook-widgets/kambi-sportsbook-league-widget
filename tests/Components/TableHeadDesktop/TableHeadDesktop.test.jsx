@@ -1,13 +1,14 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import TableHeadDesktop from '../../../src/js/Components/TableHeadDesktop/TableHeadDesktop';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
 describe('TableHeadDesktop DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly', () => {
@@ -18,4 +19,5 @@ describe('TableHeadDesktop DOM rendering', () => {
          />
       )).toMatchSnapshot();
    });
+
 });

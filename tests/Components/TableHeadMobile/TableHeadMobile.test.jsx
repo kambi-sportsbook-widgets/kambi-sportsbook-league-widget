@@ -1,8 +1,8 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
-import TableHeadMobile from '../../../src/js/Components/TableHeadMobile/TableHeadMobile';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import { mount, shallow } from 'enzyme';
-import ReactTestUtils from 'react-addons-test-utils';
+import TableHeadMobile from '../../../src/js/Components/TableHeadMobile/TableHeadMobile';
 
 let renderer;
 
@@ -32,8 +32,9 @@ const columnGroups = [
 ];
 
 describe('TableHeadMobile DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly', () => {
@@ -79,6 +80,10 @@ describe('TableHeadMobile DOM rendering', () => {
 });
 
 describe('TableHeadMobile interface', () => {
+
+   beforeEach(() => {
+      renderer = new ReactShallowRenderer();
+   });
 
    it('handles onColumnGroupChange events correctly', () => {
       const onColumnGroupChangedMock = jest.fn(),

@@ -1,14 +1,15 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import Legend from '../../../src/js/Components/Legend/Legend';
 import PositionCircle from '../../../src/js/Components/Position/Circle/PositionCircle';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
 describe('Legend DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
 
    it('renders correctly with empty items list', () => {

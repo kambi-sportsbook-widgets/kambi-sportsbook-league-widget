@@ -1411,10 +1411,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
     items={
       Array [
         Object {
-          "color": Object {
-            "background": "KambiWidget-winPrimaryColor dark",
-            "text": "KambiWidget-winSecondaryColor",
-          },
+          "color": "GREEN",
           "description": "Test legend description",
         },
       ]

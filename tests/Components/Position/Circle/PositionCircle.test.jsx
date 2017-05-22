@@ -1,14 +1,16 @@
 /* eslint-env jest */
-import React, { Children } from 'react';
+import React from 'react';
+import ReactShallowRenderer from 'react-test-renderer/shallow';
 import PositionCircle from '../../../../src/js/Components/Position/Circle/PositionCircle';
-import ReactTestUtils from 'react-addons-test-utils';
 
 let renderer;
 
 describe('PositionCircle DOM rendering', () => {
+
    beforeEach(() => {
-      renderer = ReactTestUtils.createRenderer();
+      renderer = new ReactShallowRenderer();
    });
+
    it('renders correctly with default props', () => {
       expect(renderer.render(
          <PositionCircle />

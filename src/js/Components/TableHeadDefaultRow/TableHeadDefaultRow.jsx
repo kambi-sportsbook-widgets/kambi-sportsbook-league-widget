@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { translationModule } from 'kambi-widget-core-library';
 import styles from './TableHeadDefaultRow.scss';
 
