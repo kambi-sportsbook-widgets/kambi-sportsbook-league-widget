@@ -51,8 +51,8 @@ class TableHeadMobile extends Component {
       return (
          <thead>
             <tr className={headerCssClasses}>
-               <th colSpan='2' className='title'>{this.props.title}</th>
-               <th colSpan={this.columnGroup.columns.length} className='column-picker'>
+               <th colSpan='2' className={styles.title}>{this.props.title}</th>
+               <th colSpan={this.columnGroup.columns.length} className={styles['column-picker']}>
                   {
                      this.props.showColumnPicker ?
                         <DropdownButton
@@ -63,7 +63,7 @@ class TableHeadMobile extends Component {
                      : null
                   }
                </th>
-               <th className='margin' />
+               <th className={styles.margin} />
             </tr>
             <TableHeadDefaultRow
                columns={this.columnGroup.columns}

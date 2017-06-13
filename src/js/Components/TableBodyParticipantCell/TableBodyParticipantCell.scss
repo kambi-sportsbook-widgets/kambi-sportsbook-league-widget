@@ -1,7 +1,7 @@
 @import '../TableBodyShared';
 
-:local(.general) {
-   @extend .table-body-cell;
+.general {
+   @extend .cell;
 
    font-weight: bold;
    padding-right: 6px;

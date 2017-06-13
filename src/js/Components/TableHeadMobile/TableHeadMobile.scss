@@ -1,11 +1,19 @@
 @import '../TableHeadShared';
 
-:local(.mobile-row) {
+.mobile-row {
    th {
-      @extend .table-head-cell;
+      @extend .cell;
 
       &.column-picker {
          text-align: right;
+      }
+
+      &.title {
+         @extend .title;
+      }
+
+      &.margin {
+         @extend .margin;
       }
    }
 }

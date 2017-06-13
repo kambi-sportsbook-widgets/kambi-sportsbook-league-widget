@@ -17,21 +17,21 @@ const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
 
    return (
       <tr className={headerCssClasses}>
-         <th colSpan='2' className='title'>
+         <th colSpan='2' className={styles.title}>
             {title}
          </th>
          {
             columns.map((column, i) =>
                <th
                   key={i}
-                  className='column-name'
+                  className={styles['column-name']}
                   title={t(column.short)}
                >
                   {hiddenMode ? '' : t(column.short)}
                </th>
             )
          }
-         <th className='margin' />
+         <th className={styles.margin} />
       </tr>
    );
 };

@@ -1,11 +1,19 @@
 @import '../TableHeadShared';
 
-:local(.general) {
+.general {
    th {
-      @extend .table-head-cell;
+      @extend .cell;
 
       &.column-name {
          font-weight: bold;
+      }
+
+      &.title {
+         @extend .title;
+      }
+
+      &.margin {
+         @extend .margin;
       }
    }
 }

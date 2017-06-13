@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import TableHeadDefaultRow from '../TableHeadDefaultRow/TableHeadDefaultRow';
 
-const TableHeadDesktop = ({ columns, title }) => {
-   return (
-      <thead>
-         <TableHeadDefaultRow
-            columns={columns}
-            title={title}
-         />
-      </thead>
-   );
-};
+const TableHeadDesktop = ({ columns, title }) => (
+   <thead>
+      <TableHeadDefaultRow
+         columns={columns}
+         title={title}
+      />
+   </thead>
+);
 
 TableHeadDesktop.propTypes = {
    /**

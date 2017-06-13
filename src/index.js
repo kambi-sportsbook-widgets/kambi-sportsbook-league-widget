@@ -1,3 +1,3 @@
 import './index.html';
-import './scss/legacy.scss'
+import './scss/core.scss'
 import './js/app';

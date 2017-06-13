@@ -8,7 +8,7 @@ const PositionIndicator = ({ position, color, change }) => {
       <span>
          <PositionCircle color={color}>{position}</PositionCircle>
          {change !== 0 &&
-            <i className={[styles.triangle, change > 0 ? 'up' : 'down'].join(' ')} />}
+            <i className={[styles.triangle, change > 0 ? styles.up : styles.down].join(' ')} />}
       </span>
    );
 };

@@ -1,9 +1,6 @@
-@import '~kambi-widget-core-library/src/scss/core.scss';
-
-:local(.general) {
+.general {
    width: 10%;
-   padding: 0;
-   padding-left: 3px; // makes the space between outcome buttons 3px
+   padding: 0 0 0 3px; // makes the space between outcome buttons 3px
 
    .wrapper {
       display: flex;
@@ -11,7 +8,7 @@
 }
 
 @media (max-width: 480px) {
-   :local(.general) {
+   .general {
       width: 17%;
    }
 }

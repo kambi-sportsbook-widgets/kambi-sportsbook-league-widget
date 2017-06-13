@@ -1,7 +1,7 @@
 @import '../TableBodyShared';
 
-:local(.general) {
-   @extend .table-body-cell;
+.general {
+   @extend .cell;
    white-space: nowrap;
    width: 54px;
    padding-left: 16px;

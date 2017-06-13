@@ -4,31 +4,31 @@ import styles from './PositionCircle.scss';
 
 const COLORS = {
    GREEN: {
-      background: 'KambiWidget-winPrimaryColor dark',
+      background: `KambiWidget-winPrimaryColor ${styles.dark}`,
       text: 'KambiWidget-winSecondaryColor',
    },
    LIGHT_GREEN: {
-      background: 'KambiWidget-winPrimaryColor light',
+      background: `KambiWidget-winPrimaryColor ${styles.light}`,
       text: 'KambiWidget-winSecondaryColor',
    },
    ORANGE: {
-      background: 'KambiWidget-drawPrimaryColor dark',
+      background: `KambiWidget-drawPrimaryColor ${styles.dark}`,
       text: 'KambiWidget-drawSecondaryColor',
    },
    LIGHT_ORANGE: {
-      background: 'KambiWidget-drawPrimaryColor light',
+      background: `KambiWidget-drawPrimaryColor ${styles.light}`,
       text: 'KambiWidget-drawSecondaryColor',
    },
    RED: {
-      background: 'KambiWidget-losePrimaryColor dark',
+      background: `KambiWidget-losePrimaryColor ${styles.dark}`,
       text: 'KambiWidget-loseSecondaryColor',
    },
    LIGHT_RED: {
-      background: 'KambiWidget-losePrimaryColor light',
+      background: `KambiWidget-losePrimaryColor ${styles.light}`,
       text: 'KambiWidget-loseSecondaryColor',
    },
    TRANSPARENT: {
-      background: 'transparent',
+      background: styles.transparent,
       text: 'KambiWidget-card-text-color',
    },
 };
@@ -49,7 +49,7 @@ const PositionCircle = ({ color, children }) => {
          </span>
       </span>
    );
-}
+};
 
 PositionCircle.propTypes = {
 
