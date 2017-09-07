@@ -63,31 +63,25 @@ const getCompetitionEvent = (filter, criterionId) => {
 
          const filteredEvents = response.events.filter((ev) => {
             const evYear = (new Date(ev.event.start)).getYear();
-            return evYear === lowestYear;
+
+            const hasCriterionBetoffer = ev.betOffers.find(bo => bo.criterion.id === criterionId);
+
+            return ev.event.type === 'ET_COMPETITION' && evYear === lowestYear && hasCriterionBetoffer;
          });
 
-         return Promise.all(
-            filteredEvents.map(ev =>
-               offeringModule.getEvent(ev.event.id)
-                  .catch((res) => {
-                     return null;
-                  })
-            ))
-            .then((response2) => {
-               response2 = response2.filter(res => res !== null);
-               // search for event which is a competition and has a betOffer with given criterion identifier
-               const event = response2.find((ev) => {
-                  return ev.event.type === 'ET_COMPETITION' &&
-                     ev.betOffers.find(bo => bo.criterion.id === criterionId);
-               });
+         if (filteredEvents.length === 0) {
+            console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
+            setTitle(response.events[0]); // original response
+            return null;
+         }
 
-               if (event == null) {
-                  console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
-                  setTitle(response.events[0]); // original response
-                  return null;
-               }
-               setTitle(event);
-               return event;
+         return offeringModule.getEvent(filteredEvents[0].event.id)
+            .then((response2) => {
+               setTitle(response2);
+               return response2;
+            })
+            .catch(() => {
+               return null;
             })
       })
 };
