@@ -52,6 +52,8 @@ const getCompetitionEvent = (filter, criterionId) => {
             return null;
          }
 
+         setTitle(response.events[0]);
+
          // filtering the response to contain just the lowest year events.
          let lowestYear = Number.MAX_VALUE;
          response.events.forEach((ev) => {
@@ -71,15 +73,10 @@ const getCompetitionEvent = (filter, criterionId) => {
 
          if (filteredEvents.length === 0) {
             console.warn(`Competition event not found for filter=${filter} and criterionId=${criterionId}. No Betoffers to show`);
-            setTitle(response.events[0]); // original response
             return null;
          }
 
          return offeringModule.getEvent(filteredEvents[0].event.id)
-            .then((response2) => {
-               setTitle(response2);
-               return response2;
-            })
             .catch(() => {
                return null;
             })
