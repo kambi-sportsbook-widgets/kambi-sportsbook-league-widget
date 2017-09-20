@@ -39,10 +39,9 @@ const CONFIG = {
       { from: 18, to: 20, color: 'RED', description: 'Relegation' }
    ],
    '/football/italy/serie_a': [
-      { from: 1, to: 2, color: 'GREEN', description: 'UEFA Champions League' },
-      { from: 3, to: 3, color: 'LIGHT_GREEN', description: 'UEFA Champions League Qualifiers' },
-      { from: 4, to: 5, color: 'ORANGE', description: 'Europa League' },
-      { from: 18, to: 20, color: 'RED', description: 'Relegation' }
+      { from: 1, to: 4, color: "GREEN", description: "UEFA Champions League" },
+      { from: 5, to: 6, color: "LIGHT_GREEN", description: "UEFA Europa League"},
+      { from: 18, to: 20, color: "RED", description: "Relegation" }
    ],
    '/football/france/ligue_1': [
       { from: 1, to: 2, color: 'GREEN', description: 'UEFA Champions League' },
