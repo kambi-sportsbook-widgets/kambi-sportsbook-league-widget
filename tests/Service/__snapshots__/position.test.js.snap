@@ -8,12 +8,58 @@ Array [
       "description": "UEFA Champions League",
     },
     Object {
-      "color": "LIGHT_GREEN",
-      "description": "UEFA Champions League Qualifiers",
+      "color": "ORANGE",
+      "description": "UEFA Europa League",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
     },
     Object {
       "color": "ORANGE",
-      "description": "Europa League",
+      "description": "UEFA Europa League",
+    },
+    Object {
+      "color": "LIGHT_RED",
+      "description": "Relegation Play-off",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Europa League",
+    },
+    Object {
+      "color": "ORANGE",
+      "description": "UEFA Europa League Qualifying",
+    },
+    Object {
+      "color": "RED",
+      "description": "Relegation",
+    },
+  ],
+  Array [
+    Object {
+      "color": "GREEN",
+      "description": "UEFA Champions League",
+    },
+    Object {
+      "color": "LIGHT_GREEN",
+      "description": "UEFA Europa League",
     },
     Object {
       "color": "RED",
@@ -31,7 +77,7 @@ Array [
     },
     Object {
       "color": "ORANGE",
-      "description": "Europa League",
+      "description": "UEFA Europa League",
     },
     Object {
       "color": "LIGHT_RED",
@@ -53,65 +99,7 @@ Array [
     },
     Object {
       "color": "ORANGE",
-      "description": "Europa League",
-    },
-    Object {
-      "color": "RED",
-      "description": "Relegation",
-    },
-  ],
-  Array [
-    Object {
-      "color": "GREEN",
-      "description": "UEFA Champions League",
-    },
-    Object {
-      "color": "LIGHT_GREEN",
-      "description": "UEFA Champions League Qualifiers",
-    },
-    Object {
-      "color": "ORANGE",
-      "description": "Europa League",
-    },
-    Object {
-      "color": "RED",
-      "description": "Relegation",
-    },
-  ],
-  Array [
-    Object {
-      "color": "GREEN",
-      "description": "UEFA Champions League",
-    },
-    Object {
-      "color": "LIGHT_GREEN",
-      "description": "UEFA Champions League Qualifiers",
-    },
-    Object {
-      "color": "ORANGE",
-      "description": "Europa League",
-    },
-    Object {
-      "color": "LIGHT_RED",
-      "description": "Relegation Play-off",
-    },
-    Object {
-      "color": "RED",
-      "description": "Relegation",
-    },
-  ],
-  Array [
-    Object {
-      "color": "GREEN",
-      "description": "UEFA Champions League",
-    },
-    Object {
-      "color": "LIGHT_GREEN",
-      "description": "UEFA Champions League Qualifiers",
-    },
-    Object {
-      "color": "ORANGE",
-      "description": "Europa League",
+      "description": "UEFA Europa League",
     },
     Object {
       "color": "LIGHT_ORANGE",
