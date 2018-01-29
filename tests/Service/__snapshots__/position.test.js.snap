@@ -90,10 +90,6 @@ Array [
   ],
   Array [
     Object {
-      "color": "GREEN",
-      "description": "UEFA Champions League",
-    },
-    Object {
       "color": "LIGHT_GREEN",
       "description": "UEFA Champions League Qualifiers",
     },
@@ -140,7 +136,7 @@ Array [
     null,
   ],
   Array [
-    "GREEN",
+    "LIGHT_GREEN",
     null,
   ],
 ]
