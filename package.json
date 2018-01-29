@@ -13,13 +13,13 @@
    },
    "dependencies": {
       "kambi-widget-components": "^1.16.0",
-      "kambi-widget-core-library": "^3.9.9",
+      "kambi-widget-core-library": "^3.11.0",
       "prop-types": "^15.3.2",
       "react": "^15.3.2",
       "react-dom": "^15.3.2"
    },
    "devDependencies": {
-      "kambi-widget-build-tools": "^4.0.2"
+      "kambi-widget-build-tools": "^4.2.1"
    },
    "scripts": {
       "clean": "kambi-widgets-cli clean",
