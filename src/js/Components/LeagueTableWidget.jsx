@@ -137,10 +137,16 @@ class LeagueTableWidget extends Component {
               short: betOffer.betOfferType.name,
             }
           }),
-          render: function(row) {
+          render: row => {
             return row.outcomes.map((outcome, i) => (
               <TableBodyOutcomeCell key={i}>
-                {outcome && <OutcomeButton outcome={outcome} label={false} />}
+                {outcome && (
+                  <OutcomeButton
+                    event={this.props.event}
+                    outcome={outcome}
+                    label={false}
+                  />
+                )}
               </TableBodyOutcomeCell>
             ))
           },

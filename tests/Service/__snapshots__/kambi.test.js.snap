@@ -3,6 +3,7 @@
 exports[`Kambi service fails to fetch event proper getting title from event third path 1`] = `
 Object {
   "betOffers": Array [],
+  "event": null,
   "statistics": Array [
     Object {
       "goalsAgainst": 200,
@@ -33,6 +34,11 @@ Object {
       ],
     },
   ],
+  "event": Object {
+    "id": 100,
+    "start": 1495193733875,
+    "type": "ET_COMPETITION",
+  },
   "statistics": Array [
     Object {
       "goalsAgainst": 200,
@@ -53,6 +59,7 @@ Object {
 exports[`Kambi service returns correct data when criterionId is not given 1`] = `
 Object {
   "betOffers": Array [],
+  "event": null,
   "statistics": Array [
     Object {
       "goalsAgainst": 200,

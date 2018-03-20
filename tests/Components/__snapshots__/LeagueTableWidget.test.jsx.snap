@@ -560,6 +560,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -570,10 +571,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -584,6 +588,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -689,6 +695,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -699,6 +706,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with bet offers 1`] =
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -879,6 +888,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -889,10 +899,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -903,6 +916,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1008,6 +1023,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -1018,6 +1034,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with custom position 
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1084,9 +1102,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with no data 1`] = `
       }
       title="League Table"
     />
-    <TableBody>
-      
-    </TableBody>
+    <TableBody />
   </Table>
 </div>
 `;
@@ -1263,6 +1279,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -1273,10 +1290,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -1287,6 +1307,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1392,6 +1414,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -1402,6 +1425,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with position legend 
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1592,6 +1617,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -1602,10 +1634,19 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -1616,6 +1657,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1721,6 +1764,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -1731,6 +1781,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -1911,6 +1963,20 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -1921,10 +1987,26 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -1935,6 +2017,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -2040,6 +2124,20 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -2050,6 +2148,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -2230,6 +2330,23 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                    Object {
+                      "name": "p3",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -2240,10 +2357,29 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                    Object {
+                      "name": "p3",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -2254,6 +2390,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -2359,6 +2497,23 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={
+              Object {
+                "event": Object {
+                  "path": Array [
+                    Object {
+                      "name": "p1",
+                    },
+                    Object {
+                      "name": "p2",
+                    },
+                    Object {
+                      "name": "p3",
+                    },
+                  ],
+                },
+              }
+            }
             label={false}
             outcome={
               Object {
@@ -2369,6 +2524,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly with title extracted 
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -2537,6 +2694,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
         />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -2547,10 +2705,13 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
                 "oddsFractional": "1.1",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -2561,6 +2722,8 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
                 "oddsFractional": "1.2",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
@@ -2666,6 +2829,7 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
         <TableBodyOutcomeCell />
         <TableBodyOutcomeCell>
           <OutcomeButton
+            event={undefined}
             label={false}
             outcome={
               Object {
@@ -2676,340 +2840,12 @@ exports[`LeagueTableWidget DOM rendering renders correctly without bet offers 1`
                 "oddsFractional": "1.4",
               }
             }
+            outlineStyle={false}
+            updateOdds={true}
           />
         </TableBodyOutcomeCell>
       </TableBodyRow>
     </TableBody>
   </Table>
 </div>
-`;
-
-exports[`LeagueTableWidget interface handles columns group change events correctly 1`] = `
-"<LeagueTableWidget statistics={{...}} betOffers={{...}} title=\\"League Table\\" positionLegend={{...}} positionColorMatcher={[Function]}>
-  <div>
-    <Table>
-      <table className=\\"KambiWidget-card-background-color general\\">
-        <TableHeadMobile title=\\"League Table\\" showColumnPicker={true} columnGroups={{...}} initialColumnGroupIdx={0} onColumnGroupChanged={[Function]}>
-          <thead>
-            <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row\\">
-              <th colSpan=\\"2\\" className=\\"title\\">
-                League Table
-              </th>
-              <th colSpan={6} className=\\"column-picker\\">
-                <DropdownButton options={{...}} selected={0} onChange={[Function]} horizontalAlignment=\\"right\\" verticalAlignment=\\"top\\">
-                  <div className=\\"general\\">
-                    <button className=\\"KambiWidget-card-support-text-color button\\" onClick={[Function]}>
-                      Translated: \\"Statistics\\"
-                      <i />
-                    </button>
-                    <ul style={{...}} className=\\"dropDown  rightAlign topAlign\\">
-                      <li data-kw-dropdown-button-index={0} className=\\"KambiWidget-card-background-color KambiWidget-card-background-color--hoverable KambiWidget-card-background-color--clickable KambiWidget-primary-color\\">
-                        Translated: &quot;Statistics&quot;
-                      </li>
-                      <li data-kw-dropdown-button-index={1} className=\\"KambiWidget-card-background-color KambiWidget-card-background-color--hoverable KambiWidget-card-background-color--clickable KambiWidget-card-text-color\\">
-                        Translated: &quot;Bet offers&quot;
-                      </li>
-                    </ul>
-                  </div>
-                </DropdownButton>
-              </th>
-              <th className=\\"margin\\" />
-            </tr>
-            <TableHeadDefaultRow columns={{...}} title=\\"\\" hiddenMode={false}>
-              <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general\\">
-                <th colSpan=\\"2\\" className=\\"title\\" />
-                <th className=\\"column-name\\" title=\\"Translated: \\"P\\"\\">
-                  Translated: &quot;P&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"W\\"\\">
-                  Translated: &quot;W&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"D\\"\\">
-                  Translated: &quot;D&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"L\\"\\">
-                  Translated: &quot;L&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"+/-\\"\\">
-                  Translated: &quot;+/-&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Pts\\"\\">
-                  Translated: &quot;Pts&quot;
-                </th>
-                <th className=\\"margin\\" />
-              </tr>
-            </TableHeadDefaultRow>
-          </thead>
-        </TableHeadMobile>
-        <TableBody>
-          <tbody>
-            <TableBodyRow>
-              <tr className=\\"KambiWidget-card-inner-border row\\">
-                <TableBodyPositionCell>
-                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                    <PositionIndicator position={1} color=\\"TRANSPARENT\\" change={0}>
-                      <span>
-                        <PositionCircle color=\\"TRANSPARENT\\">
-                          <span className=\\"wrapper transparent\\">
-                            <span className=\\" KambiWidget-card-text-color\\">
-                              1
-                            </span>
-                          </span>
-                        </PositionCircle>
-                      </span>
-                    </PositionIndicator>
-                  </td>
-                </TableBodyPositionCell>
-                <TableBodyParticipantCell name=\\"FC Pęzino\\">
-                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                    FC Pęzino
-                  </td>
-                </TableBodyParticipantCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={1}>
-                  <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                    Translated: &quot;1&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <td className=\\"margin\\" />
-              </tr>
-            </TableBodyRow>
-            <TableBodyRow>
-              <tr className=\\"KambiWidget-card-inner-border row\\">
-                <TableBodyPositionCell>
-                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                    <PositionIndicator position={2} color=\\"TRANSPARENT\\" change={0}>
-                      <span>
-                        <PositionCircle color=\\"TRANSPARENT\\">
-                          <span className=\\"wrapper transparent\\">
-                            <span className=\\" KambiWidget-card-text-color\\">
-                              2
-                            </span>
-                          </span>
-                        </PositionCircle>
-                      </span>
-                    </PositionIndicator>
-                  </td>
-                </TableBodyPositionCell>
-                <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
-                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                    Błękitni Stargard
-                  </td>
-                </TableBodyParticipantCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Games Played\\"\\" className=\\"general games-played\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Wins\\"\\" className=\\"general wins\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Draws\\"\\" className=\\"general draws\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Losses\\"\\" className=\\"general losses\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Difference\\"\\" className=\\"general goals-difference\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <TableBodyStatsCell column={{...}} value={2}>
-                  <td title=\\"Translated: \\"Points\\"\\" className=\\"general points\\">
-                    Translated: &quot;2&quot;
-                  </td>
-                </TableBodyStatsCell>
-                <td className=\\"margin\\" />
-              </tr>
-            </TableBodyRow>
-          </tbody>
-        </TableBody>
-      </table>
-    </Table>
-  </div>
-</LeagueTableWidget>"
-`;
-
-exports[`LeagueTableWidget interface handles columns group change events correctly 2`] = `
-"<LeagueTableWidget statistics={{...}} betOffers={{...}} title=\\"League Table\\" positionLegend={{...}} positionColorMatcher={[Function]}>
-  <div>
-    <Table>
-      <table className=\\"KambiWidget-card-background-color general\\">
-        <TableHeadMobile title=\\"League Table\\" showColumnPicker={true} columnGroups={{...}} initialColumnGroupIdx={1} onColumnGroupChanged={[Function]}>
-          <thead>
-            <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color mobile-row\\">
-              <th colSpan=\\"2\\" className=\\"title\\">
-                League Table
-              </th>
-              <th colSpan={2} className=\\"column-picker\\">
-                <DropdownButton options={{...}} selected={1} onChange={[Function]} horizontalAlignment=\\"right\\" verticalAlignment=\\"top\\">
-                  <div className=\\"general\\">
-                    <button className=\\"KambiWidget-card-support-text-color button\\" onClick={[Function]}>
-                      Translated: \\"Bet offers\\"
-                      <i />
-                    </button>
-                  </div>
-                </DropdownButton>
-              </th>
-              <th className=\\"margin\\" />
-            </tr>
-            <TableHeadDefaultRow columns={{...}} title=\\"\\" hiddenMode={false}>
-              <tr className=\\"KambiWidget-card-header-border KambiWidget-secondary-header KambiWidget-card-support-text-color general\\">
-                <th colSpan=\\"2\\" className=\\"title\\" />
-                <th className=\\"column-name\\" title=\\"Translated: \\"Test BetOffer 1\\"\\">
-                  Translated: &quot;Test BetOffer 1&quot;
-                </th>
-                <th className=\\"column-name\\" title=\\"Translated: \\"Test BetOffer 2\\"\\">
-                  Translated: &quot;Test BetOffer 2&quot;
-                </th>
-                <th className=\\"margin\\" />
-              </tr>
-            </TableHeadDefaultRow>
-          </thead>
-        </TableHeadMobile>
-        <TableBody>
-          <tbody>
-            <TableBodyRow>
-              <tr className=\\"KambiWidget-card-inner-border row\\">
-                <TableBodyPositionCell>
-                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                    <PositionIndicator position={1} color=\\"TRANSPARENT\\" change={0}>
-                      <span>
-                        <PositionCircle color=\\"TRANSPARENT\\">
-                          <span className=\\"wrapper transparent\\">
-                            <span className=\\" KambiWidget-card-text-color\\">
-                              1
-                            </span>
-                          </span>
-                        </PositionCircle>
-                      </span>
-                    </PositionIndicator>
-                  </td>
-                </TableBodyPositionCell>
-                <TableBodyParticipantCell name=\\"FC Pęzino\\">
-                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                    FC Pęzino
-                  </td>
-                </TableBodyParticipantCell>
-                <TableBodyOutcomeCell>
-                  <td className=\\"general\\">
-                    <div className=\\"wrapper\\">
-                      <OutcomeButton outcome={{...}} label={false}>
-                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                          <button type=\\"button\\" role=\\"button\\" className=\\"KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                              <span className=\\"KambiWidget-outcome__odds\\">
-                                1.0
-                              </span>
-                            </div>
-                          </button>
-                        </OutcomeButtonUI>
-                      </OutcomeButton>
-                    </div>
-                  </td>
-                </TableBodyOutcomeCell>
-                <TableBodyOutcomeCell>
-                  <td className=\\"general\\">
-                    <div className=\\"wrapper\\">
-                      <OutcomeButton outcome={{...}} label={false}>
-                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                          <button type=\\"button\\" role=\\"button\\" className=\\"KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                              <span className=\\"KambiWidget-outcome__odds\\">
-                                1.0
-                              </span>
-                            </div>
-                          </button>
-                        </OutcomeButtonUI>
-                      </OutcomeButton>
-                    </div>
-                  </td>
-                </TableBodyOutcomeCell>
-                <td className=\\"margin\\" />
-              </tr>
-            </TableBodyRow>
-            <TableBodyRow>
-              <tr className=\\"KambiWidget-card-inner-border row\\">
-                <TableBodyPositionCell>
-                  <td className=\\"general\\" title=\\"Translated: \\"Position\\"\\">
-                    <PositionIndicator position={2} color=\\"TRANSPARENT\\" change={0}>
-                      <span>
-                        <PositionCircle color=\\"TRANSPARENT\\">
-                          <span className=\\"wrapper transparent\\">
-                            <span className=\\" KambiWidget-card-text-color\\">
-                              2
-                            </span>
-                          </span>
-                        </PositionCircle>
-                      </span>
-                    </PositionIndicator>
-                  </td>
-                </TableBodyPositionCell>
-                <TableBodyParticipantCell name=\\"Błękitni Stargard\\">
-                  <td className=\\"general\\" title=\\"Translated: \\"Participant name\\"\\">
-                    Błękitni Stargard
-                  </td>
-                </TableBodyParticipantCell>
-                <TableBodyOutcomeCell>
-                  <td className=\\"general\\">
-                    <div className=\\"wrapper\\" />
-                  </td>
-                </TableBodyOutcomeCell>
-                <TableBodyOutcomeCell>
-                  <td className=\\"general\\">
-                    <div className=\\"wrapper\\">
-                      <OutcomeButton outcome={{...}} label={false}>
-                        <OutcomeButtonUI label={{...}} odds=\\"1.0\\" suspended={false} selected={false} onClick={[Function]}>
-                          <button type=\\"button\\" role=\\"button\\" className=\\"KambiWidget-outcome general\\" disabled={false} onClick={[Function]}>
-                            <div className=\\"KambiWidget-outcome__odds-wrapper\\">
-                              <span className=\\"KambiWidget-outcome__odds\\">
-                                1.0
-                              </span>
-                            </div>
-                          </button>
-                        </OutcomeButtonUI>
-                      </OutcomeButton>
-                    </div>
-                  </td>
-                </TableBodyOutcomeCell>
-                <td className=\\"margin\\" />
-              </tr>
-            </TableBodyRow>
-          </tbody>
-        </TableBody>
-      </table>
-    </Table>
-  </div>
-</LeagueTableWidget>"
 `;

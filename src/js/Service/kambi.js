@@ -123,6 +123,7 @@ const getData = (filter, criterionId) => {
     return {
       title: title,
       betOffers: betOffers,
+      event: event == null ? null : event.event,
       statistics: statistics.leagueTableRows.map(row => {
         row.goalsDifference = row.goalsFor - row.goalsAgainst
         row.outcomes = betOffers.map(bo =>

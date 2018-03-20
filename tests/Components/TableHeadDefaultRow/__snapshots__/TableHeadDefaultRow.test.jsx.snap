@@ -7,11 +7,15 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly in hidden mode 1`] 
   <th
     className="title"
     colSpan="2"
-  />
+  >
+    
+  </th>
   <th
     className="column-name"
     title="Translated: \\"TC1\\""
-  />
+  >
+    
+  </th>
   <th
     className="margin"
   />
@@ -25,7 +29,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly when collapsable 1`
   <th
     className="title"
     colSpan="2"
-  />
+  >
+    
+  </th>
   <th
     className="column-name"
     title="Translated: \\"TC1\\""
@@ -45,7 +51,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly when not collapsabl
   <th
     className="title"
     colSpan="2"
-  />
+  >
+    
+  </th>
   <th
     className="column-name"
     title="Translated: \\"TC1\\""
@@ -65,7 +73,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly with many columns 1
   <th
     className="title"
     colSpan="2"
-  />
+  >
+    
+  </th>
   <th
     className="column-name"
     title="Translated: \\"TC1\\""
@@ -113,7 +123,9 @@ exports[`TableHeadDefaultRow DOM rendering renders correctly without columns 1`]
   <th
     className="title"
     colSpan="2"
-  />
+  >
+    
+  </th>
   <th
     className="margin"
   />

@@ -48,6 +48,7 @@ coreLibrary
     ReactDOM.render(
       <LeagueTableWidget
         betOffers={data.betOffers}
+        event={data.event}
         statistics={data.statistics}
         title={title}
         positionLegend={positionLegend}

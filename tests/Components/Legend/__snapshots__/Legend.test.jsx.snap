@@ -3,9 +3,7 @@
 exports[`Legend DOM rendering renders correctly with empty items list 1`] = `
 <ul
   className="legend"
->
-  
-</ul>
+/>
 `;
 
 exports[`Legend DOM rendering renders correctly with items 1`] = `
