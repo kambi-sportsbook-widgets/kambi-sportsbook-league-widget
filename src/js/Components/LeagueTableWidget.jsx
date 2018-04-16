@@ -145,6 +145,7 @@ class LeagueTableWidget extends Component {
                     event={this.props.event}
                     outcome={outcome}
                     label={false}
+                    updateOdds={true}
                   />
                 )}
               </TableBodyOutcomeCell>
