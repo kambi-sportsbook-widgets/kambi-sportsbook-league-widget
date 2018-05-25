@@ -8,8 +8,8 @@ import position from './Service/position'
 coreLibrary
   .init({
     // filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
-    // filter: "/football/netherlands/eredivisie", // for testing
-    criterionId: 1001221607, // football To Win criterionId
+    filter: '/football/netherlands/eredivisie', // for testing
+    criterionId: 1004240932, // football To Win criterionId
     title: null,
     widgetTrackingName: 'gm-league-table-widget',
   })

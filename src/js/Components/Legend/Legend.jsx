@@ -5,19 +5,28 @@ import styles from './Legend.scss'
 import PositionCircle from '../Position/Circle/PositionCircle'
 
 const t = translationModule.getTranslation.bind(translationModule)
+/**
+ * Removes duplicate legends based on matching descriptions
+ */
+const Legend = ({ items }) => {
+  items = items.filter(
+    (item, i, arr) =>
+      i === arr.findIndex(t => t.description === item.description)
+  )
 
-const Legend = ({ items }) => (
-  <ul className={styles.legend}>
-    {items.map((item, i) => (
-      <li key={i}>
-        <div className={styles.circle}>
-          <PositionCircle color={item.color} />
-        </div>
-        <p>{t(item.description)}</p>
-      </li>
-    ))}
-  </ul>
-)
+  return (
+    <ul className={styles.legend}>
+      {items.map((item, i) => (
+        <li key={i}>
+          <div className={styles.circle}>
+            <PositionCircle color={item.color} />
+          </div>
+          <p>{t(item.description)}</p>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 Legend.propTypes = {
   /**
