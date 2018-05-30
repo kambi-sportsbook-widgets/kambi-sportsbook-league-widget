@@ -54,7 +54,7 @@ coreLibrary
         positionLegend={positionLegend}
         positionColorMatcher={positionColorMatcher}
       />,
-      document.getElementById('root')
+      coreLibrary.rootElement
     )
   })
   .catch(error => {
