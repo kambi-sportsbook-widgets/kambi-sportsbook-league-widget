@@ -7,8 +7,8 @@ import position from './Service/position'
 
 coreLibrary
   .init({
-    // filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
-    filter: '/football/netherlands/eredivisie', // for testing
+    filter: null, // if null will use CoreLibrary.pageInfo.leaguePaths
+    // filter: '/football/sweden/allsvenskan', // for testing
     criterionId: 1004240932, // football To Win criterionId
     title: null,
     widgetTrackingName: 'gm-league-table-widget',
