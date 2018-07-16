@@ -120,17 +120,51 @@ const getData = (filter, criterionId) => {
       betOffers = event.betOffers.filter(bo => bo.criterion.id === criterionId)
     }
 
+    const stats = statistics.leagueTableRows.map(row => {
+      row.goalsDifference = row.goalsFor - row.goalsAgainst
+      row.outcomes = betOffers.map(bo =>
+        bo.outcomes.find(oc => oc.participantId === row.participantId)
+      )
+      return row
+    })
+
+    // if the tournament hasn't started yet (all teams have 0 points) we sort the table by odds instead of position
+    if (betOffers.length > 0) {
+      const betOfferId = betOffers[0].id
+      let totalPoints = 0
+      stats.forEach(row => {
+        totalPoints += row.points
+      })
+
+      const outcomes = betOffers[0].outcomes
+      let positionCounter = 1
+      if (totalPoints === 0) {
+        stats.sort((a, b) => {
+          const outcomeA = a.outcomes.find(o => o.betOfferId === betOfferId)
+          const outcomeB = b.outcomes.find(o => o.betOfferId === betOfferId)
+          if (outcomeA == null) {
+            return -1
+          }
+          if (outcomeB == null) {
+            return 1
+          }
+          if (outcomeA.odds > outcomeB.odds) {
+            return 1
+          }
+          return -1
+        })
+      }
+      stats.forEach(row => {
+        row.position = positionCounter
+        positionCounter++
+      })
+    }
+
     return {
       title: title,
       betOffers: betOffers,
       event: event == null ? null : event.event,
-      statistics: statistics.leagueTableRows.map(row => {
-        row.goalsDifference = row.goalsFor - row.goalsAgainst
-        row.outcomes = betOffers.map(bo =>
-          bo.outcomes.find(oc => oc.participantId === row.participantId)
-        )
-        return row
-      }),
+      statistics: stats,
     }
   })
 }
