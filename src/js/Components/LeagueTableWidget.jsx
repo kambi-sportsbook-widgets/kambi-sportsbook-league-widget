@@ -133,8 +133,8 @@ class LeagueTableWidget extends Component {
             return {
               key: '',
               className: 'outcome',
-              name: betOffer.betOfferType.name,
-              short: betOffer.betOfferType.name,
+              name: betOffer.description,
+              short: betOffer.description,
             }
           }),
           render: row => {
