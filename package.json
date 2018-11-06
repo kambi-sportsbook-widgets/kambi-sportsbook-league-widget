@@ -1,6 +1,6 @@
 {
   "name": "league-table-widget",
-  "version": "3.7.0",
+  "version": "3.7.6",
   "description": "",
   "main": "dist/index.html",
   "widgetCssVersion": "1.0.0.84",
