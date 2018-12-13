@@ -5,9 +5,10 @@ import styles from './Table.scss'
 const Table = ({ children }) => {
   return (
     <table
-      className={['KambiWidget-card-background-color', styles.general].join(
-        ' '
-      )}
+      className={[
+        'KambiWidget-card-background-color KambiWidget-primary-text-color',
+        styles.general,
+      ].join(' ')}
     >
       {children}
     </table>
