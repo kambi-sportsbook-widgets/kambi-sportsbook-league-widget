@@ -3,7 +3,7 @@
   "version": "3.7.13",
   "description": "",
   "main": "dist/index.html",
-  "widgetCssVersion": "1.0.0.92",
+  "widgetCssVersion": "1.0.0.93",
   "scripts": {
     "clean": "kambi-widgets-cli clean",
     "prestart": "npm run clean",
