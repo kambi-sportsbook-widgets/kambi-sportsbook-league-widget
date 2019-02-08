@@ -3,7 +3,7 @@
   "version": "3.7.14",
   "description": "",
   "main": "dist/index.html",
-  "widgetCssVersion": "1.0.0.93",
+  "widgetCssVersion": "1.0.0.96",
   "scripts": {
     "clean": "kambi-widgets-cli clean",
     "prestart": "npm run clean",
@@ -16,7 +16,8 @@
     "preversion": "kambi-widgets-cli preversion",
     "postversion": "kambi-widgets-cli postversion",
     "test": "kambi-widgets-cli test",
-    "prettier-all": "find ./src -name \"*.jsx\" -o -name \"*.js\" | xargs prettier --write",
+    "prettier-all":
+      "find ./src -name \"*.jsx\" -o -name \"*.js\" | xargs prettier --write",
     "precommit": "lint-staged"
   },
   "prettier": {
@@ -27,10 +28,7 @@
     "trailingComma": "es5"
   },
   "lint-staged": {
-    "*.{js,json,css,scss}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json,css,scss}": ["prettier --write", "git add"]
   },
   "devServer": {
     "https": true
@@ -57,9 +55,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
+    "url":
+      "git+ssh://github.com/kambi-sportsbook-widgets/league-table-widget.git"
   },
   "author": "Daniel Hoffmann Bernardes",
   "license": "MIT",
-  "homepage": "https://github.com/kambi-sportsbook-widgets/league-table-widget#readme"
+  "homepage":
+    "https://github.com/kambi-sportsbook-widgets/league-table-widget#readme"
 }
