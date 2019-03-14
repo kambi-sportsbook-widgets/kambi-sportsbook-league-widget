@@ -17,7 +17,8 @@
     "postversion": "kambi-widgets-cli postversion",
     "test": "kambi-widgets-cli test",
     "prettier-all": "find ./src -name \"*.jsx\" -o -name \"*.js\" | xargs prettier --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "production-deployment": "aws s3 sync ./dist s3://extwidgets/league-table-widget/v3.7 --profile kambi"
   },
   "prettier": {
     "tabWidth": 2,
