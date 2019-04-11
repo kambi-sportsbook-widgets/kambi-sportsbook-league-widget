@@ -5,6 +5,14 @@ import styles from './Legend.scss'
 import PositionCircle from '../Position/Circle/PositionCircle'
 
 const t = translationModule.getTranslation.bind(translationModule)
+
+let cssClasses = [
+  'KambiWidget-card-support-text-color',
+  styles.legend
+]
+
+cssClasses = cssClasses.join(' ')
+
 /**
  * Removes duplicate legends based on matching descriptions
  */
@@ -15,7 +23,7 @@ const Legend = ({ items }) => {
   )
 
   return (
-    <ul className={styles.legend}>
+    <ul className={cssClasses}>
       {items.map((item, i) => (
         <li key={i}>
           <div className={styles.circle}>

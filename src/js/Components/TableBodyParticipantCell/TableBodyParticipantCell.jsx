@@ -5,9 +5,16 @@ import styles from './TableBodyParticipantCell.scss'
 
 const t = translationModule.getTranslation.bind(translationModule)
 
+let cssClasses = [
+  'KambiWidget-card-support-text-color',
+  styles.general
+]
+
+cssClasses = cssClasses.join(' ')
+
 const TableBodyParticipantCell = ({ name }) => {
   return (
-    <td className={styles.general} title={t('Participant name')}>
+    <td className={cssClasses} title={t('Participant name')}>
       {name}
     </td>
   )

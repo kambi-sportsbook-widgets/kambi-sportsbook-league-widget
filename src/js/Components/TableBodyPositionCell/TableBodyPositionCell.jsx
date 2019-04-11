@@ -5,8 +5,15 @@ import styles from './TableBodyPositionCell.scss'
 
 const t = translationModule.getTranslation.bind(translationModule)
 
+let cssClasses = [
+  'KambiWidget-card-support-text-color',
+  styles.general
+]
+
+cssClasses = cssClasses.join(' ')
+
 const TableBodyPositionCell = ({ children }) => (
-  <td className={styles.general} title={t('Position')}>
+  <td className={cssClasses} title={t('Position')}>
     {children}
   </td>
 )
