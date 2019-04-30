@@ -8,6 +8,7 @@ const t = translationModule.getTranslation.bind(translationModule)
 
 let cssClasses = [
   'KambiWidget-card-support-text-color',
+  'KambiWidget-league-table-participant-classification',
   styles.legend
 ]
 

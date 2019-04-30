@@ -17,7 +17,7 @@ const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
 
   return (
     <tr className={headerCssClasses}>
-      <th colSpan="2" className={styles.title}>
+      <th colSpan="2" className={[styles.title, 'KambiWidget-league-table-league-name'].join(' ')}>
         {title}
       </th>
       {columns.map((column, i) => (

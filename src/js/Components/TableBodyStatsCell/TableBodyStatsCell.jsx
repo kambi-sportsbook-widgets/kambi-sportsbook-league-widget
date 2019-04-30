@@ -9,7 +9,7 @@ const TableBodyStatsCell = ({ column, value }) => {
   return (
     <td
       title={t(column.name)}
-      className={[styles.general, column.className].join(' ')}
+      className={[styles.general, column.className, 'KambiWidget-league-table-statistics-value'].join(' ')}
     >
       {t(value)}
     </td>
