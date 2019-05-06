@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "kambi-widget-core-library": "^4.11.4",
-    "kambi-widget-components": "^1.21.6"
+    "kambi-widget-components": "^1.21.12"
   },
   "peerDependencies": {
     "prop-types": "x",
