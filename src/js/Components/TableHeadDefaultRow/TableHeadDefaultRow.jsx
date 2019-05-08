@@ -6,22 +6,30 @@ import styles from './TableHeadDefaultRow.scss'
 const t = translationModule.getTranslation.bind(translationModule)
 
 const TableHeadDefaultRow = ({ title, columns, hiddenMode }) => {
-  let headerCssClasses = [
+  const headerClasses = [
     'KambiWidget-card-header-border',
     'KambiWidget-secondary-header',
     'KambiWidget-card-support-text-color',
     styles.general,
-  ]
+  ].join(' ')
 
-  headerCssClasses = headerCssClasses.join(' ')
+  const titleClasses = [
+    styles.title,
+    'KambiWidget-league-table-league-name',
+  ].join(' ')
+
+  const columnClasses = [
+    styles['column-name'],
+    'KambiWidget-league-table-header-text',
+  ].join(' ')
 
   return (
-    <tr className={headerCssClasses}>
-      <th colSpan="2" className={[styles.title, 'KambiWidget-league-table-league-name'].join(' ')}>
+    <tr className={headerClasses}>
+      <th colSpan="2" className={titleClasses}>
         {title}
       </th>
       {columns.map((column, i) => (
-        <th key={i} className={styles['column-name']} title={t(column.short)}>
+        <th key={i} className={columnClasses} title={t(column.short)}>
           {hiddenMode ? '' : t(column.short)}
         </th>
       ))}

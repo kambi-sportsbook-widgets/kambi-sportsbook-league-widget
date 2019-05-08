@@ -39,18 +39,23 @@ class TableHeadMobile extends Component {
     const columnPickerOptions = this.props.columnGroups.map(column => {
       return translationModule.getTranslation(column.title)
     })
-    let headerCssClasses = [
+
+    const headerClasses = [
       'KambiWidget-card-header-border',
       'KambiWidget-secondary-header',
       'KambiWidget-card-support-text-color',
       styles['mobile-row'],
-    ]
-    headerCssClasses = headerCssClasses.join(' ')
+    ].join(' ')
+
+    const titleClasses = [
+      styles.title,
+      'KambiWidget-league-table-league-name'
+    ].join(' ')
 
     return (
       <thead>
-        <tr className={headerCssClasses}>
-          <th colSpan="2" className={styles.title}>
+        <tr className={headerClasses}>
+          <th colSpan="2" className={titleClasses}>
             {this.props.title}
           </th>
           <th
